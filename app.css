@@ -1,0 +1,213 @@
+/*
+
+Copyright (C) 2013 Gabriel Barbosa <barbosanascimentogabriel@gmail.com>
+
+This program is free software: you can redistribute it and/or modify it 
+under the terms of the GNU General Public License version 3, as published 
+by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but 
+WITHOUT ANY WARRANTY; without even the implied warranties of 
+MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR 
+PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along 
+with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+* {
+-webkit-user-select: none;
+user-select: none;
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+}
+
+body{
+	margin: 0 auto;
+	cursor: default;
+	font-family: 'Lato';
+}
+
+span {
+	font-family: 'Lato';
+	color: white;
+}
+a{
+	text-decoration: none;
+	font-family: 'Lato';
+	color: white;
+	opacity: 0.8;
+}
+#container{
+	width: 442px;
+	height: 442px;
+	position: absolute;
+	top: 0;
+	left: 0;	
+	background: #2f0916;
+}
+
+#animation{
+	width: 442px;
+	height: 442px;
+	z-index: 0;
+	overflow: hidden;	
+	position: relative;
+	left: 0;
+}
+
+
+#ur{
+	font-size: 34px;
+	position: absolute;
+	top: 202px;	
+	z-index: 2;
+	opacity: 0.65;
+	color: white;
+	width: 100%;
+	text-align: center;
+	font-family: 'Lato';
+}
+#clock{
+	font-size: 32px;
+	position: absolute;
+	top: 206px;
+	z-index: 2;
+	opacity: 0.7;
+	font-family: 'Lato';
+	color: white;
+	display: none;
+	width: 100%;
+	text-align: center;
+}
+
+
+#circle{
+	width: 284px;
+	height: 284px;
+	position: absolute;
+	top: 81px;
+	left: 76px;
+	background: rgb(51, 51, 51);
+	border-radius: 174px;
+	z-index: 1;
+	overflow: hidden;
+	display: none;
+}
+
+#close{
+	font-family: 'Lato';
+	font-size: 18px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 31px;
+	background: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	color: white;
+}
+
+
+#minimize{
+	font-family: monospace;
+	font-size: 18px;
+	width: 30px;
+	height: 30px;
+	left: 30px;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	line-height: 20px;
+	background: rgba(0, 0, 0, 0.4);
+	cursor: default;	
+	top: 0px;
+	left: 30px;
+	z-index: 2;
+	color: white;
+}
+#close:hover, #minimize:hover, #settings:hover, #refresh:hover{
+	background: rgba(255, 255, 255, 0.2);
+}
+
+
+#settings{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	cursor: default;	
+	top: 0px;
+	right: 0px;
+	z-index: 2;
+}
+#settings img{
+	margin-top: 6px;
+	margin-left: 6px;
+	width: 18px;
+	height: 18px;
+}
+
+
+
+#configuration{
+	width: 442px;
+	height: 350px;
+	position: absolute;
+	z-index: 99;
+	left: 0px;
+	top: 46px;
+	background: #ecf0f1;
+	display: none;
+}
+
+
+#pallet-color{
+	font-size: 0;
+	margin-top: 10px;
+	display: inline-block;
+	border: 2px solid #fff;
+	position: absolute;
+	top: 43px;
+	left: 90px;
+	box-shadow: black 0px 0px 1px;
+}
+
+#pallet-color span {
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+}
+
+
+
+.classic{
+	border: 2px solid #fff;
+	position: absolute;
+	top: 53px;
+	left: 10px;
+	padding: 4px 5px 4px 5px;
+	font-size: 17px;
+	cursor: pointer;
+	box-shadow: black 0px 0px 1px;
+}
+.t24:hover, .t12:hover, .classic:hover, #confim:hover{
+	opacity: 0.8;
+}
+
+#updates{
+	width: 100%;
+	height: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 4;
+}
+
