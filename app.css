@@ -25,7 +25,7 @@ user-select: none;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+  src: url('lib/Lato-Regular.ttf');
 }
 
 body{
@@ -64,7 +64,7 @@ a{
 
 
 #ur{
-	font-size: 34px;
+	font-size: 38px;
 	position: absolute;
 	top: 202px;	
 	z-index: 2;
@@ -75,11 +75,11 @@ a{
 	font-family: 'Lato';
 }
 #clock{
-	font-size: 32px;
+	font-size: 34px;
 	position: absolute;
 	top: 206px;
 	z-index: 2;
-	opacity: 0.7;
+	opacity: 0.65;
 	font-family: 'Lato';
 	color: white;
 	display: none;
