@@ -170,13 +170,14 @@ a{
 
 
 #pallet-color{
+	width: 150px;
 	font-size: 0;
 	margin-top: 10px;
 	display: inline-block;
 	border: 2px solid #fff;
 	position: absolute;
 	top: 43px;
-	left: 90px;
+	left: 10px;
 	box-shadow: black 0px 0px 1px;
 }
 
@@ -192,13 +193,24 @@ a{
 	border: 2px solid #fff;
 	position: absolute;
 	top: 53px;
-	left: 10px;
+	left: 172px;
 	padding: 4px 5px 4px 5px;
 	font-size: 17px;
 	cursor: pointer;
 	box-shadow: black 0px 0px 1px;
 }
-.t24:hover, .t12:hover, .classic:hover, #confim:hover{
+
+.auto{
+	border: 2px solid #fff;
+	position: absolute;
+	top: 53px;
+	left: 244px;
+	padding: 4px 5px 4px 5px;
+	font-size: 17px;
+	cursor: pointer;
+	box-shadow: black 0px 0px 1px;
+}
+.t24:hover, .t12:hover, .classic:hover, .auto:hover, #confim:hover{
 	opacity: 0.8;
 }
 
