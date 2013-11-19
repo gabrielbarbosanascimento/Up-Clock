@@ -200,7 +200,7 @@ a{
 	box-shadow: black 0px 0px 1px;
 }
 
-.auto{
+.choose{
 	border: 2px solid #fff;
 	position: absolute;
 	top: 53px;
@@ -210,7 +210,7 @@ a{
 	cursor: pointer;
 	box-shadow: black 0px 0px 1px;
 }
-.t24:hover, .t12:hover, .classic:hover, .auto:hover, #confim:hover{
+.t24:hover, .t12:hover, .classic:hover, .choose:hover, #confim:hover{
 	opacity: 0.8;
 }
 
