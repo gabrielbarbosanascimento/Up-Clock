@@ -153,10 +153,27 @@ input{
 	color: white;
 	display: none;
 }
-#close:hover, #minimize:hover, #settings:hover, #refresh:hover{
+#close:hover, #minimize:hover, #settings:hover, #hide:hover{
 	background: rgba(255, 255, 255, 0.5);
 }
 
+#hide{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	cursor: default;	
+	top: 0px;
+	left: 60px;
+	z-index: 2;
+	display: none;
+}
+#hide img{
+	margin-top: 6px;
+	margin-left: 5px;
+	width: 22px;
+	height: 22px;
+	opacity: 0.9;
+}
 
 #settings{
 	width: 30px;
@@ -230,11 +247,11 @@ input{
 }
 
 .t24{
-	cursor: pointer;position: absolute;top: 230px;left: 10px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
+	cursor: pointer;position: absolute;top: 200px;left: 10px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
 
 .t12{
-	cursor: pointer;position: absolute;top: 230px;left: 106px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
+	cursor: pointer;position: absolute;top: 200px;left: 106px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
 
 .t24:hover, .t12:hover, .classic:hover, .choose:hover, #confim:hover{
