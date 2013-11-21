@@ -132,7 +132,6 @@ input{
 	top: 0px;
 	left: 0px;
 	color: white;
-	display: none;
 }
 
 
@@ -151,7 +150,7 @@ input{
 	left: 30px;
 	z-index: 2;
 	color: white;
-	display: none;
+	opacity: 0.7;
 }
 #close:hover, #minimize:hover, #settings:hover, #hide:hover{
 	background: rgba(255, 255, 255, 0.5);
@@ -165,14 +164,13 @@ input{
 	top: 0px;
 	left: 60px;
 	z-index: 2;
-	display: none;
 }
 #hide img{
 	margin-top: 6px;
 	margin-left: 5px;
 	width: 22px;
 	height: 22px;
-	opacity: 0.9;
+	opacity: 0.8;
 }
 
 #settings{
@@ -183,13 +181,13 @@ input{
 	top: 0px;
 	right: 0px;
 	z-index: 2;
-	display: none;
 }
 #settings img{
 	margin-top: 6px;
 	margin-left: 6px;
 	width: 18px;
 	height: 18px;
+	opacity: 0.8;
 }
 
 
