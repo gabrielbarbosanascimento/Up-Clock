@@ -99,7 +99,10 @@ a{
 	z-index: 1;
 	overflow: hidden;
 	display: none;
+	-webkit-filter: none;
+	filter: none;
 }
+
 
 #close{
 	font-family: 'Lato';
@@ -108,7 +111,6 @@ a{
 	height: 30px;
 	text-align: center;
 	line-height: 31px;
-	background: rgba(0, 0, 0, 0.4);
 	position: absolute;
 	z-index: 2;
 	top: 0px;
@@ -127,7 +129,6 @@ a{
 	position: absolute;
 	text-align: center;
 	line-height: 20px;
-	background: rgba(0, 0, 0, 0.4);
 	cursor: default;	
 	top: 0px;
 	left: 30px;
@@ -135,7 +136,7 @@ a{
 	color: white;
 }
 #close:hover, #minimize:hover, #settings:hover, #refresh:hover{
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -164,7 +165,7 @@ a{
 	z-index: 99;
 	left: 0px;
 	top: 46px;
-	background: #ecf0f1;
+	background: rgba(255, 255, 255, 0.4);
 	display: none;
 }
 
@@ -174,11 +175,9 @@ a{
 	font-size: 0;
 	margin-top: 10px;
 	display: inline-block;
-	border: 2px solid #fff;
 	position: absolute;
 	top: 43px;
 	left: 10px;
-	box-shadow: black 0px 0px 1px;
 }
 
 #pallet-color span {
@@ -190,28 +189,28 @@ a{
 
 
 .classic{
-	border: 2px solid #fff;
 	position: absolute;
 	top: 53px;
 	left: 172px;
-	padding: 4px 5px 4px 5px;
+	padding: 5px 10px 5px 10px;
 	font-size: 17px;
 	cursor: pointer;
-	box-shadow: black 0px 0px 1px;
+	background: rgba(0, 0, 0, 0.4);
+	border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
 
 .choose{
-	border: 2px solid #fff;
 	position: absolute;
 	top: 53px;
-	left: 244px;
-	padding: 4px 5px 4px 5px;
+	left: 254px;
+	padding: 5px 10px 5px 10px;
 	font-size: 17px;
 	cursor: pointer;
-	box-shadow: black 0px 0px 1px;
+	background: rgba(0, 0, 0, 0.4);
+	border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
 .t24:hover, .t12:hover, .classic:hover, .choose:hover, #confim:hover{
-	opacity: 0.8;
+	background: rgba(255, 255, 255, 0.3);
 }
 
 #updates{
