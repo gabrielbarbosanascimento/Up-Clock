@@ -26,7 +26,7 @@ require(['lib/mediator', 'lib/backend', 'lib/jquery-1.8.3.js'], function(mediato
    		 mediator.publish('send_backend', 'minimize', 'minimize');
 	});
 
-	$('#close, #minimize, #confirm, #pallet-color span, #settings, .classic, .auto, .t24, .t12, #refresh').mouseenter(function() {
+	$('#close, #minimize, #confirm, #pallet-color span, #settings, .classic, #hide, .t24, .t12').mouseenter(function() {
 		mediator.publish('send_backend', 'disable_drag', 'disable_drag');
 	}).mouseleave(function() {
 		mediator.publish('send_backend', 'enable_drag', 'enable_drag');
