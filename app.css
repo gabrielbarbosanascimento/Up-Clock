@@ -209,6 +209,15 @@ a{
 	background: rgba(0, 0, 0, 0.4);
 	border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
+
+.t24{
+	cursor: pointer;position: absolute;top: 180px;left: 10px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
+}
+
+.t12{
+	cursor: pointer;position: absolute;top: 180px;left: 106px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
+}
+
 .t24:hover, .t12:hover, .classic:hover, .choose:hover, #confim:hover{
 	background: rgba(255, 255, 255, 0.3);
 }
