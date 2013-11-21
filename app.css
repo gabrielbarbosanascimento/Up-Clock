@@ -25,7 +25,7 @@ user-select: none;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: url('lib/Lato-Regular.ttf');
+  src: url('lib/Lato-Light.ttf');
 }
 
 body{
@@ -44,6 +44,22 @@ a{
 	color: white;
 	opacity: 0.8;
 }
+
+input{
+	font-family: 'Lato';
+	color: white;
+	width: 235px;
+	font-size: 17px;
+	border: none;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.39);
+	top: 150px;
+	left: 10px;
+	height: 25px;
+	outline: none;
+	color: white;
+}
+
 #container{
 	width: 442px;
 	height: 442px;
@@ -116,6 +132,7 @@ a{
 	top: 0px;
 	left: 0px;
 	color: white;
+	display: none;
 }
 
 
@@ -134,6 +151,7 @@ a{
 	left: 30px;
 	z-index: 2;
 	color: white;
+	display: none;
 }
 #close:hover, #minimize:hover, #settings:hover, #refresh:hover{
 	background: rgba(255, 255, 255, 0.5);
@@ -148,6 +166,7 @@ a{
 	top: 0px;
 	right: 0px;
 	z-index: 2;
+	display: none;
 }
 #settings img{
 	margin-top: 6px;
@@ -211,11 +230,11 @@ a{
 }
 
 .t24{
-	cursor: pointer;position: absolute;top: 180px;left: 10px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
+	cursor: pointer;position: absolute;top: 230px;left: 10px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
 
 .t12{
-	cursor: pointer;position: absolute;top: 180px;left: 106px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
+	cursor: pointer;position: absolute;top: 230px;left: 106px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
 
 .t24:hover, .t12:hover, .classic:hover, .choose:hover, #confim:hover{

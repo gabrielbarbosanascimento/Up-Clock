@@ -48,7 +48,7 @@
 </script>  
 </head>
 <body oncontextmenu="return false;" onload="firstclock()">
-	<div id="container">
+	<div id="container" class="show">
 	
 		<div id="animation">
 			<img id="i1" src="media/1.png" />
@@ -89,9 +89,17 @@
 			<span style="position: relative;font-size: 22px;margin-left: 10px;top: 10px;color: #FFFFFF;opacity: 0.9;">Themes</span><br />
 
 			<span title="Classic Theme" class="classic">Classic</span>
-			<span title="Set The Color An Press Here" class="choose" >Choose</span>
 
-			<span style="position: relative;font-size: 22px;margin-left: 10px;top: 110px;color: #FFFFFF;opacity: 0.9;">Time</span><br />
+			<span style="position: relative;font-size: 22px;margin-left: 10px;top: 90px;color: #FFFFFF;opacity: 0.9;">Or</span><br />
+
+			<form method="post" onsubmit="setColor()">
+
+			<input id="color-pick" onsubmit='setColor()' placeholder="The Hex Color Value With Sharp" maxlength="7" type="text" />
+			<input id="submitColor" type="submit" style="visibility: hidden;" value="submit" />
+
+			</form>
+
+			<span style="position: relative;font-size: 22px;margin-left: 10px;top: 140px;color: #FFFFFF;opacity: 0.9;">Time</span>
 			<span class="t24">24 hours</span>	
 			<span title="Time like AM/PM" class="t12" >12 hours</span>			
 
