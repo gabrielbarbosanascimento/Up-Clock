@@ -171,6 +171,7 @@ input{
 	width: 22px;
 	height: 22px;
 	opacity: 0.8;
+    -webkit-user-drag: none;
 }
 
 #settings{
@@ -188,6 +189,7 @@ input{
 	width: 18px;
 	height: 18px;
 	opacity: 0.8;
+    -webkit-user-drag: none;
 }
 
 
