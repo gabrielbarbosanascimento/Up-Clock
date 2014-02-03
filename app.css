@@ -115,8 +115,6 @@ input{
 	z-index: 1;
 	overflow: hidden;
 	display: none;
-	-webkit-filter: none;
-	filter: none;
 }
 
 
@@ -235,17 +233,6 @@ input{
 	border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
 
-.choose{
-	position: absolute;
-	top: 53px;
-	left: 254px;
-	padding: 5px 10px 5px 10px;
-	font-size: 17px;
-	cursor: pointer;
-	background: rgba(0, 0, 0, 0.4);
-	border-right: 4px solid rgba(0, 0, 0, 0.4);
-}
-
 .t24{
 	cursor: pointer;position: absolute;top: 200px;left: 10px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
@@ -254,16 +241,6 @@ input{
 	cursor: pointer;position: absolute;top: 200px;left: 106px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
 
-.t24:hover, .t12:hover, .classic:hover, .choose:hover, #confim:hover{
+.t24:hover, .t12:hover, .classic:hover{
 	background: rgba(255, 255, 255, 0.3);
 }
-
-#updates{
-	width: 100%;
-	height: 0px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	z-index: 4;
-}
-
