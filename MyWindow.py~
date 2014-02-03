@@ -22,7 +22,6 @@ class MyWindow(HTMLWindow):
     def __init__(self):
         super(MyWindow, self).__init__(442, 442)
         self.drag = True
-        self.set_resizable(False)
         self.connect('button-press-event', self.button_press)
 
     def button_press(self, widget, event):

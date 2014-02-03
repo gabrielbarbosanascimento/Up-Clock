@@ -17,8 +17,8 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 * {
--webkit-user-select: none;
-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 @font-face {
