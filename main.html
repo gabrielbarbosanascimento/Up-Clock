@@ -2,15 +2,15 @@
 <html>
 <head>
 	<title>disabledrag</title>
-	<link rel="stylesheet" type="text/css" href="app.css">
 	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="app.css">
 	<script defer data-main="main" src="lib/require.js"></script>
 
 	<script src="main.js"></script>
 	<script src="lib/jquery-1.8.3.js"></script>
 	<script src="lib/jquery.cycle.all.js"></script>
 	<script src="lib/upclock.js"></script>
-	<script language="JavaScript" src="lib/clock.js"></script>
+	<script src="lib/clock.js"></script>
 	<script language="JavaScript">  
 	 function checklength(i){  
 	        if (i<10){  
@@ -80,24 +80,21 @@
 		</div>
 
 
-		<a id="close" style="text-decoration: none;cursor: pointer;">&#10005;</a>	
-		<a id="minimize" style="text-decoration: none;cursor: pointer;">_</a>	
-		<a id="hide" style="text-decoration: none;cursor: pointer;" ><img src="media/hide.svg" /></a>
-		<a id="settings" class="show" style="text-decoration: none;cursor: pointer;" ><img src="media/settings.svg" /></a>
+		<a id="close">&#10005;</a>	
+		<a id="minimize">_</a>	
+		<a id="hide"><img src="media/hide.svg" /></a>
+		<a id="settings" class="show"><img src="media/settings.svg" /></a>
 
 		
 		<div id="configuration">
 
-			<span style="position: relative;font-size: 22px;margin-left: 10px;top: 10px;color: #FFFFFF;opacity: 0.9;">Themes</span><br />
-
-			<span title="Classic Theme" class="classic">Classic</span>
-
-			<span style="position: relative;font-size: 22px;margin-left: 10px;top: 130px;color: #FFFFFF;opacity: 0.9;">Time</span>
+			<span class="title1">Themes</span><br />
+			<span class="classic">Classic</span>
+			<span class="title2">Time</span>
 			<span class="t24">24 hours</span>	
-			<span title="Time like AM/PM" class="t12" >12 hours</span>			
+			<span title="Time like AM/PM" class="t12">12 hours</span>			
 
 			
-
 
 			<div id="pallet-color">
 				<span class="c1" style="background-color: #333;"></span>
@@ -114,6 +111,7 @@
 			
 			
 		</div>
+
 	</div>
 </body>
 </html>

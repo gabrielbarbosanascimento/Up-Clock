@@ -19,46 +19,36 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 * {
 	-webkit-user-select: none;
 	user-select: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Lato';
+}
+img {
+	-webkit-user-drag: none;
 }
 
 @font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: url('lib/Lato-Light.ttf');
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: url('lib/Lato-Light.ttf');
 }
 
 body{
-	margin: 0 auto;
 	cursor: default;
-	font-family: 'Lato';
 }
 
 span {
-	font-family: 'Lato';
 	color: white;
 }
 a{
-	text-decoration: none;
-	font-family: 'Lato';
 	color: white;
 	opacity: 0.8;
 }
 
-input{
-	font-family: 'Lato';
-	color: white;
-	width: 235px;
-	font-size: 17px;
-	border: none;
-	position: absolute;
-	background: rgba(0, 0, 0, 0.39);
-	top: 150px;
-	left: 10px;
-	height: 25px;
-	outline: none;
-	color: white;
-}
+
+/*---------------------------------------------------------*/
 
 #container{
 	width: 442px;
@@ -130,6 +120,7 @@ input{
 	top: 0px;
 	left: 0px;
 	color: white;
+	cursor: pointer;
 }
 
 
@@ -149,6 +140,7 @@ input{
 	z-index: 2;
 	color: white;
 	opacity: 0.7;
+	cursor: pointer;
 }
 #close:hover, #minimize:hover, #settings:hover, #hide:hover{
 	background: rgba(255, 255, 255, 0.5);
@@ -162,6 +154,7 @@ input{
 	top: 0px;
 	left: 60px;
 	z-index: 2;
+	cursor: pointer;
 }
 #hide img{
 	margin-top: 6px;
@@ -169,7 +162,7 @@ input{
 	width: 22px;
 	height: 22px;
 	opacity: 0.8;
-    -webkit-user-drag: none;
+    
 }
 
 #settings{
@@ -180,6 +173,7 @@ input{
 	top: 0px;
 	right: 0px;
 	z-index: 2;
+	cursor: pointer;
 }
 #settings img{
 	margin-top: 6px;
@@ -187,10 +181,9 @@ input{
 	width: 18px;
 	height: 18px;
 	opacity: 0.8;
-    -webkit-user-drag: none;
 }
 
-
+/*------------------- Configuration Screen ----------------------*/
 
 #configuration{
 	width: 442px;
@@ -201,6 +194,22 @@ input{
 	top: 46px;
 	background: rgba(255, 255, 255, 0.4);
 	display: none;
+}
+
+.title1{
+	position: relative;
+	font-size: 22px;
+	margin-left: 10px;
+	top: 10px;
+	color: #FFFFFF;
+	opacity: 0.9;
+}.title2{
+	position: relative;
+	font-size: 22px;
+	margin-left: 10px;
+	top: 130px;
+	color: #FFFFFF;
+	opacity: 0.9;
 }
 
 
