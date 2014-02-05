@@ -16,6 +16,7 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
+
 * {
 	-webkit-user-select: none;
 	user-select: none;
@@ -23,9 +24,12 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 	padding: 0;
 	text-decoration: none;
 	font-family: 'Lato';
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 img {
 	-webkit-user-drag: none;
+	border: 0;
 }
 
 @font-face {
@@ -45,7 +49,14 @@ span {
 a{
 	color: white;
 	opacity: 0.8;
+	background: transparent;
 }
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
 
 
 /*---------------------------------------------------------*/
