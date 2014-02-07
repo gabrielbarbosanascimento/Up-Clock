@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Up Clock - A Beautiful Way To Display Your Time</title>
+    <link rel="stylesheet" type="text/css" href="css/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.8.3.js"></script>
+    <script src="js/jquery.cycle.all.js"></script>
+    <script>
+    $('.slide').cycle({ 
+      fx:      'fade', 
+      speed:    2000, 
+      timeout:  1000,
+    });
+    </script>
+</head>
+<body>
+
+  <header>
+    <img class="blured" src="img/blured.jpg" alt="">
+    <div class="row">
+      <br>
+      A Beautiful Widget
+
+      
+    </div> 
+  </header>
+  <div class="container">
+    <div class="row">
+      <h1>UP Clock</h1>
+      <h3>A beautiful way to see your time !</h3>
+      <div class="design"><img src="img/design.svg" alt="img/design.svg"></div>
+      <h2>Design</h2>
+      <h4>The app was inspired on Ubuntu Phone OS welcome screen</h4>
+    </div>
+    <div class="features">
+      <div class="row">
+      <h1>Features</h1>
+
+      <div class="pure-g" style="text-align: center;margin-top: 70px;">
+        <div class="pure-u-1-3">
+
+            <div class="slide">
+              <img id="i1" src="img/1.png" />
+              <img id="i2" src="img/2.png" />
+              <img id="i3" src="img/3.png" />
+              <img id="i4" src="img/4.png" />
+              <img id="i5" src="img/5.png" />
+            </div>
+            
+            <h3>Clouds</h3>
+            <p>Like in Ubuntu OS, the app keep changing, making a stunning animation !</p>
+        </div>
+
+        <div class="pure-u-1-3">
+            <div class="thumbnail-features">
+              <img id="i1" src="img/theme.png" />
+            </div>
+            <h3>Change Theme</h3>
+            <p>You have the power, if you don't want to use the classic theme, you can change it !</p>
+        </div>
+
+        <div class="pure-u-1-3">
+            <div class="thumbnail-features">
+              <img id="i1" src="img/hide.png" />
+            </div>
+            <h3>Hide Button</h3>
+            <p>You can hide the controls buttons for a perfect screenshot</p>
+        </div>
+      </div>
+
+
+      <div class="download">
+        <a class="pure-button pure-button-primary" style="font-weight: 300;font-size: 21px;" href="apt://up-clock">Download <br> <h5>Ubuntu Software Center</h5></a>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
