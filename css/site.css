@@ -109,6 +109,10 @@ h1, h3, h4{
 	position: relative;
 	margin: 0 auto;
 }
+.design iframe {
+	height: 442px;
+	width: 442px;
+}
 .design img {
 	width: 100%;
 	height: 100%;

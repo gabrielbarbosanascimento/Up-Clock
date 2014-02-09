@@ -145,7 +145,7 @@ a:hover {
 	position: absolute;
 	text-align: center;
 	line-height: 20px;
-	cursor: default;	
+	cursor: default;
 	top: 0px;
 	left: 30px;
 	z-index: 2;
@@ -161,7 +161,7 @@ a:hover {
 	width: 30px;
 	height: 30px;
 	position: absolute;
-	cursor: default;	
+	cursor: default;
 	top: 0px;
 	left: 60px;
 	z-index: 2;
@@ -180,7 +180,7 @@ a:hover {
 	width: 30px;
 	height: 30px;
 	position: absolute;
-	cursor: default;	
+	cursor: default;
 	top: 0px;
 	right: 0px;
 	z-index: 2;
