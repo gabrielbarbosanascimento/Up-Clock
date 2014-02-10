@@ -6,10 +6,12 @@
 	<script defer data-main="main" src="lib/require.js"></script>
 
 	<script src="main.js"></script>
-	<script src="lib/jquery-1.8.3.js"></script>
-	<script src="lib/jquery.cycle.all.js"></script>
+	<script src="lib/jquery-1.11.0.min.js"></script>
+	<script src="lib/jquery.cycle2.min.js"></script>
 	<script src="lib/upclock.js"></script>
 	<script src="lib/clock.js"></script>
+
+
 	<script language="JavaScript">  
 	 function checklength(i){  
 	        if (i<10){  
@@ -51,7 +53,7 @@
 <body oncontextmenu="return false;" onload="firstclock()">
 	<div id="container" class="show">
 	
-		<div id="animation">
+		<div id="animation" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000" >
 			<img id="i1" src="media/1.png" />
 			<img id="i2" src="media/2.png" />
 			<img id="i3" src="media/3.png" />
@@ -71,7 +73,7 @@
 		</div>  
 		
 
-		<div id="circle">
+		<div id="circle" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000">
 			<img src="media/point-1.svg" />
 			<img src="media/point-2.svg" />
 			<img src="media/point-3.svg" />

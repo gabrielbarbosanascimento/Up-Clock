@@ -16,7 +16,7 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-
+/*----------------SOME GERAL RUNES/DON'T TOUCH IT-----------------*/
 * {
 	-webkit-user-select: none;
 	user-select: none;
@@ -62,8 +62,8 @@ a:hover {
 /*---------------------------------------------------------*/
 
 #container{
-	width: 442px;
-	height: 442px;
+    height: 442px;
+    width: 442px;
 	position: absolute;
 	top: 0;
 	left: 0;	
@@ -79,7 +79,6 @@ a:hover {
 	left: 0;
 }
 
-
 #ur{
 	font-size: 38px;
 	position: absolute;
@@ -91,6 +90,7 @@ a:hover {
 	text-align: center;
 	font-family: 'Lato';
 }
+
 #clock{
 	font-size: 34px;
 	position: absolute;
