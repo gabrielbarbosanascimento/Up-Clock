@@ -150,7 +150,7 @@ a:hover {
 	left: 30px;
 	z-index: 2;
 	color: white;
-	opacity: 0.7;
+	opacity: 0.8;
 	cursor: pointer;
 }
 #close:hover, #minimize:hover, #settings:hover, #hide:hover{
@@ -172,7 +172,7 @@ a:hover {
 	margin-left: 5px;
 	width: 22px;
 	height: 22px;
-	opacity: 0.8;
+	opacity: 1;
     
 }
 
@@ -180,10 +180,9 @@ a:hover {
 	width: 30px;
 	height: 30px;
 	position: absolute;
-	cursor: default;	
 	top: 0px;
 	right: 0px;
-	z-index: 2;
+	z-index: 100;
 	cursor: pointer;
 }
 #settings img{
@@ -191,18 +190,18 @@ a:hover {
 	margin-left: 6px;
 	width: 18px;
 	height: 18px;
-	opacity: 0.8;
+	opacity: 1;
 }
 
 /*------------------- Configuration Screen ----------------------*/
 
 #configuration{
 	width: 442px;
-	height: 350px;
+	height: 442px;
 	position: absolute;
 	z-index: 99;
 	left: 0px;
-	top: 46px;
+	top: 0;
 	background: rgba(255, 255, 255, 0.4);
 	display: none;
 }
@@ -210,14 +209,14 @@ a:hover {
 .title1{
 	position: relative;
 	font-size: 22px;
-	margin-left: 10px;
+	margin-left: 15px;
 	top: 10px;
 	color: #FFFFFF;
 	opacity: 0.9;
 }.title2{
 	position: relative;
 	font-size: 22px;
-	margin-left: 10px;
+	margin-left: 15px;
 	top: 130px;
 	color: #FFFFFF;
 	opacity: 0.9;
@@ -231,7 +230,7 @@ a:hover {
 	display: inline-block;
 	position: absolute;
 	top: 43px;
-	left: 10px;
+	left: 15px;
 }
 
 #pallet-color span {
@@ -246,7 +245,7 @@ a:hover {
 .classic{
 	position: absolute;
 	top: 53px;
-	left: 172px;
+	left: 177px;
 	padding: 5px 10px 5px 10px;
 	font-size: 17px;
 	cursor: pointer;
@@ -255,11 +254,11 @@ a:hover {
 }
 
 .t24{
-	cursor: pointer;position: absolute;top: 200px;left: 10px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
+	cursor: pointer;position: absolute;top: 200px;left: 15px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
 
 .t12{
-	cursor: pointer;position: absolute;top: 200px;left: 106px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
+	cursor: pointer;position: absolute;top: 200px;left: 111px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
 }
 
 .t24:hover, .t12:hover, .classic:hover{
