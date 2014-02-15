@@ -1,15 +1,15 @@
 Up-Clock
 ========
 
-A beautiful clock inspired on Ubuntu Touch
+A beautiful clock inspired by the [Ubuntu Touch clock app](https://wiki.ubuntu.com/Touch/CoreApps/Clock).
+
+![screenshot](https://dl.dropboxusercontent.com/u/84627545/app.png)
+This app is made using Quickly on ubuntu 12.04. It runs using Python, but It's a web application.
 
 
-This app is made using quickly on ubuntu 12.04. It runs on python, but It's a web application.
+<h3>HOW TO RUN IT?</h3>
 
-
-HOW TO RUN: 
-
-To run this aplication, open the terminal and type cd plus the direction of this directory on your files. Type chmod +x up-clock to make it executable or just type python up-clock to run it
+To run this aplication, open the terminal and type cd plus the direction of this directory on your files. Type `chmod +x up-clock` to make it executable or just run it using `python up-clock` in a Terminal.
 
 
 Images
