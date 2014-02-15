@@ -25,6 +25,7 @@ class MyWindow(HTMLWindow):
         self.set_resizable(False)
         self.connect('button-press-event', self.button_press)
 
+
     def button_press(self, widget, event):
         if event.button == 1 and self.drag:
             print "button 1 pressed and self drag is true"

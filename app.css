@@ -58,7 +58,6 @@ a:hover {
 }
 
 
-
 /*---------------------------------------------------------*/
 
 #container{
@@ -77,6 +76,7 @@ a:hover {
 	overflow: hidden;	
 	position: relative;
 	left: 0;
+    display: none;
 }
 
 #ur{
@@ -128,7 +128,7 @@ a:hover {
 	line-height: 31px;
 	position: absolute;
 	z-index: 2;
-	top: 0px;
+	top: -30px;
 	left: 0px;
 	color: white;
 	cursor: pointer;
@@ -146,7 +146,7 @@ a:hover {
 	text-align: center;
 	line-height: 20px;
 	cursor: default;	
-	top: 0px;
+	top: -30px;
 	left: 30px;
 	z-index: 2;
 	color: white;
@@ -157,12 +157,13 @@ a:hover {
 	background: rgba(255, 255, 255, 0.5);
 }
 
+
 #hide{
 	width: 30px;
 	height: 30px;
 	position: absolute;
 	cursor: default;	
-	top: 0px;
+	top: -30px;
 	left: 60px;
 	z-index: 2;
 	cursor: pointer;
@@ -180,7 +181,7 @@ a:hover {
 	width: 30px;
 	height: 30px;
 	position: absolute;
-	top: 0px;
+	top: -30px;
 	right: 0px;
 	z-index: 100;
 	cursor: pointer;

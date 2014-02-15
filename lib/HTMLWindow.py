@@ -12,8 +12,8 @@ class HTMLWindow(Gtk.Window):
         #create the window
         Gtk.Window.__init__(self)
 
-        # splitter = Gtk.Paned(orientation=Gtk.Orientation.VERTICAL)
-        # splitter.show()
+        splitter = Gtk.Paned(orientation=Gtk.Orientation.VERTICAL)
+        splitter.show()
 
         # #create the widget container
         # vbox = Gtk.VBox(homogeneous=False)

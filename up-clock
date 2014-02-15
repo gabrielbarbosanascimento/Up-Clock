@@ -8,6 +8,5 @@ window = MyWindow.MyWindow()
 window.connect("destroy",Gtk.main_quit)
 window.set_decorated(False)
 
-
 window.show()
 Gtk.main()
