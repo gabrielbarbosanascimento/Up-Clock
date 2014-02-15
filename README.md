@@ -5,7 +5,9 @@ A beautiful clock inspired by the [Ubuntu Touch clock app](https://wiki.ubuntu.c
 
 ![screenshot](https://dl.dropboxusercontent.com/u/84627545/app.png)
 
-This app created made using Quickly on ubuntu 12.04. It runs using Python, but It's a web application.
+This app is created using Quickly on [Ubuntu](http://ubuntu.com/) and is for Linux distributions. It runs using Python, but It's a web application.
+
+We plan to release Up-Clock for other systems soon.
 
 
 <h3>HOW TO RUN IT?</h3>
