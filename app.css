@@ -228,17 +228,16 @@ hr{
 	opacity: 1;
 }
 
-/*------------------- Configuration Screen ----------------------*/
+/*------------------- eConfiguration Screen ----------------------*/
 
 #configuration{
 	width: 442px;
-	height: 442px;
+	height: 412px;
 	position: absolute;
 	z-index: 99;
 	left: 0px;
-	top: 0;
+	top: -412px;
 	background: rgba(245, 245, 245, 1);
-	display: none;
 }
 
 .title1{
