@@ -44,7 +44,7 @@ body{
 }
 
 span {
-	color: white;
+	color: #565656;
 }
 a{
 	color: white;
@@ -57,7 +57,41 @@ a:hover {
   outline: 0;
 }
 
+hr{   
+    background-color: #eaeaea;
+    color: #eaeaea;
+    width: 412px;
+    position: relative;
+    margin: 15px;
+    border: 1px solid #eaeaea;
+    height: 0;
+    top: -12px;
+}
 
+.switch{
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    background: #e6e6e6;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+.switch div{
+    width: 50px;
+    height: 30px;
+    background: #aaa;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+}
+
+.switch div a{
+    color: white;
+    opacity: 1;
+    position: absolute;
+    margin: 5px 13px;
+}
 /*---------------------------------------------------------*/
 
 #container{
@@ -203,7 +237,7 @@ a:hover {
 	z-index: 99;
 	left: 0px;
 	top: 0;
-	background: rgba(255, 255, 255, 0.4);
+	background: rgba(245, 245, 245, 1);
 	display: none;
 }
 
@@ -212,20 +246,20 @@ a:hover {
 	font-size: 22px;
 	margin-left: 15px;
 	top: 10px;
-	color: #FFFFFF;
+	color: #565656;
 	opacity: 0.9;
 }.title2{
 	position: relative;
 	font-size: 22px;
 	margin-left: 15px;
-	top: 130px;
-	color: #FFFFFF;
+	top: 95px;
+	color: #565656;
 	opacity: 0.9;
 }
 
 
 #pallet-color{
-	width: 150px;
+	width: 300px;
 	font-size: 0;
 	margin-top: 10px;
 	display: inline-block;
@@ -245,23 +279,36 @@ a:hover {
 
 .classic{
 	position: absolute;
-	top: 53px;
-	left: 177px;
-	padding: 5px 10px 5px 10px;
+	top: 100px;
+	left: 15px;
 	font-size: 17px;
 	cursor: pointer;
-	background: rgba(0, 0, 0, 0.4);
-	border-right: 4px solid rgba(0, 0, 0, 0.4);
+    width: 412px;
+}
+
+.classic .switch{
+	position: absolute;
+	top: -4px;
+    right: 0;
 }
 
 .t24{
-	cursor: pointer;position: absolute;top: 200px;left: 15px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
+	cursor: pointer;position: absolute;top: 230px;left: 15px;font-size: 17px;width: 412px;
 }
-
+.t24 .switch{
+	position: absolute;
+	top: -4px;
+    right: 0;
+}
 .t12{
-	cursor: pointer;position: absolute;top: 200px;left: 111px;padding: 5px 10px 5px 10px;font-size: 17px;background: rgba(0, 0, 0, 0.4);border-right: 4px solid rgba(0, 0, 0, 0.4);
+	cursor: pointer;position: absolute;top: 270px;left: 15px;font-size: 17px;width: 412px;
 }
 
+.t12 .switch{
+	position: absolute;
+	top: -4px;
+    right: 0;
+}
 .t24:hover, .t12:hover, .classic:hover{
 	background: rgba(255, 255, 255, 0.3);
 }
