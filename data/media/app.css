@@ -26,11 +26,11 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 	font-family: 'Lato';
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	-webkit-user-drag: none;
-	user-drag: none;
 }
 img {
 	border: 0;
+	-webkit-user-drag: none;
+	user-drag: none;
 }
 
 @font-face {
@@ -51,6 +51,8 @@ a{
 	color: white;
 	opacity: 0.8;
 	background: transparent;
+	-webkit-user-drag: none;
+	user-drag: none;
 }
 
 a:active, a:hover {
