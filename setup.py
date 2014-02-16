@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 ### BEGIN LICENSE
-# Copyright (C) 2014 <Gabriel Barbosa Nascimento> <barbosanascimentogabriel@gmail.com>
-# Copyright (C) 2014 <Archisman Panigrahi> <apandada1@gmail.com>
+# Copyright (C) 2014 Gabriel Barbosa <barbosanascimentogabriel@gmail.com>
+# Copyright (C) 2014 Archisman Panigrahi <apandada1@gmail.com>
 # This program is free software: you can redistribute it and/or modify it 
 # under the terms of the GNU General Public License version 3, as published 
 # by the Free Software Foundation.
@@ -137,12 +137,12 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 DistUtilsExtra.auto.setup(
     name='up-clock',
-    version='4.1',
+    version='4.1-public2',
     license='GPL-3',
     author='Archisman Panigrahi',
     author_email='apandada1@gmail.com',
-    #description='UI for managing …',
-    #long_description='Here a longer description',
+    description='A beautiful Clock, inspired by Ubuntu Touch homescreen, already on your desktop.',
+    long_description='Inspired by Ubuntu Touch homescreen, this clock is able to show you the time in a way you never seen before. The "clouds" changes colors and sizes automaticaly awhile showing you the time.',
     url='https://launchpad.net/up-clock',
     cmdclass={'install': InstallAndUpdateDataDirectory}
     )

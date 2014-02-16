@@ -16,5 +16,7 @@ Depends: ${misc:Depends},
  gir1.2-gtk-3.0,
  gir1.2-webkit-3.0,
  yelp
-Description: UNKNOWN
- UNKNOWN
+Description: A beautiful Clock, inspired by Ubuntu Touch homescreen, already on your desktop.
+ Inspired by Ubuntu Touch homescreen, this clock is able to show you the
+ time in a way you never seen before. The "clouds" changes colors and
+ sizes automaticaly awhile showing you the time.

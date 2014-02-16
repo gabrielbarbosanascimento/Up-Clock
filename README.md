@@ -14,7 +14,8 @@ We plan to release Up-Clock for other systems soon.
 
 To run this aplication, open the terminal and type cd plus the direction of this directory on your files. Type `chmod +x up-clock` to make it executable or just run it using `python up-clock` in a Terminal.
 
-A PPA is available at https://launchpad.net/~apandada1/+archive/up-clock
+A PPA is available at https://launchpad.net/~apandada1/+archive/up-clock.
+
 Up-Clock is also available at [Ubuntu Software Center](https://apps.ubuntu.com/cat/applications/up-clock/)
 
 

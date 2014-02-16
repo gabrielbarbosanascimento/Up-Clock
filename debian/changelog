@@ -1,3 +1,15 @@
+up-clock (4.1-public2) saucy; urgency=low
+
+  * New release.
+
+ -- Archisman Panigrahi <apandada1@gmail.com>  Sun, 16 Feb 2014 18:20:09 +0530
+
+up-clock (4.1-public1) saucy; urgency=low
+
+  * New release.
+
+ -- Archisman Panigrahi <apandada1@gmail.com>  Sun, 16 Feb 2014 18:18:02 +0530
+
 up-clock (4.1) saucy; urgency=low
 
   * Initial release.

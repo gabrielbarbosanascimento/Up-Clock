@@ -7,9 +7,8 @@ Files: *
 Binary file ./data/media/lib/Lato-Light.ttf matches
 Copyright: (C) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
 Copyright: (C) 2010-2012, The Dojo Foundation All Rights Reserved.
-Copyright: (C) 2013 Gabriel Barbosa <barbosanascimentogabriel@gmail.com>
-Copyright: (C) 2014 <Archisman Panigrahi> <apandada1@gmail.com>
-Copyright: (C) 2014 <Gabriel Barbosa Nascimento> <barbosanascimentogabriel@gmail.com>
+Copyright: (C) 2014 Archisman Panigrahi <apandada1@gmail.com>
+Copyright: (C) 2014 Gabriel Barbosa <barbosanascimentogabriel@gmail.com>
 Copyright: (C) 2014 M. Alsup; Dual licensed: MIT/GPL
 Copyright: (C)?(a=c,c=d):a=[]);if(k&&k.context)j=k.context;d=D[j]||(D[j]=ga(j));k&&d.configure(k);
 Copyright: (C).appendTo(o)}else s=o.children().eq(t.slideCount-1);s.on(t.pagerEvent,function(e){e.preventDefault(),t.API.page(o,e.currentTarget)})})}function i(e,t){var i=this.opts();if(!i.busy||i.manualTrump){var n=e.children().index(t),s=n,o=s>i.currSlide;i.currSlide!=s&&(i.nextSlide=s,i.API.prepareTx(!0,o),i.API.trigger("cycle-pager-activated",[i,e,t]))}}e.extend(e.fn.cycle.defaults,{pager:"> .cycle-pager",pagerActiveClass:"cycle-pager-active",pagerEvent:"click.cycle",pagerTemplate:"<span>&bull;</span>"}),e(document).on("cycle-bootstrap",function(e,i,n){n.buildPagerLink=t}),e(document).on("cycle-slide-added",function(e,t,n,s){t.pager&&(t.API.buildPagerLink(t,n,s),t.API.page=i)}),e(document).on("cycle-slide-removed",function(t,i,n){if(i.pager){var s=i.API.getComponent("pager");s.each(function(){var t=e(this);e(t.children()[n]).remove()})}}),e(document).on("cycle-update-view",function(t,i){var n;i.pager&&(n=i.API.getComponent("pager"),n.each(function(){e(this).children().removeClass(i.pagerActiveClass).eq(i.currSlide).addClass(i.pagerActiveClass)}))}),e(document).on("cycle-destroyed",function(e,t){var i=t.API.getComponent("pager");i&&(i.children().off(t.pagerEvent),t.pagerTemplate&&i.empty())})}(jQuery),/*! prevnext plugin for Cycle2;  version: 20130709 */

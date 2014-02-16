@@ -1,7 +1,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 ### BEGIN LICENSE
-# Copyright (C) 2014 <Gabriel Barbosa Nascimento> <barbosanascimentogabriel@gmail.com>
-# Copyright (C) 2014 <Archisman Panigrahi> <apandada1@gmail.com>
+# Copyright (C) 2014 Gabriel Barbosa <barbosanascimentogabriel@gmail.com>
+# Copyright (C) 2014 Archisman Panigrahi <apandada1@gmail.com>
 # This program is free software: you can redistribute it and/or modify it 
 # under the terms of the GNU General Public License version 3, as published 
 # by the Free Software Foundation.
