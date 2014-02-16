@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>enable_drag</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<script defer data-main="main" src="lib/require.js"></script>
+
+	<script src="main.js"></script>
+	<script src="lib/jquery-1.11.0.min.js"></script>	
+	<script src="lib/jquery.cycle2.min.js"></script>	
+	<script src="lib/upclock.js"></script>
+	<script src="lib/clock.js"></script>
+	<script language="JavaScript">  
+	 //Clock minified
+	 function checklength(e){if(e<10){e="0"+e}return e}function clock(){var e=new Date;var t=checklength(e.getHours());var n=checklength(e.getMinutes());var r=checklength(e.getSeconds());var i=1;var s;if(i==1){if(t>=12){if(t==12){t=12}else{t=t-12}s=t+":"+n+":"+r+" PM"}else if(t<12){if(t==0){t=12}s=t+":"+n+":"+r+" AM"}}if(i==0){s=t+":"+n+":"+r}document.getElementById("clock").innerHTML=s;setTimeout("clock();",500)}
+	</script>  
+	<script>
+	//Animation minified
+	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#hide").animate({top:0},100,function(){$("#settings").animate({top:0},200,function(){$("#animation").fadeIn(1e3)})})})})})
+	</script>
+	<script src="lib/save.js"></script>
+</head>
+<body oncontextmenu="return false;" onload="firstclock()">
+	<div id="container" class="show">
+	
+		<div id="animation" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000" >
+			<img id="i1" src="media/1.png" />
+			<img id="i2" src="media/2.png" />
+			<img id="i3" src="media/3.png" />
+			<img id="i4" src="media/4.png" />
+			<img id="i5" src="media/5.png" />
+		</div>
+
+		<span id="ur"></span>
+
+		<div id="clock">
+			<script language="javascript">
+				<!--
+				clock();
+				//-->
+			</script>
+		</div>
+
+
+		<div id="circle" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000">
+			<img src="media/point-1.svg" />
+			<img src="media/point-2.svg" />
+			<img src="media/point-3.svg" />
+			<img src="media/point-4.svg" />
+			<img src="media/point-5.svg" />
+		</div>
+
+
+		<a id="close">&#10005;</a>	
+		<a id="minimize">_</a>	
+		<a id="hide"><img src="media/hide.svg" /></a>
+		<a id="settings" class="show"><img src="media/settings.svg" /></a>
+
+		
+		<div id="configuration">
+
+			<span class="title1">Themes<hr /></span><br />
+			
+			<span class="classic">
+			Classic
+			<span class="switch"><div><a href="#">Off</a></div></span>
+			</span>
+			<span class="title2">Time<hr /></span>
+			
+			<span class="t24">24 hours<span class="switch"><div><a href="#">Off</a></div></span></span>
+			<span title="Time like AM/PM" class="t12">12 hours<span class="switch"><div><a href="#">Off</a></div></span></span>
+
+			<div id="pallet-color">
+				<span class="c1" style="background-color: #333;"></span>
+				<span class="c2" style="background-color: #535353;"></span>
+				<span class="c3" style="background-color: #16a085;"></span>
+				<span class="c4" style="background-color: #338000;"></span>
+				<span class="c5" style="background-color: #1BA1E2;"></span>
+				<span class="c6" style="background-color: #3B5998;"></span>
+				<span class="c7" style="background-color: #34495e;"></span>
+				<span class="c8" style="background-color: #441650;"></span>
+				<span class="c9" style="background-color: #f39c12;"></span>
+				<span class="c10" style="background-color: #c0392b;"></span>
+			</div>
+
+		</div>
+
+	</div>
+</body>
+</html>

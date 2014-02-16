@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Up Clock
+_Comment=UpClock application
+Categories=GNOME;Utility;
+Exec=up-clock
+Icon=up-clock
+Terminal=false
+Type=Application
