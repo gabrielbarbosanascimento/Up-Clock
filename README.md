@@ -12,7 +12,7 @@ We plan to release Up-Clock for other systems soon.
 
 <h3>HOW TO RUN IT?</h3>
 
-To run this aplication, open the terminal and type cd plus the direction of this directory on your files. Enter on the directory using cd Up-Clock/ and then type quickly run. You need to have quickly installed
+To run this aplication, open the terminal and type cd plus the direction of this directory on your files. Enter on the directory using 'cd Up-Clock/' and then type 'quickly run'. You need to have quickly installed
 
 A PPA is available at https://launchpad.net/~apandada1/+archive/up-clock.
 
