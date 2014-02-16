@@ -1,3 +1,5 @@
 project = up-clock
 version = 12.08.1
 template = ubuntu-application
+ppa = up-clock
+lp_id = up-clock

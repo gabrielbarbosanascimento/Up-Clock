@@ -137,13 +137,13 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 DistUtilsExtra.auto.setup(
     name='up-clock',
-    version='0.1',
+    version='4.1',
     license='GPL-3',
-    #author='Your Name',
-    #author_email='email@ubuntu.com',
+    author='Archisman Panigrahi',
+    author_email='apandada1@gmail.com',
     #description='UI for managing …',
     #long_description='Here a longer description',
-    #url='https://launchpad.net/up-clock',
+    url='https://launchpad.net/up-clock',
     cmdclass={'install': InstallAndUpdateDataDirectory}
     )
 
