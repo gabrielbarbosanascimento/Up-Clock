@@ -61,24 +61,44 @@ $(document).ready(function() {
 	$('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12, .c13, .c14').click(function() {
 		if ($(this).hasClass("c1")) {
 			$('#container, #circle').css("background","#333");
+			$('.c1 img').css('display','block');
+			$('.c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c2")) {
 			$('#container, #circle').css("background","#535353");
+			$('.c2 img').css('display','block');
+			$('.c1 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c3")) {
 			$('#container, #circle').css("background","#16a085");
+			$('.c3 img').css('display','block');
+			$('.c1 img, .c2 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c4")) {
 			$('#container, #circle').css("background","#338000");
+			$('.c4 img').css('display','block');
+			$('.c1 img, .c2 img, .c3 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c5")) {
 			$('#container, #circle').css("background","#1BA1E2");
+			$('.c5 img').css('display','block');
+			$('.c1 img, .c2 img, .c3 img, .c4 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c6")) {
 			$('#container, #circle').css("background","#3B5998");
+			$('.c6 img').css('display','block');
+			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c7")) {
 			$('#container, #circle').css("background","#34495e");
+			$('.c7 img').css('display','block');
+			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c8")) {
 			$('#container, #circle').css("background","#441650");
+			$('.c8 img').css('display','block');
+			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c9")) {
 			$('#container, #circle').css("background","#f39c12");
+			$('.c9 img').css('display','block');
+			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c10")) {
 			$('#container, #circle').css("background","#c0392b");
+			$('.c10 img').css('display','block');
+			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img').css('display','none');
 		}
 	});
 
@@ -105,6 +125,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.png");
 		$('#i5').attr("src","media/5.png");
 		$('#container').css("background","#2f0916");
+		$('#pallet-color span img').css('display','none');
 	});
 	
 	//Clock changing
