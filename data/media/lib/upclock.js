@@ -91,15 +91,13 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch div').css('background-color','#aaa');
-		$('.classic .switch div a').text('Off');
+		$('.classic .switch').css('background-color','#B6B6B6');
 	});
 
 	//Classic button
 	$('.classic').click(function() {
 		$('.classic .switch div').css('float','right');
-		$('.classic .switch div a').text('On');
-		$('.classic .switch div').css('background-color','#3B5998');
+		$('.classic .switch').css('background-color','#fff');
 		$('#circle').fadeOut('fast');
 		$('#i1').attr("src","media/1.png");
 		$('#i2').attr("src","media/2.png");
@@ -114,23 +112,18 @@ $(document).ready(function() {
 		$('#clock').fadeOut('fast');
 		$('#ur').fadeIn('fast');
 		$('.t24 .switch div').css('float','right');
-		$('.t24 .switch div a').text('On');
-		$('.t24 .switch div').css('background-color','#3B5998');
 		$('.t12 .switch div').css('float','left');
-		$('.t12 .switch div').css('background-color','#aaa');
-		$('.t12 .switch div a').text('Off');
+		$('.t12 .switch').css('background-color','#B6B6B6');
+		$('.t24 .switch').css('background-color','#fff');
 
 	});
 	$('.t12').click(function() {
 		$('#clock').fadeIn('fast');
 		$('#ur').fadeOut('fast');
 		$('.t12 .switch div').css('float','right');
-		$('.t12 .switch div a').text('On');
-		$('.t12 .switch div').css('background-color','#3B5998');
 		$('.t24 .switch div').css('float','left');
-		$('.t24 .switch div').css('background-color','#aaa');
-		$('.t24 .switch div a').text('Off');
-
+		$('.t24 .switch').css('background-color','#B6B6B6');
+		$('.t12 .switch').css('background-color','#fff');
 	});
 
 })
