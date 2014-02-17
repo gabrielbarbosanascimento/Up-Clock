@@ -32,16 +32,16 @@ $(document).ready(function() {
 		$('#clock').fadeIn('fast');
 		$('#ur').fadeOut('fast');
 		$('.t12 .switch div').css('float','right');
-		$('.t12 .switch').css('background-color','#fff');
+		$('.t12 .switch').css('background-color','#B6B6B6');
 		$('.t24 .switch div').css('float','left');
-		$('.t24 .switch').css('background-color','#B6B6B6');
+		$('.t24 .switch').css('background-color','#fff');
 	} else if (localStorage.getItem("clock1") === "true") {		
 		$('#clock').fadeOut('fast');
 		$('#ur').fadeIn('fast');
 		$('.t24 .switch div').css('float','right');
-		$('.t24 .switch').css('background-color','#fff');
+		$('.t24 .switch').css('background-color','#B6B6B6');
 		$('.t12 .switch div').css('float','left');
-		$('.t12 .switch').css('background-color','#B6B6B6');
+		$('.t12 .switch').css('background-color','#fff');
 	}
 
 /*----------------------------------------------------------------------*/
@@ -70,7 +70,7 @@ $(document).ready(function() {
 		$('#i5').attr("src","media/5.png");
 		$('#container').css("background","#2f0916");
 		$('.classic .switch div').css('float','right');
-		$('.classic .switch').css('background-color','#fff');
+		$('.classic .switch').css('background-color','#B6B6B6');
 	}
 
 	//Colors
@@ -201,7 +201,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch').css('background-color','#fff');
 		
 	}
 	if (localStorage.getItem("c2") === 'true') {
@@ -213,7 +213,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch').css('background-color','#fff');
 		
 	}
 
@@ -226,7 +226,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch').css('background-color','#fff');
 		
 	}
 
@@ -239,7 +239,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch').css('background-color','#fff');
 		
 	}
 
@@ -252,7 +252,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch').css('background-color','#fff');
 		
 	}
 
@@ -265,7 +265,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch').css('background-color','#fff');
 		
 	}
 
@@ -278,7 +278,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch').css('background-color','#fff');
 		
 	}
 
@@ -291,7 +291,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch').css('background-color','#fff');
 		
 	}
 
@@ -304,7 +304,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch').css('background-color','#fff');
 		
 	}
 
@@ -317,7 +317,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').css('float','left');
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch').css('background-color','#fff');
 		
 	}
 });
