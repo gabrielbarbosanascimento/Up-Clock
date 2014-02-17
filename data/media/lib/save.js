@@ -31,16 +31,16 @@ $(document).ready(function() {
 	if (localStorage.getItem("clock2") === "true") {
 		$('#clock').fadeIn('fast');
 		$('#ur').fadeOut('fast');
-		$('.t12 .switch div').css('float','right');
+		$('.t12 .switch div').animate({right: '-30px'},300);
 		$('.t12 .switch').css('background-color','#B6B6B6');
-		$('.t24 .switch div').css('float','left');
+		$('.t24 .switch div').animate({right: 0},300);
 		$('.t24 .switch').css('background-color','#fff');
 	} else if (localStorage.getItem("clock1") === "true") {		
 		$('#clock').fadeOut('fast');
 		$('#ur').fadeIn('fast');
-		$('.t24 .switch div').css('float','right');
+		$('.t24 .switch div').animate({right: '-30px'},300);
 		$('.t24 .switch').css('background-color','#B6B6B6');
-		$('.t12 .switch div').css('float','left');
+		$('.t12 .switch div').animate({right: 0},300);
 		$('.t12 .switch').css('background-color','#fff');
 	}
 
@@ -69,7 +69,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.png");
 		$('#i5').attr("src","media/5.png");
 		$('#container').css("background","#2f0916");
-		$('.classic .switch div').css('float','right');
+		$('.classic .switch div').animate({right: '-30px'},300);
 		$('.classic .switch').css('background-color','#B6B6B6');
 	}
 
@@ -200,7 +200,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},200);
 		$('.classic .switch').css('background-color','#fff');
 		$('.c1 img').css('display','block');
 	}
@@ -212,7 +212,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},200);
 		$('.classic .switch').css('background-color','#fff');
 		$('.c2 img').css('display','block');
 	}
@@ -225,7 +225,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},200);
 		$('.classic .switch').css('background-color','#fff');
 		$('.c3 img').css('display','block');
 	}
@@ -238,7 +238,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},200);
 		$('.classic .switch').css('background-color','#fff');
 		$('.c4 img').css('display','block');
 	}
@@ -251,7 +251,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},200);
 		$('.classic .switch').css('background-color','#fff');
 		$('.c5 img').css('display','block');
 	}
@@ -264,7 +264,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},200);
 		$('.classic .switch').css('background-color','#fff');
 		$('.c6 img').css('display','block');
 	}
@@ -277,7 +277,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},200);
 		$('.classic .switch').css('background-color','#fff');
 		$('.c7 img').css('display','block');
 	}
@@ -290,7 +290,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},200);
 		$('.classic .switch').css('background-color','#fff');
 		$('.c8 img').css('display','block');		
 	}
@@ -303,7 +303,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},200);
 		$('.classic .switch').css('background-color','#fff');
 		$('.c9 img').css('display','block');		
 	}
@@ -316,7 +316,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},200);
 		$('.classic .switch').css('background-color','#fff');
 		$('.c10 img').css('display','block');
 	}

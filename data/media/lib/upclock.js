@@ -110,13 +110,13 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.svg");
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').css('float','left');
+		$('.classic .switch div').animate({right: 0},300);
 		$('.classic .switch').css('background-color','#fff');
 	});
 
 	//Classic button
 	$('.classic').click(function() {
-		$('.classic .switch div').css('float','right');
+		$('.classic .switch div').animate({right: '-30px'},300);
 		$('.classic .switch').css('background-color','#B6B6B6');
 		$('#circle').fadeOut('fast');
 		$('#i1').attr("src","media/1.png");
@@ -132,8 +132,8 @@ $(document).ready(function() {
 	$('.t24').click(function() {
 		$('#clock').fadeOut('fast');
 		$('#ur').fadeIn('fast');
-		$('.t24 .switch div').css('float','right');
-		$('.t12 .switch div').css('float','left');
+		$('.t24 .switch div').animate({right: '-30px'},300);
+		$('.t12 .switch div').animate({right: 0},200);
 		$('.t12 .switch').css('background-color','#fff');
 		$('.t24 .switch').css('background-color','#B6B6B6');
 
@@ -141,8 +141,8 @@ $(document).ready(function() {
 	$('.t12').click(function() {
 		$('#clock').fadeIn('fast');
 		$('#ur').fadeOut('fast');
-		$('.t12 .switch div').css('float','right');
-		$('.t24 .switch div').css('float','left');
+		$('.t12 .switch div').animate({right: '-30px'},300);
+		$('.t24 .switch div').animate({right: 0},300);
 		$('.t24 .switch').css('background-color','#fff');
 		$('.t12 .switch').css('background-color','#B6B6B6');
 	});
