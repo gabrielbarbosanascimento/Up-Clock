@@ -4,23 +4,8 @@
 	<title>enable_drag</title>
 	<link rel="stylesheet" type="text/css" href="app.css">
 	<script defer data-main="main" src="lib/require.js"></script>
-
-	<script src="main.js"></script>
-	<script src="lib/jquery-1.11.0.min.js"></script>	
-	<script src="lib/jquery.cycle2.min.js"></script>	
-	<script src="lib/upclock.js"></script>
-	<script src="lib/clock.js"></script>
-	<script language="JavaScript">  
-	 //Clock minified
-	 function checklength(e){if(e<10){e="0"+e}return e}function clock(){var e=new Date;var t=checklength(e.getHours());var n=checklength(e.getMinutes());var r=checklength(e.getSeconds());var i=1;var s;if(i==1){if(t>=12){if(t==12){t=12}else{t=t-12}s=t+":"+n+":"+r+" PM"}else if(t<12){if(t==0){t=12}s=t+":"+n+":"+r+" AM"}}if(i==0){s=t+":"+n+":"+r}document.getElementById("clock").innerHTML=s;setTimeout("clock();",500)}
-	</script>  
-	<script>
-	//Animation minified
-	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#hide").animate({top:0},100,function(){$("#settings").animate({top:0},200,function(){$("#animation").fadeIn(1e3)})})})})})
-	</script>
-	<script src="lib/save.js"></script>
 </head>
-<body oncontextmenu="return false;" onload="firstclock()">
+<body oncontextmenu="return false;">
 	<div id="container" class="show">
 	
 		<div id="animation" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000" >
@@ -31,14 +16,17 @@
 			<img id="i5" src="media/5.png" />
 		</div>
 
-		<span id="ur"></span>
+		<span id="ur">
+			<script type="text/javascript">
+				function firstclock(){UR_Nu=new Date;UR_Indhold=showFilled(UR_Nu.getHours())+":"+showFilled(UR_Nu.getMinutes())+":"+showFilled(UR_Nu.getSeconds());document.getElementById("ur").innerHTML=UR_Indhold;setTimeout("firstclock()",1e3)}function showFilled(e){return e>9?""+e:"0"+e}firstclock();
+			</script>
+		</span>
 
 		<div id="clock">
-			<script language="javascript">
-				<!--
-				clock();
-				//-->
-			</script>
+			<script type="text/javascript">  
+	 		//Clock AM/PM function minified
+	 		function checklength(e){if(e<10){e="0"+e}return e}function clock(){var e=new Date;var t=checklength(e.getHours());var n=checklength(e.getMinutes());var r=checklength(e.getSeconds());var i=1;var s;if(i==1){if(t>=12){if(t==12){t=12}else{t=t-12}s=t+":"+n+":"+r+" PM"}else if(t<12){if(t==0){t=12}s=t+":"+n+":"+r+" AM"}}if(i==0){s=t+":"+n+":"+r}document.getElementById("clock").innerHTML=s;setTimeout("clock();",500)}clock()
+			</script>  
 		</div>
 
 
@@ -86,5 +74,28 @@
 		</div>
 
 	</div>
+
+
+
+
+
+
+
+
+	<!--------------------------------------Scripts ------------------------------------------------------>
+
+	<script src="main.js"></script>
+	<script src="lib/jquery-1.11.0.min.js"></script>	
+	<script src="lib/jquery.cycle2.min.js"></script>	
+	<script src="lib/upclock.js"></script>
+	<script language="JavaScript">  
+	 //Clock minified
+	 function checklength(e){if(e<10){e="0"+e}return e}function clock(){var e=new Date;var t=checklength(e.getHours());var n=checklength(e.getMinutes());var r=checklength(e.getSeconds());var i=1;var s;if(i==1){if(t>=12){if(t==12){t=12}else{t=t-12}s=t+":"+n+":"+r+" PM"}else if(t<12){if(t==0){t=12}s=t+":"+n+":"+r+" AM"}}if(i==0){s=t+":"+n+":"+r}document.getElementById("clock").innerHTML=s;setTimeout("clock();",500)}
+	</script>  
+	<script>
+	//Animation minified
+	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#hide").animate({top:0},100,function(){$("#settings").animate({top:0},200,function(){$("#animation").fadeIn(1e3)})})})})})
+	</script>
+	<script src="lib/save.js"></script>
 </body>
 </html>
