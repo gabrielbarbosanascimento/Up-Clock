@@ -47,6 +47,7 @@ body{
 span {
 	color: #565656;
 }
+
 a{
 	color: rgba(255, 255, 255, 0.6);
 	background: transparent;
@@ -241,8 +242,8 @@ hr{
 	top: 30px;
 	background: rgba(245, 245, 245, 1);
 	display: none;
-	-webkit-animation-duration: 0.5s;
-	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
 }
 
 .title1{
