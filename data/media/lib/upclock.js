@@ -21,10 +21,11 @@ $(document).ready(function() {
 
 	//Hide button behavior
 	$('#hide').click(function() {
+		$('a').css('display','0.8')
 		if ($('#container').hasClass('show'))
 		{
 			$('#close, #settings, #minimize').addClass('animated fadeOutDown');
-			$('#hide').animate({left: 0, opacity: '0.5'});
+			$('#hide').animate({left: 0, opacity: '0.8'});
 			$("#container").addClass('hide');
 			$("#container").removeClass('show');
 			$('#close, #settings, #minimize').removeClass('fadeInUp');
@@ -32,11 +33,12 @@ $(document).ready(function() {
 		else
 		{
 			$('#close, #settings, #minimize').addClass('fadeInUp');
-			$('#hide').animate({left: '60px',  opacity: '1'});
+			$('#hide').animate({left: '60px'});
 			$("#container").addClass('show');
 			$("#container").removeClass('hide');
 			$('#close, #settings, #minimize').removeClass('fadeOutDown');
 		}
+
 	});
 
 	//Gear button to open the configurations
@@ -50,8 +52,7 @@ $(document).ready(function() {
 			$(this).css('display','block');
 			$('#configuration').removeClass('fadeOutDown');
 		}
-		else
-		{
+		else {
 			$('#configuration').addClass('fadeOutDown');
 			$(this).addClass('show');
 			$(this).removeClass('hide');
