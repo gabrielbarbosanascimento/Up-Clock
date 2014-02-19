@@ -3,6 +3,7 @@
 <head>
 	<title>enable_drag</title>
 	<link rel="stylesheet" type="text/css" href="app.css">
+	<link rel="stylesheet" href="lib/animate.css">
 	<script defer data-main="main" src="lib/require.js"></script>
 </head>
 <body oncontextmenu="return false;">
@@ -94,7 +95,7 @@
 	</script>  
 	<script>
 	//Animation minified
-	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#hide").animate({top:0},100,function(){$("#settings").animate({top:0},200,function(){$("#animation").fadeIn(1e3)})})})})})
+	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#hide").animate({top:0},100,function(){$("#settings").animate({top:0},200,function(){$("#animation").fadeIn("slow");$("#circle").addClass("animated pulse")})})})})});
 	</script>
 	<script src="lib/save.js"></script>
 </body>

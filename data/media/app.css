@@ -98,6 +98,7 @@ hr{
 	top: 0;
 	left: 0;
 	background: #2f0916;
+	overflow: hidden;
 }
 
 #animation{
@@ -163,6 +164,8 @@ hr{
 	left: 0px;
 	color: white;
 	cursor: pointer;
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
 }
 
 
@@ -183,6 +186,8 @@ hr{
 	color: white;
 	opacity: 0.8;
 	cursor: pointer;
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
 }
 #close:hover, #minimize:hover, #settings:hover, #hide:hover{
 	background: rgba(255, 255, 255, 0.5);
@@ -216,6 +221,8 @@ hr{
 	right: 0px;
 	z-index: 100;
 	cursor: pointer;
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
 }
 #settings img{
 	margin-top: 6px;
@@ -233,8 +240,11 @@ hr{
 	position: absolute;
 	z-index: 99;
 	left: 0px;
-	top: -412px;
+	top: 30px;
 	background: rgba(245, 245, 245, 1);
+	display: none;
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
 }
 
 .title1{

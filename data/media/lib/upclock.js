@@ -17,21 +17,25 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 $(document).ready(function() {
 
+	$('#ur, #clock').addClass('animated bounce');
+
 	//Hide button behavior
 	$('#hide').click(function() {
 		if ($('#container').hasClass('show'))
 		{
-			$('#close, #settings, #minimize').fadeOut('fast');
+			$('#close, #settings, #minimize').addClass('animated fadeOutDown');
 			$('#hide').animate({left: 0, opacity: '0.5'});
 			$("#container").addClass('hide');
 			$("#container").removeClass('show');
+			$('#close, #settings, #minimize').removeClass('fadeInUp');
 		}
 		else
 		{
-			$('#close, #settings, #minimize, #hide').fadeIn('slow');
+			$('#close, #settings, #minimize').addClass('fadeInUp');
 			$('#hide').animate({left: '60px',  opacity: '1'});
 			$("#container").addClass('show');
 			$("#container").removeClass('hide');
+			$('#close, #settings, #minimize').removeClass('fadeOutDown');
 		}
 	});
 
@@ -39,20 +43,19 @@ $(document).ready(function() {
 	$('#settings').click(function() {
 		if ($('#settings').hasClass('show'))
 		{
-			$('#configuration').animate({
-				top: 30
-			},300);
+			$('#configuration').addClass('animated fadeInDown');
 			$(this).addClass('hide');
 			$(this).removeClass('show');
+			$('#configuration').css('display','block');
 			$(this).css('display','block');
+			$('#configuration').removeClass('fadeOutDown');
 		}
 		else
 		{
-			$('#configuration').animate({
-				top: "-412px"
-			},300);
+			$('#configuration').addClass('fadeOutDown');
 			$(this).addClass('show');
 			$(this).removeClass('hide');
+			$('#configuration').removeClass('fadeInDown');
 		}
 	});
 
