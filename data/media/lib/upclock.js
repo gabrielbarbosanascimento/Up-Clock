@@ -28,6 +28,7 @@ $(document).ready(function() {
 			$("#container").addClass('hide');
 			$("#container").removeClass('show');
 			$('#close, #settings, #minimize').removeClass('fadeInUp');
+			$('#close, #settings, #minimize').fadeOut('fast');
 		}
 		else
 		{
@@ -36,6 +37,7 @@ $(document).ready(function() {
 			$("#container").addClass('show');
 			$("#container").removeClass('hide');
 			$('#close, #settings, #minimize').removeClass('fadeOutDown');
+			$('#close, #settings, #minimize').fadeIn('fast');
 		}
 
 	});
