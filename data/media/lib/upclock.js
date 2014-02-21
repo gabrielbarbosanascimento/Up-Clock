@@ -64,17 +64,17 @@ $(document).ready(function() {
 	$('#alarm').click(function() {
 		if ($('#alarm').hasClass('show'))
 		{
-			$('.alarm-settings').addClass('animated fadeInDown');
-			$(this).addClass('hide');
-			$(this).removeClass('show');
+			$('.alarm-settings').addClass('fadeInDown');
 			$('.alarm-settings').css('display','block');
-			$(this).css('display','block');
+			$('.alarm-settings').css('-webkit-animation-duration:','0.2s');
+			$('#alarm').removeClass('show');
+			$('#alarm').addClass('hide')
 			$('.alarm-settings').removeClass('fadeOutDown');
 		}
 		else {
 			$('.alarm-settings').addClass('fadeOutDown');
-			$(this).addClass('show');
-			$(this).removeClass('hide');
+			$('#alarm').addClass('show');
+			$('#alarm').removeClass('hide');
 			$('.alarm-settings').removeClass('fadeInDown');
 		}
 	});

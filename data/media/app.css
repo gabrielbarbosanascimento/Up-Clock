@@ -373,6 +373,12 @@ hr{
 	top: 0px;
 	background-image: url(media/blur.jpg);
 	display: none;
+	
+}
+
+.alarm-settings .animated{
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
 }
 
 .alarm-settings span{
