@@ -59,6 +59,12 @@ a:active, a:hover {
 	outline: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+
 hr{
 	background-color: #eaeaea;
 	color: #eaeaea;
@@ -159,7 +165,7 @@ hr{
 	text-align: center;
 	line-height: 31px;
 	position: absolute;
-	z-index: 2;
+	z-index: 100;
 	top: -30px;
 	left: 0px;
 	color: rgba(255, 255, 255, 0.8);
@@ -182,13 +188,13 @@ hr{
 	cursor: default;
 	top: -30px;
 	left: 30px;
-	z-index: 2;
+	z-index: 100;
 	color: rgba(255, 255, 255, 0.8);
 	cursor: pointer;
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
 }
-#close:hover, #minimize:hover, #settings:hover, #hide:hover{
+#close:hover, #minimize:hover, #settings:hover, #hide:hover, #alarm:hover{
 	background: rgba(255, 255, 255, 0.5);
 }
 
@@ -200,7 +206,7 @@ hr{
 	cursor: default;
 	top: -30px;
 	left: 60px;
-	z-index: 2;
+	z-index: 3;
 	cursor: pointer;
 }
 #hide img{
@@ -218,7 +224,7 @@ hr{
 	position: absolute;
 	top: -30px;
 	right: 0px;
-	z-index: 100;
+	z-index: 3;
 	cursor: pointer;
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
@@ -231,7 +237,27 @@ hr{
 	opacity: 0.85;
 }
 
-/*------------------- eConfiguration Screen ----------------------*/
+#alarm{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: -30px;
+	right: 30px;
+	z-index: 100;
+	cursor: pointer;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+
+#alarm img{
+	margin-top: 6px;
+	margin-left: 6px;
+	width: 18px;
+	height: 18px;
+	opacity: 0.85;
+}
+
+/*------------------- Configuration Screen ----------------------*/
 
 #configuration{
 	width: 442px;
@@ -245,6 +271,8 @@ hr{
 	-webkit-animation-duration: 0.3s;
 	animation-duration: 0.3s;
 }
+
+
 
 .title1{
 	position: relative;
@@ -332,4 +360,74 @@ hr{
 }
 .t24:hover, .t12:hover, .classic:hover{
 	background: rgba(255, 255, 255, 0.3);
+}
+
+/*---------------------Alarm Screen---------------------------*/
+
+.alarm-settings{
+	width: 442px;
+	height: 442px;
+	position: absolute;
+	z-index: 99;
+	left: 0px;
+	top: 0px;
+	background-image: url(media/blur.jpg);
+	display: none;
+}
+
+.alarm-settings span{
+	color: #F7F7F7;
+	text-align: center;
+	font-size: 22px;
+	width: 100%;
+	position: absolute;
+	margin-top: 24px;
+}
+
+.clock-settings{
+	width: 318px;
+	margin: 0 auto;
+	position: relative;
+	top: 70px;
+	padding: 6px;
+
+}
+
+.clock-settings label{
+	text-transform: uppercase;
+	background-color: #f4f4f4;
+	width: 80px;
+	height: 62px;
+	font-size: 11px;
+	display: inline-block;
+	padding: 10px;
+	margin-right: 4px;
+	text-align: center;
+}
+.clock-settings label input{
+	display: block;
+	border: 0;
+	font: inherit;
+	font-size: 17px;
+	padding: 6px;
+	outline: none;
+	text-align: center;
+	width: 59px;
+	margin: 10px auto;
+	background-color:#fff;
+}
+
+
+.btn{
+	width: 110px;
+	padding: 7px 0;
+	color: white;
+	text-align: center;
+	position: relative;
+	font-size: 1.2em;
+	cursor: pointer;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.3);
+	margin: 0 auto;
+	top: 100px;
 }

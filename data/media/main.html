@@ -43,7 +43,9 @@
 		<a id="close">&#10005;</a>	
 		<a id="minimize">_</a>	
 		<a id="hide"><img src="media/hide.svg" /></a>
+		<a id="alarm" class="show"><img src="media/alarm.svg" /></a>
 		<a id="settings" class="show"><img src="media/settings.svg" /></a>
+
 
 		
 		<div id="configuration">
@@ -74,6 +76,31 @@
 
 		</div>
 
+		<div class="alarm-settings">
+			<span>Set Alarm After</span>
+
+			<div class="clock-settings">
+				<label class="hours">
+					Hours
+					<input type="number" value="0" min="0" />
+				</label>
+				
+				<label class="minutes">
+					Minutes
+					<input type="number" value="0" min="0" />
+				</label>
+				
+				<label class="seconds">
+					Seconds
+					<input type="number" value="0" min="0" />
+				</label>
+			</div>
+
+			<div class="buttons">
+				<div class="btn">Set Alarm</div>
+			</div>
+		</div>	
+
 	</div>
 
 
@@ -95,7 +122,7 @@
 	</script>  
 	<script>
 	//Animation minified
-	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#hide").animate({top:0},100,function(){$("#settings").animate({top:0},200,function(){$("#animation").fadeIn("slow");$("#circle").addClass("animated pulse")})})})})});
+	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#hide").animate({top:0},100,function(){$("#settings, #alarm").animate({top:0},200,function(){$("#animation").fadeIn("slow");$("#circle").addClass("animated pulse")})})})})});
 	</script>
 	<script src="lib/save.js"></script>
 </body>

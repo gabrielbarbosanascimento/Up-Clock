@@ -23,21 +23,21 @@ $(document).ready(function() {
 	$('#hide').click(function() {
 		if ($('#container').hasClass('show'))
 		{
-			$('#close, #settings, #minimize').addClass('animated fadeOutDown');
+			$('#close, #settings, #minimize, #alarm').addClass('animated fadeOutDown');
 			$('#hide').animate({left: 0, opacity: '0.8'});
 			$("#container").addClass('hide');
 			$("#container").removeClass('show');
-			$('#close, #settings, #minimize').removeClass('fadeInUp');
-			$('#close, #settings, #minimize').fadeOut('fast');
+			$('#close, #settings, #minimize, #alarm').removeClass('fadeInUp');
+			$('#close, #settings, #minimize, #alarm').fadeOut('fast');
 		}
 		else
 		{
-			$('#close, #settings, #minimize').addClass('fadeInUp');
+			$('#close, #settings, #minimize, #alarm').addClass('fadeInUp');
 			$('#hide').animate({left: '60px'});
 			$("#container").addClass('show');
 			$("#container").removeClass('hide');
-			$('#close, #settings, #minimize').removeClass('fadeOutDown');
-			$('#close, #settings, #minimize').fadeIn('fast');
+			$('#close, #settings, #minimize, #alarm').removeClass('fadeOutDown');
+			$('#close, #settings, #minimize, #alarm').fadeIn('fast');
 		}
 
 	});
@@ -60,6 +60,25 @@ $(document).ready(function() {
 			$('#configuration').removeClass('fadeInDown');
 		}
 	});
+
+	$('#alarm').click(function() {
+		if ($('#alarm').hasClass('show'))
+		{
+			$('.alarm-settings').addClass('animated fadeInDown');
+			$(this).addClass('hide');
+			$(this).removeClass('show');
+			$('.alarm-settings').css('display','block');
+			$(this).css('display','block');
+			$('.alarm-settings').removeClass('fadeOutDown');
+		}
+		else {
+			$('.alarm-settings').addClass('fadeOutDown');
+			$(this).addClass('show');
+			$(this).removeClass('hide');
+			$('.alarm-settings').removeClass('fadeInDown');
+		}
+	});
+
 
 
 	//Color changes
