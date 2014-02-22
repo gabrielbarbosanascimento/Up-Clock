@@ -371,7 +371,7 @@ hr{
 	z-index: 99;
 	left: 0px;
 	top: 0px;
-	background-image: url(media/blur.jpg);
+	background-image: url(media/blur.png);
 	display: none;
 	-webkit-animation-duration: 0.3s;
 	animation-duration: 0.3s;
@@ -470,7 +470,8 @@ hr{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: url(media/blur.jpg);
+	background: url(media/blur.png);
+	background-position: bottom right;
 	z-index: 999;	
 	display: none;
 }

@@ -202,7 +202,7 @@ $(document).ready(function() {
 		}
 
 		$('.btn-close').click(function() {
-			$('.alarm-popup').css('display','none');
+			$('.alarm-popup').fadeOut('slow');
 			$('#alarm').css('display','block');
 		});
 
