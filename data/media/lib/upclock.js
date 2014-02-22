@@ -64,18 +64,18 @@ $(document).ready(function() {
 	$('#alarm').click(function() {
 		if ($('#alarm').hasClass('show'))
 		{
-			$('.alarm-settings').addClass('fadeInDown');
-			$('.alarm-settings').css('display','block');
-			$('.alarm-settings').css('-webkit-animation-duration:','0.2s');
+			$('#alarm-settings').addClass('fadeInDown');
+			$('#alarm-settings').css('display','block');
+			$('#alarm-settings').css('-webkit-animation-duration:','0.2s');
 			$('#alarm').removeClass('show');
 			$('#alarm').addClass('hide')
-			$('.alarm-settings').removeClass('fadeOutDown');
+			$('#alarm-settings').removeClass('fadeOutDown');
 		}
 		else {
-			$('.alarm-settings').addClass('fadeOutDown');
+			$('#alarm-settings').addClass('fadeOutDown');
 			$('#alarm').addClass('show');
 			$('#alarm').removeClass('hide');
-			$('.alarm-settings').removeClass('fadeInDown');
+			$('#alarm-settings').removeClass('fadeInDown');
 		}
 	});
 
@@ -169,6 +169,43 @@ $(document).ready(function() {
 		$('.t24 .switch div').animate({right: 0},300);
 		$('.t24 .switch').css('background-color','#fff');
 		$('.t12 .switch').css('background-color','#B6B6B6');
+	});
+
+
+	//Alarm
+	$('.btn').click(function() {
+		$('#alarm-settings').addClass('fadeOutDown');
+		$('#alarm').addClass('show');
+		$('#alarm').removeClass('hide');
+		$('#alarm-settings').removeClass('fadeInDown');
+
+		var alarmSeconds = $('.seconds input').val() * 1000;
+		var alarmMinutes = $('.minutes input').val() * 60000;
+		var alarmHours = $('.hours input').val() * 3600000;
+
+		var timeLeft = alarmSeconds + alarmMinutes + alarmHours
+
+		if (timeLeft != 0) {
+			$('#alarm').css('display','none');
+
+			setTimeout(function(){		
+				var alarmSound = new Audio('media/alarm.mp3');
+				alarmSound.play();
+
+			},timeLeft);
+
+			setTimeout(function(){		
+				$('.alarm-popup').css('display','block');
+
+			},timeLeft);
+
+		}
+
+		$('.btn-close').click(function() {
+			$('.alarm-popup').css('display','none');
+			$('#alarm').css('display','block');
+		});
+
 	});
 
 })

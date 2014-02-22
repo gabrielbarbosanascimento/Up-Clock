@@ -364,7 +364,7 @@ hr{
 
 /*---------------------Alarm Screen---------------------------*/
 
-.alarm-settings{
+#alarm-settings{
 	width: 442px;
 	height: 442px;
 	position: absolute;
@@ -373,15 +373,13 @@ hr{
 	top: 0px;
 	background-image: url(media/blur.jpg);
 	display: none;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
 	
 }
 
-.alarm-settings .animated{
-	-webkit-animation-duration: 0.3s;
-	animation-duration: 0.3s;
-}
 
-.alarm-settings span{
+#alarm-settings span{
 	color: #F7F7F7;
 	text-align: center;
 	font-size: 22px;
@@ -390,11 +388,18 @@ hr{
 	margin-top: 24px;
 }
 
+#alarm-settings p{
+	color: #F7F7F7;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 80px;
+}
 .clock-settings{
 	width: 318px;
 	margin: 0 auto;
 	position: relative;
-	top: 70px;
+	top: 100px;
 	padding: 6px;
 
 }
@@ -435,5 +440,68 @@ hr{
 	border-radius: 5px;
 	background: rgba(255, 255, 255, 0.3);
 	margin: 0 auto;
+	top: 120px;
+}
+
+/*-------------------- Alarm Touch ----------------------*/
+
+@-webkit-keyframes play {
+	from {
+		-webkit-transform:rotate(45deg);
+	}
+
+	to {
+		-webkit-transform:rotate(-45deg);
+	}
+}
+@keyframes play {
+	from {
+		-webkit-transform:rotate(45deg);
+	}
+
+	to {
+		-webkit-transform:rotate(-45deg);
+	}
+}
+
+.alarm-popup{
+	width: 442px;
+	height: 442px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(media/blur.jpg);
+	z-index: 999;	
+	display: none;
+}
+.alarm-popup span{
+	color: white;
+	text-align: center;
+	width: 100%;
+	font-size: 34px;
+	position: absolute;
+	top: 30px;
+}
+.alarm-popup img{
+	-webkit-animation: play 0.2s linear infinite alternate;
+	animation: play 0.2s linear infinite alternate;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
 	top: 100px;
+}
+.btn-close{
+	width: 110px;
+	padding: 7px 0;
+	color: white;
+	text-align: center;
+	position: relative;
+	font-size: 1.2em;
+	cursor: pointer;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.3);
+	margin: 0 auto;
+	top: 340px;
 }
