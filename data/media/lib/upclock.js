@@ -154,22 +154,25 @@ $(document).ready(function() {
 	
 	//Clock changing
 	$('.t24').click(function() {
-		$('#clock').fadeOut('fast');
-		$('#ur').fadeIn('fast');
-		$('.t24 .switch div').animate({right: '-30px'},300);
-		$('.t12 .switch div').animate({right: 0},200);
-		$('.t12 .switch').css('background-color','#fff');
-		$('.t24 .switch').css('background-color','#B6B6B6');
+		if ($('.t24').hasClass('on')) {
+			$('.t24 .switch div').animate({right: '-30px'},300);
+			$('.t24 .switch').css('background-color','#B6B6B6');
+			$('#clock').fadeOut('fast');
+			$('#ur').fadeIn('fast');
+			$('.t24').addClass('off');
+			$('.t24').removeClass('on');
+		} 
+		else {
+			$('.t24 .switch div').animate({right: '0'},300);
+			$('.t24 .switch').css('background-color','#fff');
+			$('#clock').fadeIn('fast');
+			$('#ur').fadeOut('fast');
+			$('.t24').addClass('on');
+			$('.t24').removeClass('off');
+		}
+		
+	});
 
-	});
-	$('.t12').click(function() {
-		$('#clock').fadeIn('fast');
-		$('#ur').fadeOut('fast');
-		$('.t12 .switch div').animate({right: '-30px'},300);
-		$('.t24 .switch div').animate({right: 0},300);
-		$('.t24 .switch').css('background-color','#fff');
-		$('.t12 .switch').css('background-color','#B6B6B6');
-	});
 
 
 	//Alarm
@@ -202,8 +205,10 @@ $(document).ready(function() {
 		}
 
 		$('.btn-close').click(function() {
-			$('.alarm-popup').fadeOut('slow');
-			$('#alarm').css('display','block');
+			$('.alarm-popup').fadeOut('slow', function() {
+				$('#alarm-settings').css('display','none');
+			});
+			$('#alarm').css('display','block');		
 		});
 
 	});

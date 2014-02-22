@@ -17,31 +17,28 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 $(document).ready(function() {
 	//Saving clock users preferences
-	$(".t12").click(function() {
-		localStorage.setItem('clock2', 'true');
-		localStorage.removeItem('clock1', 'true');
-
-	});
-
 	$(".t24").click(function() {
-		localStorage.setItem('clock1', 'true');
-		localStorage.removeItem('clock2', 'true');
+		if ($('.t24').hasClass('off')) {
+			localStorage.setItem('clock2', 'true');
+			localStorage.removeItem('clock1', 'true');
+		} else {
+			localStorage.setItem('clock1', 'true');
+			localStorage.removeItem('clock2', 'true');
+		}
 	});
 
-	if (localStorage.getItem("clock2") === "true") {
+	if (localStorage.getItem("clock1") === "true") {
 		$('#clock').fadeIn('fast');
 		$('#ur').fadeOut('fast');
-		$('.t12 .switch div').animate({right: '-30px'},300);
-		$('.t12 .switch').css('background-color','#B6B6B6');
 		$('.t24 .switch div').animate({right: 0},300);
 		$('.t24 .switch').css('background-color','#fff');
-	} else if (localStorage.getItem("clock1") === "true") {		
+	} else if (localStorage.getItem("clock2") === "true") {		
 		$('#clock').fadeOut('fast');
 		$('#ur').fadeIn('fast');
 		$('.t24 .switch div').animate({right: '-30px'},300);
 		$('.t24 .switch').css('background-color','#B6B6B6');
-		$('.t12 .switch div').animate({right: 0},300);
-		$('.t12 .switch').css('background-color','#fff');
+		$('.t24').addClass('off');
+		$('.t24').removeClass('on');
 	}
 
 /*----------------------------------------------------------------------*/
