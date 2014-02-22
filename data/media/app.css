@@ -426,6 +426,8 @@ hr{
 	width: 59px;
 	margin: 10px auto;
 	background-color:#fff;
+	-webkit-user-select: inherit;
+	user-select: inherit;
 }
 
 
@@ -484,8 +486,7 @@ hr{
 	top: 30px;
 }
 .alarm-popup img{
-	-webkit-animation: play 0.2s linear infinite alternate;
-	animation: play 0.2s linear infinite alternate;
+
 	width: 200px;
 	height: 200px;
 	position: absolute;

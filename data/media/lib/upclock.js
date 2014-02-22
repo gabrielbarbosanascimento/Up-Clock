@@ -181,6 +181,8 @@ $(document).ready(function() {
 		$('#alarm').addClass('show');
 		$('#alarm').removeClass('hide');
 		$('#alarm-settings').removeClass('fadeInDown');
+		$('.alarm-popup img').css('-webkit-animation','play 0.2s linear infinite alternate');
+		$('.alarm-popup img').css('animation','play 0.2s linear infinite alternate');
 
 		var alarmSeconds = $('.seconds input').val() * 1000;
 		var alarmMinutes = $('.minutes input').val() * 60000;
@@ -192,7 +194,7 @@ $(document).ready(function() {
 			$('#alarm').css('display','none');
 
 			setTimeout(function(){		
-				var alarmSound = new Audio('media/alarm.mp3');
+				var alarmSound = new Audio('media/alarm.ogg');
 				alarmSound.play();
 
 			},timeLeft);
@@ -209,6 +211,8 @@ $(document).ready(function() {
 				$('#alarm-settings').css('display','none');
 			});
 			$('#alarm').css('display','block');		
+			$('.alarm-popup img').css('-webkit-animation','0');
+			$('.alarm-popup img').css('animation','0');
 		});
 
 	});
