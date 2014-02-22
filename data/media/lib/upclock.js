@@ -23,21 +23,21 @@ $(document).ready(function() {
 	$('#hide').click(function() {
 		if ($('#container').hasClass('show'))
 		{
-			$('#close, #settings, #minimize').addClass('animated fadeOutDown');
+			$('#close, #settings, #minimize, #alarm').addClass('animated fadeOutDown');
 			$('#hide').animate({left: 0, opacity: '0.8'});
 			$("#container").addClass('hide');
 			$("#container").removeClass('show');
-			$('#close, #settings, #minimize').removeClass('fadeInUp');
-			$('#close, #settings, #minimize').fadeOut('fast');
+			$('#close, #settings, #minimize, #alarm').removeClass('fadeInUp');
+			$('#close, #settings, #minimize, #alarm').fadeOut('fast');
 		}
 		else
 		{
-			$('#close, #settings, #minimize').addClass('fadeInUp');
+			$('#close, #settings, #minimize, #alarm').addClass('fadeInUp');
 			$('#hide').animate({left: '60px'});
 			$("#container").addClass('show');
 			$("#container").removeClass('hide');
-			$('#close, #settings, #minimize').removeClass('fadeOutDown');
-			$('#close, #settings, #minimize').fadeIn('fast');
+			$('#close, #settings, #minimize, #alarm').removeClass('fadeOutDown');
+			$('#close, #settings, #minimize, #alarm').fadeIn('fast');
 		}
 
 	});
@@ -60,6 +60,25 @@ $(document).ready(function() {
 			$('#configuration').removeClass('fadeInDown');
 		}
 	});
+
+	$('#alarm').click(function() {
+		if ($('#alarm').hasClass('show'))
+		{
+			$('#alarm-settings').addClass('fadeInDown');
+			$('#alarm-settings').css('display','block');
+			$('#alarm-settings').css('-webkit-animation-duration:','0.2s');
+			$('#alarm').removeClass('show');
+			$('#alarm').addClass('hide')
+			$('#alarm-settings').removeClass('fadeOutDown');
+		}
+		else {
+			$('#alarm-settings').addClass('fadeOutDown');
+			$('#alarm').addClass('show');
+			$('#alarm').removeClass('hide');
+			$('#alarm-settings').removeClass('fadeInDown');
+		}
+	});
+
 
 
 	//Color changes
@@ -150,6 +169,43 @@ $(document).ready(function() {
 		$('.t24 .switch div').animate({right: 0},300);
 		$('.t24 .switch').css('background-color','#fff');
 		$('.t12 .switch').css('background-color','#B6B6B6');
+	});
+
+
+	//Alarm
+	$('.btn').click(function() {
+		$('#alarm-settings').addClass('fadeOutDown');
+		$('#alarm').addClass('show');
+		$('#alarm').removeClass('hide');
+		$('#alarm-settings').removeClass('fadeInDown');
+
+		var alarmSeconds = $('.seconds input').val() * 1000;
+		var alarmMinutes = $('.minutes input').val() * 60000;
+		var alarmHours = $('.hours input').val() * 3600000;
+
+		var timeLeft = alarmSeconds + alarmMinutes + alarmHours
+
+		if (timeLeft != 0) {
+			$('#alarm').css('display','none');
+
+			setTimeout(function(){		
+				var alarmSound = new Audio('media/alarm.mp3');
+				alarmSound.play();
+
+			},timeLeft);
+
+			setTimeout(function(){		
+				$('.alarm-popup').css('display','block');
+
+			},timeLeft);
+
+		}
+
+		$('.btn-close').click(function() {
+			$('.alarm-popup').css('display','none');
+			$('#alarm').css('display','block');
+		});
+
 	});
 
 })
