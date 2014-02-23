@@ -80,6 +80,7 @@ $(document).ready(function() {
 			$('#alarm').removeClass('hide');
 			$('#alarm-settings').removeClass('fadeInUp');
 			$('#settings').css('z-index','100');
+			$('#alarm-settings').fadeOut('slow');
 		}
 	});
 
