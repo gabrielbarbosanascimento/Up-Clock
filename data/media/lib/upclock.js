@@ -60,6 +60,7 @@ $(document).ready(function() {
 			$(this).removeClass('hide');
 			$('#configuration').removeClass('fadeInUp');
 			$('#alarm').css('z-index','100');
+			$('#configuration').fadeOut('fast');
 		}
 	});
 
@@ -197,11 +198,13 @@ $(document).ready(function() {
 
 		var timeLeft = alarmSeconds + alarmMinutes + alarmHours
 
+		var alarmSound = new Audio('media/alarm.ogg');
+
 		if (timeLeft != 0) {
 			$('#alarm').css('display','none');
 
 			setTimeout(function(){		
-				var alarmSound = new Audio('media/alarm.ogg');
+				alarmSound.loop = true;
 				alarmSound.play();
 
 			},timeLeft);
@@ -220,6 +223,7 @@ $(document).ready(function() {
 			$('#alarm').css('display','block');		
 			$('.alarm-popup img').css('-webkit-animation','0');
 			$('.alarm-popup img').css('animation','0');
+			alarmSound.pause();
 		});
 
 	});

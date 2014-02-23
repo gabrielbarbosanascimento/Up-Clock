@@ -272,20 +272,25 @@ hr{
 	animation-duration: 0.3s;
 }
 
+.group{
+	width: 100%;
+	background: rgba(255, 255, 255, 0.2);
+	position: relative;
+}
 
 
 .title1{
 	position: relative;
 	font-size: 22px;
 	margin-left: 15px;
-	top: 40px;
+	top: 0;
 	color: white;
 	opacity: 0.9;
 }.title2{
 	position: relative;
 	font-size: 22px;
 	margin-left: 15px;
-	top: 170px;
+	top: 0px;
 	color: white;
 	opacity: 0.9;
 }
@@ -294,10 +299,9 @@ hr{
 #pallet-color{
 	width: 300px;
 	font-size: 0;
-	margin-top: 10px;
-	display: inline-block;
-	position: absolute;
-	top: 67px;
+	margin-top: 5px;
+	position: relative;
+	top: 0;
 	left: 15px;
 }
 
@@ -318,7 +322,7 @@ hr{
 
 .classic{
 	position: absolute;
-	top: 120px;
+	top: 68px;
 	left: 15px;
 	font-size: 17px;
 	cursor: pointer;
@@ -335,7 +339,7 @@ hr{
 .t24{
 	cursor: pointer;
 	position: absolute;
-	top: 235px;
+	top: 34px;
 	left: 15px;
 	font-size: 17px;
 	width: 412px;
