@@ -46,36 +46,40 @@ $(document).ready(function() {
 	$('#settings').click(function() {
 		if ($('#settings').hasClass('show'))
 		{
-			$('#configuration').addClass('animated fadeInDown');
+			$('#configuration').addClass('animated fadeInUp');
 			$(this).addClass('hide');
 			$(this).removeClass('show');
 			$('#configuration').css('display','block');
 			$(this).css('display','block');
 			$('#configuration').removeClass('fadeOutDown');
+			$('#alarm').css('z-index','98');
 		}
 		else {
 			$('#configuration').addClass('fadeOutDown');
 			$(this).addClass('show');
 			$(this).removeClass('hide');
-			$('#configuration').removeClass('fadeInDown');
+			$('#configuration').removeClass('fadeInUp');
+			$('#alarm').css('z-index','100');
 		}
 	});
 
 	$('#alarm').click(function() {
 		if ($('#alarm').hasClass('show'))
 		{
-			$('#alarm-settings').addClass('fadeInDown');
+			$('#alarm-settings').addClass('fadeInUp');
 			$('#alarm-settings').css('display','block');
 			$('#alarm-settings').css('-webkit-animation-duration:','0.2s');
 			$('#alarm').removeClass('show');
 			$('#alarm').addClass('hide')
 			$('#alarm-settings').removeClass('fadeOutDown');
+			$('#settings').css('z-index','98');
 		}
 		else {
 			$('#alarm-settings').addClass('fadeOutDown');
 			$('#alarm').addClass('show');
 			$('#alarm').removeClass('hide');
-			$('#alarm-settings').removeClass('fadeInDown');
+			$('#alarm-settings').removeClass('fadeInUp');
+			$('#settings').css('z-index','100');
 		}
 	});
 
@@ -135,13 +139,13 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},300);
-		$('.classic .switch').css('background-color','#fff');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
 	});
 
 	//Classic button
 	$('.classic').click(function() {
-		$('.classic .switch div').animate({right: '-30px'},300);
-		$('.classic .switch').css('background-color','#B6B6B6');
+		$('.classic .switch div').animate({right: '-20px'},300);
+		$('.classic .switch').css('background-color','rgba(0, 0, 0, 0.2)');
 		$('#circle').fadeOut('fast');
 		$('#i1').attr("src","media/1.png");
 		$('#i2').attr("src","media/2.png");
@@ -155,8 +159,8 @@ $(document).ready(function() {
 	//Clock changing
 	$('.t24').click(function() {
 		if ($('.t24').hasClass('on')) {
-			$('.t24 .switch div').animate({right: '-30px'},300);
-			$('.t24 .switch').css('background-color','#B6B6B6');
+			$('.t24 .switch div').animate({right: '-20px'},300);
+			$('.t24 .switch').css('background-color','rgba(0, 0, 0, 0.2)');
 			$('#clock').fadeOut('fast');
 			$('#ur').fadeIn('fast');
 			$('.t24').addClass('off');
@@ -164,7 +168,7 @@ $(document).ready(function() {
 		} 
 		else {
 			$('.t24 .switch div').animate({right: '0'},300);
-			$('.t24 .switch').css('background-color','#fff');
+			$('.t24 .switch').css('background-color','rgba(255, 255, 255, 0.2)');
 			$('#clock').fadeIn('fast');
 			$('#ur').fadeOut('fast');
 			$('.t24').addClass('on');
@@ -181,8 +185,10 @@ $(document).ready(function() {
 		$('#alarm').addClass('show');
 		$('#alarm').removeClass('hide');
 		$('#alarm-settings').removeClass('fadeInDown');
+		$('#alarm-settings').fadeOut('slow');
 		$('.alarm-popup img').css('-webkit-animation','play 0.2s linear infinite alternate');
 		$('.alarm-popup img').css('animation','play 0.2s linear infinite alternate');
+		$('#settings').css('z-index','100');
 
 		var alarmSeconds = $('.seconds input').val() * 1000;
 		var alarmMinutes = $('.minutes input').val() * 60000;

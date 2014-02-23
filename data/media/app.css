@@ -45,7 +45,7 @@ body{
 }
 
 span {
-	color: #565656;
+	color: white;
 }
 
 a{
@@ -77,22 +77,22 @@ hr{
 }
 
 .switch{
-	width: 60px;
+	width: 50px;
 	height: 30px;
 	display: inline-block;
-	background-color: #B6B6B6;
+	background-color: rgba(255, 255, 255, 0.3)
 	-webkit-border-radius: 15px;
 	border-radius: 15px;
 }
 .switch div{
-	width: 30px;
-	height: 30px;
+	width: 26px;
+	height: 26px;
+	margin: 2px;
 	background: white;
 	-webkit-border-radius: 15px;
 	border-radius: 15px;
 	color: white;
 	position: relative;
-	box-shadow: inset 0 0 0 1px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.2);
 }
 
 /*---------------------------------------------------------*/
@@ -224,7 +224,7 @@ hr{
 	position: absolute;
 	top: -30px;
 	right: 0px;
-	z-index: 3;
+	z-index: 100;
 	cursor: pointer;
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
@@ -261,12 +261,12 @@ hr{
 
 #configuration{
 	width: 442px;
-	height: 412px;
+	height: 442px;
 	position: absolute;
 	z-index: 99;
 	left: 0px;
-	top: 30px;
-	background: rgba(245, 245, 245, 1);
+	top: 0px;
+	background: url(media/blur.png) center;
 	display: none;
 	-webkit-animation-duration: 0.3s;
 	animation-duration: 0.3s;
@@ -278,15 +278,15 @@ hr{
 	position: relative;
 	font-size: 22px;
 	margin-left: 15px;
-	top: 10px;
-	color: #565656;
+	top: 40px;
+	color: white;
 	opacity: 0.9;
 }.title2{
 	position: relative;
 	font-size: 22px;
 	margin-left: 15px;
-	top: 95px;
-	color: #565656;
+	top: 170px;
+	color: white;
 	opacity: 0.9;
 }
 
@@ -297,7 +297,7 @@ hr{
 	margin-top: 10px;
 	display: inline-block;
 	position: absolute;
-	top: 43px;
+	top: 67px;
 	left: 15px;
 }
 
@@ -318,11 +318,12 @@ hr{
 
 .classic{
 	position: absolute;
-	top: 100px;
+	top: 120px;
 	left: 15px;
 	font-size: 17px;
 	cursor: pointer;
 	width: 412px;
+	color: white;
 }
 
 .classic .switch{
@@ -334,7 +335,7 @@ hr{
 .t24{
 	cursor: pointer;
 	position: absolute;
-	top: 230px;
+	top: 235px;
 	left: 15px;
 	font-size: 17px;
 	width: 412px;
@@ -343,23 +344,6 @@ hr{
 	position: absolute;
 	top: -4px;
 	right: 0;
-}
-.t12{
-	cursor: pointer;
-	position: absolute;
-	top: 270px;
-	left: 15px;
-	font-size: 17px;
-	width: 412px;
-}
-
-.t12 .switch{
-	position: absolute;
-	top: -4px;
-	right: 0;
-}
-.t24:hover, .t12:hover, .classic:hover{
-	background: rgba(255, 255, 255, 0.3);
 }
 
 /*---------------------Alarm Screen---------------------------*/
@@ -371,7 +355,7 @@ hr{
 	z-index: 99;
 	left: 0px;
 	top: 0px;
-	background-image: url(media/blur.png);
+	background: url(media/blur.png) center top;
 	display: none;
 	-webkit-animation-duration: 0.3s;
 	animation-duration: 0.3s;
@@ -426,8 +410,8 @@ hr{
 	width: 59px;
 	margin: 10px auto;
 	background-color:#fff;
-	-webkit-user-select: inherit;
-	user-select: inherit;
+	-webkit-user-select: all;
+	user-select: all;
 }
 
 
@@ -472,7 +456,7 @@ hr{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: url(media/blur.png);
+	background: url(media/blur.png) center bottom;
 	background-position: bottom right;
 	z-index: 999;	
 	display: none;
