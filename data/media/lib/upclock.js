@@ -191,6 +191,15 @@ $(document).ready(function() {
 		$('.alarm-popup img').css('-webkit-animation','play 0.2s linear infinite alternate');
 		$('.alarm-popup img').css('animation','play 0.2s linear infinite alternate');
 		$('#settings').css('z-index','100');
+		$('#alarm-count').css('opacity', '1');
+		$('#alarm-count').fadeIn('fast');
+		$('#alarm-count').addClass('fadeInUp');
+		$('#alarm-count img').addClass('animated rollIn');
+		$('#alarm-count p').addClass('animated bounce');
+		setTimeout(function(){		
+			$('#alarm-count').fadeOut('slow');
+		}, 3000);
+		
 
 		var alarmSeconds = $('.seconds input').val() * 1000;
 		var alarmMinutes = $('.minutes input').val() * 60000;
@@ -214,12 +223,29 @@ $(document).ready(function() {
 
 			},timeLeft);
 
+			setInterval(function () {
+
+			var countdown = $('#alarm-count p');
+			var countdownMins = timeLeft / 60000;
+
+			cdMins = countdownMins.toFixed(2);	
+
+			countdown.text("You activated a timer for " + cdMins + " minutes"); 
+			
+			}, 100);
+
 		}
 
 		$('.btn-close').click(function() {
 			$('.alarm-popup').fadeOut('slow', function() {
 				$('#alarm-settings').css('display','none');
 			});
+			$('#alarm-count').css('opacity', '0');
+			$('#alarm-count').removeClass('fadeInUp');
+			$('#alarm-count').addClass('fadeOutBottom');
+			$('#alarm').addClass('show');
+			$('#alarm').removeClass('time-show');
+			$('#alarm').removeClass('time-hide');
 			$('#alarm').css('display','block');		
 			$('.alarm-popup img').css('-webkit-animation','0');
 			$('.alarm-popup img').css('animation','0');
