@@ -31,7 +31,7 @@ $(document).ready(function() {
 		$('#clock').fadeIn('fast');
 		$('#ur').fadeOut('fast');
 		$('.t24 .switch div').animate({right: 0},300);
-		$('.t24 .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.t24 .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 	} else if (localStorage.getItem("clock2") === "true") {		
 		$('#clock').fadeOut('fast');
 		$('#ur').fadeIn('fast');
@@ -198,7 +198,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c1 img').css('display','block');
 	}
 	if (localStorage.getItem("c2") === 'true') {
@@ -210,7 +210,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c2 img').css('display','block');
 	}
 
@@ -223,7 +223,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c3 img').css('display','block');
 	}
 
@@ -236,7 +236,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c4 img').css('display','block');
 	}
 
@@ -249,7 +249,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c5 img').css('display','block');
 	}
 
@@ -262,7 +262,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c6 img').css('display','block');
 	}
 
@@ -275,7 +275,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c7 img').css('display','block');
 	}
 
@@ -288,7 +288,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c8 img').css('display','block');		
 	}
 
@@ -301,7 +301,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c9 img').css('display','block');		
 	}
 
@@ -314,7 +314,7 @@ $(document).ready(function() {
 		$('#i4').attr("src","media/4.svg");
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c10 img').css('display','block');
 	}
 });
