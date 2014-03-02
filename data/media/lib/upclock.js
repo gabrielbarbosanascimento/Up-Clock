@@ -33,7 +33,7 @@ $(document).ready(function() {
 		else
 		{
 			$('#close, #settings, #minimize, #alarm').addClass('fadeInUp');
-			$('#hide').animate({left: '60px'});
+			$('#hide').animate({left: '60px', opacity: '1'});
 			$("#container").addClass('show');
 			$("#container").removeClass('hide');
 			$('#close, #settings, #minimize, #alarm').removeClass('fadeOutDown');
@@ -46,21 +46,32 @@ $(document).ready(function() {
 	$('#settings').click(function() {
 		if ($('#settings').hasClass('show'))
 		{
-			$('#configuration').addClass('animated fadeInUp');
-			$(this).addClass('hide');
-			$(this).removeClass('show');
-			$('#configuration').css('display','block');
-			$(this).css('display','block');
-			$('#configuration').removeClass('fadeOutDown');
-			$('#alarm').css('z-index','98');
+			$('#animation').animate({
+				marginLeft: '-285px',
+				width: '383px',
+				height: '383px',
+				top: '30px'
+			});
+			$('#circle').animate({
+				left: '-250px'
+			});
+			$('#settings').addClass('hide');
+			$('#settings').removeClass('show');
+			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.95)');
 		}
 		else {
-			$('#configuration').addClass('fadeOutDown');
-			$(this).addClass('show');
-			$(this).removeClass('hide');
-			$('#configuration').removeClass('fadeInUp');
-			$('#alarm').css('z-index','100');
-			$('#configuration').fadeOut('fast');
+			$('#animation').animate({
+				marginLeft: 0,
+				width: '442px',
+				height: '442px',
+				top: 0
+			});
+			$('#circle').animate({
+				left: '76px'
+			});
+			$('#settings').addClass('show');
+			$('#settings').removeClass('hide');
+			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.65)');
 		}
 	});
 
@@ -90,43 +101,43 @@ $(document).ready(function() {
 	//Color changes
 	$('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10').click(function() {
 		if ($(this).hasClass("c1")) {
-			$('#container, #circle').css("background","#333");
+			$('#animation, #circle').css("background","#333");
 			$('.c1 img').css('display','block');
 			$('.c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c2")) {
-			$('#container, #circle').css("background","#535353");
+			$('#animation, #circle').css("background","#535353");
 			$('.c2 img').css('display','block');
 			$('.c1 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c3")) {
-			$('#container, #circle').css("background","#16a085");
+			$('#animation, #circle').css("background","#16a085");
 			$('.c3 img').css('display','block');
 			$('.c1 img, .c2 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c4")) {
-			$('#container, #circle').css("background","#338000");
+			$('#animation, #circle').css("background","#338000");
 			$('.c4 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c5")) {
-			$('#container, #circle').css("background","#1BA1E2");
+			$('#animation, #circle').css("background","#1BA1E2");
 			$('.c5 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c6")) {
-			$('#container, #circle').css("background","#3B5998");
+			$('#animation, #circle').css("background","#3B5998");
 			$('.c6 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c7")) {
-			$('#container, #circle').css("background","#34495e");
+			$('#animation, #circle').css("background","#34495e");
 			$('.c7 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c8 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c8")) {
-			$('#container, #circle').css("background","#441650");
+			$('#animation, #circle').css("background","#441650");
 			$('.c8 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c9 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c9")) {
-			$('#container, #circle').css("background","#f39c12");
+			$('#animation, #circle').css("background","#f39c12");
 			$('.c9 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c10 img').css('display','none');
 		} else if ($(this).hasClass("c10")) {
-			$('#container, #circle').css("background","#c0392b");
+			$('#animation, #circle').css("background","#c0392b");
 			$('.c10 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img').css('display','none');
 		}
@@ -154,7 +165,7 @@ $(document).ready(function() {
 		$('#i3').attr("src","media/3.png");
 		$('#i4').attr("src","media/4.png");
 		$('#i5').attr("src","media/5.png");
-		$('#container').css("background","#2f0916");
+		$('#animation').css("background","#2f0916");
 		$('#pallet-color span img').css('display','none');
 	});
 	
