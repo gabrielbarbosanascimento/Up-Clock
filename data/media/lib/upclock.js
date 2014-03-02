@@ -47,10 +47,10 @@ $(document).ready(function() {
 		if ($('#settings').hasClass('show'))
 		{
 			$('#animation').animate({
-				marginLeft: '-285px',
-				width: '383px',
-				height: '383px',
-				top: '30px'
+				marginLeft: '-250px',
+				width: '350px',
+				height: '350px',
+				top: '50px'
 			});
 			$('#circle').animate({
 				left: '-250px'
