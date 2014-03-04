@@ -360,10 +360,7 @@ hr{
 	left: 0px;
 	top: 0px;
 	background: url(media/blur.png) center top;
-	display: none;
-	-webkit-animation-duration: 0.3s;
-	animation-duration: 0.3s;
-	
+	display: none;	
 }
 
 
