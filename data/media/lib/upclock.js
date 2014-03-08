@@ -170,7 +170,7 @@ $(document).ready(function() {
 	//Custom Button
 	$('.custom').click(function() {
 		var color = prompt("Set the color in hexa decimal (with sharp #) !");
-		if (color == null) { 
+		if (color == null, color.length !== 7, color.length !== 4) { 
 			
 		} else {
 			$('.custom').css("background","rgba(0, 0, 0, 0.3)");
