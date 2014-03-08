@@ -317,4 +317,5 @@ $(document).ready(function() {
 		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 		$('.c10 img').css('display','block');
 	}
+	
 });

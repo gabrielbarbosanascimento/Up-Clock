@@ -51,10 +51,10 @@ $(document).ready(function() {
 				width: '350px',
 				height: '350px',
 				top: '50px'
-			});
+			}, 250);
 			$('#circle').animate({
 				left: '-250px'
-			});
+			}, 250);
 			$('#settings').addClass('hide');
 			$('#settings').removeClass('show');
 			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.95)');
@@ -65,10 +65,10 @@ $(document).ready(function() {
 				width: '442px',
 				height: '442px',
 				top: 0
-			});
+			}, 250);
 			$('#circle').animate({
 				left: '76px'
-			});
+			}, 250);
 			$('#settings').addClass('show');
 			$('#settings').removeClass('hide');
 			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.65)');
@@ -149,6 +149,7 @@ $(document).ready(function() {
 		$('#i5').attr("src","media/5.svg");
 		$('.classic .switch div').animate({right: 0},300);
 		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+		$('.custom').css("background","rgba(255, 255, 255, 0.5)");
 	});
 
 	//Classic button
@@ -163,8 +164,32 @@ $(document).ready(function() {
 		$('#i5').attr("src","media/5.png");
 		$('#animation').css("background","#2f0916");
 		$('#pallet-color span img').css('display','none');
+		$('.custom').css("background","rgba(255, 255, 255, 0.5)");
 	});
 	
+	//Custom Button
+	$('.custom').click(function() {
+		var color = prompt("Set the color in hexa decimal (with sharp #) !");
+		if (color == null) { 
+			
+		} else {
+			$('.custom').css("background","rgba(0, 0, 0, 0.3)");
+			$('#circle').fadeIn('fast');
+			$('#i1').attr("src","media/1.svg");
+			$('#i2').attr("src","media/2.svg");
+			$('#i3').attr("src","media/3.svg");
+			$('#i4').attr("src","media/4.svg");
+			$('#i5').attr("src","media/5.svg");
+			$('.classic .switch div').animate({right: 0},300);
+			$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+			$('#animation, #circle').css("background",color);
+			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
+			localStorage.setItem("color", 'true');
+		}
+
+	});
+	
+
 	//Clock changing
 	$('.t24').click(function() {
 		if ($('.t24').hasClass('on')) {

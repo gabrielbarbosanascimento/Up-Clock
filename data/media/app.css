@@ -336,6 +336,17 @@ hr{
 	right: 0;
 }
 
+.custom{
+	cursor: pointer;
+	position: relative;
+	float: right;
+	padding: 10px 20px;
+	background: rgba(255, 255, 255, 0.5);
+	margin: -50px 63px;
+	border-radius: 5px;
+}
+
+
 .t24{
 	cursor: pointer;
 	position: absolute;
