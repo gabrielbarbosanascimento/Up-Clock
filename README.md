@@ -1,7 +1,7 @@
 Up-Clock
 ========
 
-A beautiful clock inspired by the [Ubuntu Touch clock app](https://wiki.ubuntu.com/Touch/CoreApps/Clock).
+A beautiful clock inspired by the [Ubuntu Touch Lockscreen](https://www.youtube.com/watch?v=iaC6EctpIas).
 
 ![screenshot](https://dl.dropboxusercontent.com/u/84627545/app.png)
 

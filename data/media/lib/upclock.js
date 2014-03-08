@@ -184,7 +184,6 @@ $(document).ready(function() {
 			$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
 			$('#animation, #circle').css("background",color);
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
-			localStorage.setItem("color", 'true');
 		}
 
 	});
