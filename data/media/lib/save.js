@@ -26,19 +26,11 @@ $(document).ready(function() {
 			localStorage.removeItem('clock2', 'true');
 		}
 	});
-
+	
 	if (localStorage.getItem("clock1") === "true") {
-		$('#clock').fadeIn('fast');
-		$('#ur').fadeOut('fast');
-		$('.t24 .switch div').animate({right: 0},300);
-		$('.t24 .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		clock2();
 	} else if (localStorage.getItem("clock2") === "true") {		
-		$('#clock').fadeOut('fast');
-		$('#ur').fadeIn('fast');
-		$('.t24 .switch div').animate({right: '-20px'},300);
-		$('.t24 .switch').css('background-color','rgba(0, 0, 0, 0.2)');
-		$('.t24').addClass('off');
-		$('.t24').removeClass('on');
+		clock1();
 	}
 
 /*----------------------------------------------------------------------*/
@@ -58,21 +50,12 @@ $(document).ready(function() {
 		localStorage.removeItem('c10', 'true');
 	});
 
-	if (localStorage.getItem('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12, .c13, .c14') === null) {
-		$('#circle').fadeOut('fast');
-		$('#i1').attr("src","media/1.png");
-		$('#i2').attr("src","media/2.png");
-		$('#i3').attr("src","media/3.png");
-		$('#i4').attr("src","media/4.png");
-		$('#i5').attr("src","media/5.png");
-		$('#animation').css("background","#2f0916");
-		$('.classic .switch div').animate({right: '-20px'},300);
-		$('.classic .switch').css('background-color','rgba(0, 0, 0, 0.2)');
+	if (localStorage.getItem('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10') === null) {
+		backToClassic();
 	}
 
 	//Colors
-	
-	$('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12, .c13, .c14').click(function() {
+	$('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10').click(function() {
 		if ($(this).hasClass("c1")) {
 			localStorage.setItem('c1', 'true');
 			localStorage.removeItem('c2', 'true');
@@ -190,131 +173,61 @@ $(document).ready(function() {
 	
 	//Colors load
 	if (localStorage.getItem("c1") === 'true') {
-		$('#animation, #circle').css("background","#333");
-		$('#circle').fadeIn('fast');
-		$('#i1').attr("src","media/1.svg");
-		$('#i2').attr("src","media/2.svg");
-		$('#i3').attr("src","media/3.svg");
-		$('#i4').attr("src","media/4.svg");
-		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		$('#animation, #circle').css("background", c1Color);
+		palletColors();
 		$('.c1 img').css('display','block');
 	}
 	if (localStorage.getItem("c2") === 'true') {
-		$('#animation, #circle').css("background","#535353");
-		$('#circle').fadeIn('fast');
-		$('#i1').attr("src","media/1.svg");
-		$('#i2').attr("src","media/2.svg");
-		$('#i3').attr("src","media/3.svg");
-		$('#i4').attr("src","media/4.svg");
-		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		$('#animation, #circle').css("background", c2Color);
+		palletColors();
 		$('.c2 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c3") === 'true') {
-		$('#animation, #circle').css("background","#16a085");
-		$('#circle').fadeIn('fast');
-		$('#i1').attr("src","media/1.svg");
-		$('#i2').attr("src","media/2.svg");
-		$('#i3').attr("src","media/3.svg");
-		$('#i4').attr("src","media/4.svg");
-		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		$('#animation, #circle').css("background", c3Color);
+		palletColors();
 		$('.c3 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c4") === 'true') {
-		$('#animation, #circle').css("background","#338000");
-		$('#circle').fadeIn('fast');
-		$('#i1').attr("src","media/1.svg");
-		$('#i2').attr("src","media/2.svg");
-		$('#i3').attr("src","media/3.svg");
-		$('#i4').attr("src","media/4.svg");
-		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		$('#animation, #circle').css("background", c4Color);
+		palletColors();
 		$('.c4 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c5") === 'true') {
-		$('#animation, #circle').css("background","#1BA1E2");
-		$('#circle').fadeIn('fast');
-		$('#i1').attr("src","media/1.svg");
-		$('#i2').attr("src","media/2.svg");
-		$('#i3').attr("src","media/3.svg");
-		$('#i4').attr("src","media/4.svg");
-		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		$('#animation, #circle').css("background", c5Color);
+		palletColors();
 		$('.c5 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c6") === 'true') {
-		$('#animation, #circle').css("background","#3B5998");
-		$('#circle').fadeIn('fast');
-		$('#i1').attr("src","media/1.svg");
-		$('#i2').attr("src","media/2.svg");
-		$('#i3').attr("src","media/3.svg");
-		$('#i4').attr("src","media/4.svg");
-		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		$('#animation, #circle').css("background", c6Color);
+		palletColors();
 		$('.c6 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c7") === 'true') {
-		$('#animation, #circle').css("background","#34495e");
-		$('#circle').fadeIn('fast');
-		$('#i1').attr("src","media/1.svg");
-		$('#i2').attr("src","media/2.svg");
-		$('#i3').attr("src","media/3.svg");
-		$('#i4').attr("src","media/4.svg");
-		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		$('#animation, #circle').css("background", c7Color);
+		palletColors();
 		$('.c7 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c8") === 'true') {
-		$('#animation, #circle').css("background","#441650");
-		$('#circle').fadeIn('fast');
-		$('#i1').attr("src","media/1.svg");
-		$('#i2').attr("src","media/2.svg");
-		$('#i3').attr("src","media/3.svg");
-		$('#i4').attr("src","media/4.svg");
-		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		$('#animation, #circle').css("background", c8Color);
+		palletColors();
 		$('.c8 img').css('display','block');		
 	}
 
 	if (localStorage.getItem("c9") === 'true') {
-		$('#animation, #circle').css("background","#f39c12");
-		$('#circle').fadeIn('fast');
-		$('#i1').attr("src","media/1.svg");
-		$('#i2').attr("src","media/2.svg");
-		$('#i3').attr("src","media/3.svg");
-		$('#i4').attr("src","media/4.svg");
-		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		$('#animation, #circle').css("background", c9Color);
+		palletColors();
 		$('.c9 img').css('display','block');		
 	}
 
 	if (localStorage.getItem("c10") === 'true') {		
-		$('#animation, #circle').css("background","#c0392b");
-		$('#circle').fadeIn('fast');
-		$('#i1').attr("src","media/1.svg");
-		$('#i2').attr("src","media/2.svg");
-		$('#i3').attr("src","media/3.svg");
-		$('#i4').attr("src","media/4.svg");
-		$('#i5').attr("src","media/5.svg");
-		$('.classic .switch div').animate({right: 0},200);
-		$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+		$('#animation, #circle').css("background", c10Color);
+		palletColors();
 		$('.c10 img').css('display','block');
 	}
 	
