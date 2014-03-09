@@ -79,7 +79,7 @@ $(document).ready(function() {
 		{
 			$('#alarm-settings').fadeIn('slow');
 			$('#alarm').removeClass('show');
-			$('#alarm').addClass('hide')
+			$('#alarm').addClass('hide');
 			$('#settings').css('z-index','98');
 		}
 		else {
@@ -152,7 +152,7 @@ $(document).ready(function() {
 	//Custom Button
 	$('.custom').click(function() {
 		var color = prompt("Set the color in hexa decimal (with sharp #) !");
-		if (color == null) { 
+		if (color === null) { 
 			
 		} else {
 			$('.custom').css("background","rgba(0, 0, 0, 0.3)");
@@ -216,9 +216,9 @@ $(document).ready(function() {
 				$('.alarm-popup').css('display','block');
 
 			},timeLeft);
-		}
+		};
 
-		if (timeLeft != 0, timeLeft != null) {
+		if (timeLeft !== 0, timeLeft !== null) {
 			ring();
 		}
 
@@ -236,4 +236,4 @@ $(document).ready(function() {
 
 	});
 
-})
+});

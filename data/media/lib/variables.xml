@@ -14,7 +14,7 @@ var backToClassic = function() {
 	$('#animation').css("background","#2f0916");
 	$('#pallet-color span img').css('display','none');
 	$('.custom').css("background","rgba(255, 255, 255, 0.5)");
-}
+};
 
 //Colors of each span pallet
 var c1Color = "#333";
@@ -40,7 +40,7 @@ var palletColors = function() {
 	$('.classic .switch div').animate({right: 0},200);
 	$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
 	$('.custom').css("background","rgba(255, 255, 255, 0.5)");
-}
+};
 
 //Variable that change the clocks
 var clock1 = function() {
@@ -50,7 +50,7 @@ var clock1 = function() {
 	$('#ur').fadeIn('fast');
 	$('.t24').addClass('off');
 	$('.t24').removeClass('on');
-}
+};
 var clock2 = function(){
 	$('.t24 .switch div').animate({right: '0'},300);
 	$('.t24 .switch').css('background-color','rgba(255, 255, 255, 0.2)');
@@ -58,6 +58,6 @@ var clock2 = function(){
 	$('#ur').fadeOut('fast');
 	$('.t24').addClass('on');
 	$('.t24').removeClass('off');	
-}
+};
 </variable>
 
