@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<variables>
+//Funcion that call the classic theme
+var backToClassic = function() {
+	$('.classic .switch div').animate({right: '-20px'},300);
+	$('.classic .switch').css('background-color','rgba(0, 0, 0, 0.2)');
+	$('#circle').fadeOut('fast');
+	$('#i1').attr("src","media/1.png");
+	$('#i2').attr("src","media/2.png");
+	$('#i3').attr("src","media/3.png");
+	$('#i4').attr("src","media/4.png");
+	$('#i5').attr("src","media/5.png");
+	$('#animation').css("background","#2f0916");
+	$('#pallet-color span img').css('display','none');
+	$('.custom').css("background","rgba(255, 255, 255, 0.5)");
+};
+
+//Colors of each span pallet
+var c1Color = "#333";
+	c2Color = "#535353";
+	c3Color = "#16a085";
+	c4Color = "#338000";
+	c5Color = "#1BA1E2";
+	c6Color = "#3B5998";
+	c7Color = "#34495e";
+	c8Color = "#441650";
+	c9Color = "#f39c12";
+	c10Color = "#c0392b";
+
+//Spans of the pallet of color
+//it returns to the colored theme
+var palletColors = function() {
+	$('#circle').fadeIn('fast');
+	$('#i1').attr("src","media/1.svg");
+	$('#i2').attr("src","media/2.svg");
+	$('#i3').attr("src","media/3.svg");
+	$('#i4').attr("src","media/4.svg");
+	$('#i5').attr("src","media/5.svg");
+	$('.classic .switch div').animate({right: 0},200);
+	$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.3)');
+	$('.custom').css("background","rgba(255, 255, 255, 0.5)");
+};
+
+//Variable that change the clocks
+var clock1 = function() {
+	$('.t24 .switch div').animate({right: '-20px'},300);
+	$('.t24 .switch').css('background-color','rgba(0, 0, 0, 0.2)');
+	$('#clock').fadeOut('fast');
+	$('#ur').fadeIn('fast');
+	$('.t24').addClass('off');
+	$('.t24').removeClass('on');
+};
+var clock2 = function(){
+	$('.t24 .switch div').animate({right: '0'},300);
+	$('.t24 .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+	$('#clock').fadeIn('fast');
+	$('#ur').fadeOut('fast');
+	$('.t24').addClass('on');
+	$('.t24').removeClass('off');	
+};
+</variables>
+<css>
+/*----------------SOME GERAL RUNES/DON'T TOUCH IT-----------------*/
+* {
+	-webkit-user-select: none;
+	user-select: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Lato';
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+img {
+	border: 0;
+	-webkit-user-drag: none;
+	user-drag: none;
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: url('lib/Lato-Light.ttf');
+}
+
+body{
+	cursor: default;
+}
+
+span {
+	color: white;
+}
+
+a{
+	color: rgba(255, 255, 255, 0.6);
+	background: transparent;
+	-webkit-user-drag: none;
+	user-drag: none;
+}
+
+a:active, a:hover {
+	outline: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+hr{
+	background-color: #eaeaea;
+	color: #eaeaea;
+	width: 412px;
+	position: relative;
+	margin: 15px;
+	border: 1px solid #eaeaea;
+	height: 0;
+	top: -12px;
+}
+
+.switch{
+	width: 50px;
+	height: 30px;
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.3)
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+}
+.switch div{
+	width: 26px;
+	height: 26px;
+	margin: 2px;
+	background: white;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	color: white;
+	position: relative;
+}
+
+/*---------------------------------------------------------*/
+
+#container{
+	height: 442px;
+	width: 442px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+#animation{
+	width: 442px;
+	height: 442px;
+	z-index: 1;
+	overflow: hidden;
+	position: relative;
+	left: 0;
+}
+
+#animation img{
+	width: 100%;
+	height: 100%;
+}
+
+#ur{
+	font-size: 38px;
+	position: absolute;
+	top: 202px;	
+	z-index: 2;
+	color: rgba(255, 255, 255, 0.65);
+	width: 100%;
+	text-align: center;
+	font-family: 'Lato';
+}
+
+#clock{
+	font-size: 34px;
+	position: absolute;
+	top: 206px;
+	z-index: 2;
+	font-family: 'Lato';
+	color: rgba(255, 255, 255, 0.65);
+	display: none;
+	width: 100%;
+	text-align: center;
+}
+
+
+#circle{
+	width: 284px;
+	height: 284px;
+	position: absolute;
+	top: 81px;
+	left: 76px;
+	background: rgb(51, 51, 51);
+	border-radius: 174px;
+	z-index: 1;
+	overflow: hidden;
+	display: none;
+	-webkit-animation-duration: 0.8s;
+	animation-duration: 0.8s;
+}
+
+
+#close{
+	font-family: 'Lato';
+	font-size: 18px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 31px;
+	position: absolute;
+	z-index: 100;
+	top: -30px;
+	left: 0px;
+	color: rgba(255, 255, 255, 0.8);
+	cursor: pointer;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+
+
+#minimize{
+	font-family: monospace;
+	font-size: 18px;
+	width: 30px;
+	height: 30px;
+	left: 30px;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	line-height: 20px;
+	cursor: default;
+	top: -30px;
+	left: 30px;
+	z-index: 100;
+	color: rgba(255, 255, 255, 0.8);
+	cursor: pointer;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+#close:hover, #minimize:hover, #settings:hover, #hide:hover, #alarm:hover{
+	background: rgba(255, 255, 255, 0.5);
+}
+
+
+#hide{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	cursor: default;
+	top: -30px;
+	left: 60px;
+	z-index: 3;
+	cursor: pointer;
+}
+#hide img{
+	margin-top: 6px;
+	margin-left: 5px;
+	width: 22px;
+	height: 22px;
+	opacity: 0.85;
+
+}
+
+#settings{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: -30px;
+	right: 0px;
+	z-index: 100;
+	cursor: pointer;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+#settings img{
+	margin-top: 6px;
+	margin-left: 6px;
+	width: 18px;
+	height: 18px;
+	opacity: 0.85;
+}
+
+#alarm{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: -30px;
+	right: 30px;
+	z-index: 100;
+	cursor: pointer;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+
+#alarm img{
+	margin-top: 6px;
+	margin-left: 6px;
+	width: 18px;
+	height: 18px;
+	opacity: 0.85;
+}
+
+/*------------------- Configuration Screen ----------------------*/
+
+#configuration{
+	width: 442px;
+	height: 442px;
+	position: absolute;
+	z-index: 0;
+	left: 0px;
+	top: 0px;
+	background: url(media/blur.png) center;
+}
+
+.group{
+	width: 336px;
+	position: relative;
+	float: right;
+}
+
+
+.title1{
+	position: relative;
+	font-size: 22px;
+	margin-left: 15px;
+	top: 0;
+	color: white;
+	opacity: 0.9;
+}.title2{
+	position: relative;
+	font-size: 22px;
+	margin-left: 15px;
+	top: 0px;
+	color: white;
+	opacity: 0.9;
+}
+
+
+#pallet-color{
+	width: 150px;
+	font-size: 0;
+	margin-top: 5px;
+	position: relative;
+	top: 0;
+	left: 15px;
+}
+
+#pallet-color span {
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+#pallet-color span img {
+	height: 30px;
+	width: 30px;
+	display: none;
+}
+
+
+
+.classic{
+	position: absolute;
+	top: 105px;
+	left: 15px;
+	font-size: 17px;
+	cursor: pointer;
+	width: 260px;
+	color: white;
+}
+
+.classic .switch{
+	position: absolute;
+	top: -4px;
+	right: 0;
+}
+
+.custom{
+	cursor: pointer;
+	position: relative;
+	float: right;
+	padding: 10px 20px;
+	background: rgba(255, 255, 255, 0.5);
+	margin: -50px 63px;
+	border-radius: 5px;
+}
+
+
+.t24{
+	cursor: pointer;
+	position: absolute;
+	top: 34px;
+	left: 15px;
+	font-size: 17px;
+	width:260px;
+}
+.t24 .switch{
+	position: absolute;
+	top: -4px;
+	right: 0;
+}
+
+/*---------------------Alarm Screen---------------------------*/
+
+#alarm-settings{
+	width: 442px;
+	height: 442px;
+	position: absolute;
+	z-index: 99;
+	left: 0px;
+	top: 0px;
+	background: url(media/blur.png) center top;
+	display: none;	
+}
+
+
+#alarm-settings span{
+	color: #F7F7F7;
+	text-align: center;
+	font-size: 22px;
+	width: 100%;
+	position: absolute;
+	margin-top: 24px;
+}
+
+#alarm-settings p{
+	color: #F7F7F7;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 80px;
+}
+.clock-settings{
+	width: 318px;
+	margin: 0 auto;
+	position: relative;
+	top: 100px;
+	padding: 6px;
+
+}
+
+.clock-settings label{
+	text-transform: uppercase;
+	background-color: #f4f4f4;
+	width: 80px;
+	height: 62px;
+	font-size: 11px;
+	display: inline-block;
+	padding: 10px;
+	margin-right: 4px;
+	text-align: center;
+}
+.clock-settings label input{
+	display: block;
+	border: 0;
+	font: inherit;
+	font-size: 17px;
+	padding: 6px;
+	outline: none;
+	text-align: center;
+	width: 59px;
+	margin: 10px auto;
+	background-color:#fff;
+	-webkit-user-select: all;
+	user-select: all;
+}
+
+
+.btn{
+	width: 110px;
+	padding: 7px 0;
+	color: white;
+	text-align: center;
+	position: relative;
+	font-size: 1.2em;
+	cursor: pointer;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.3);
+	margin: 0 auto;
+	top: 120px;
+}
+
+#alarm-count{
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.3);
+	z-index: 50;
+	opacity: 0;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+}
+
+#alarm-count div{
+	width: 100px;
+	height: 100px;
+	position: relative;
+	left: 0;top: 0;
+	background: rgba(255, 255, 255, 0.15);
+	display: inline-block;
+}
+#alarm-count div img{
+	width: 80px;
+	height: 80px;
+	margin: 10px;
+	opacity: 0.8;
+}
+
+#alarm-count span{
+	color: rgba(255, 255, 255, 0.69);
+	position: absolute;;
+	font-size: 21px;
+	font-weight: bold;
+	margin: 10px 0 0 10px;
+}
+
+#alarm-count p{
+	position: absolute;
+	left: 110px;
+	top: 50px;
+	color: white;
+	font-size: 18px;
+}
+/*-------------------- Alarm Touch ----------------------*/
+
+@-webkit-keyframes play {
+	from {
+		-webkit-transform:rotate(45deg);
+	}
+
+	to {
+		-webkit-transform:rotate(-45deg);
+	}
+}
+@keyframes play {
+	from {
+		-webkit-transform:rotate(45deg);
+	}
+
+	to {
+		-webkit-transform:rotate(-45deg);
+	}
+}
+
+.alarm-popup{
+	width: 442px;
+	height: 442px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(media/blur.png) center bottom;
+	background-position: bottom right;
+	z-index: 999;	
+	display: none;
+}
+.alarm-popup span{
+	color: white;
+	text-align: center;
+	width: 100%;
+	font-size: 34px;
+	position: absolute;
+	top: 30px;
+}
+.alarm-popup img{
+
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
+	top: 100px;
+}
+.btn-close{
+	width: 110px;
+	padding: 7px 0;
+	color: white;
+	text-align: center;
+	position: relative;
+	font-size: 1.2em;
+	cursor: pointer;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.3);
+	margin: 0 auto;
+	top: 340px;
+}
+</css>
+
