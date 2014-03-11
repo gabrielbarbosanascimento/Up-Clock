@@ -137,11 +137,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 DistUtilsExtra.auto.setup(
     name='up-clock',
-<<<<<<< HEAD
     version='4.5',
-=======
-    version='4.3',
->>>>>>> dc000c1298a12b19e082b46cdacac44f6e9c56bd
     license='GPL-3',
     author='Archisman Panigrahi',
     author_email='apandada1@gmail.com',
