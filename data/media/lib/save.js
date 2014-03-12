@@ -28,9 +28,9 @@ $(document).ready(function() {
 	});
 	
 	if (localStorage.getItem("clock1") === "true") {
-		clock2();
-	} else if (localStorage.getItem("clock2") === "true") {		
 		clock1();
+	} else if (localStorage.getItem("clock2") === "true") {		
+		clock2();
 	}
 
 /*----------------------------------------------------------------------*/
