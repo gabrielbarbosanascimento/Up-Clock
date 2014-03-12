@@ -1,12 +1,15 @@
-<<<<<<< HEAD
+up-clock (4.5.1) saucy; urgency=low
+
+  * New release.
+
+ -- Archisman Panigrahi <apandada1@gmail.com>  Wed, 12 Mar 2014 21:28:12 +0530
+
 up-clock (4.5) saucy; urgency=low
 
   * New release.
 
  -- Archisman Panigrahi <apandada1@gmail.com>  Tue, 11 Mar 2014 14:44:33 +0530
 
-=======
->>>>>>> dc000c1298a12b19e082b46cdacac44f6e9c56bd
 up-clock (4.3) saucy; urgency=low
 
   * New release.
