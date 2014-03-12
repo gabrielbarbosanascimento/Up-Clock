@@ -48,6 +48,7 @@ $(document).ready(function() {
 		localStorage.removeItem('c8', 'true');
 		localStorage.removeItem('c9', 'true');
 		localStorage.removeItem('c10', 'true');
+		localStorage.removeItem("CHOOSEN_COLOR");
 	});
 
 	if (localStorage.getItem('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10') === null) {
@@ -67,6 +68,7 @@ $(document).ready(function() {
 			localStorage.removeItem('c8', 'true');
 			localStorage.removeItem('c9', 'true');
 			localStorage.removeItem('c10', 'true');
+			localStorage.removeItem("CHOOSEN_COLOR");
 		} if ($(this).hasClass("c2")) {
 			localStorage.setItem('c2', 'true');
 			localStorage.removeItem('c1', 'true');
@@ -78,6 +80,7 @@ $(document).ready(function() {
 			localStorage.removeItem('c8', 'true');
 			localStorage.removeItem('c9', 'true');
 			localStorage.removeItem('c10', 'true');
+			localStorage.removeItem("CHOOSEN_COLOR");
 		} if ($(this).hasClass("c3")) {
 			localStorage.setItem('c3', 'true');
 			localStorage.removeItem('c1', 'true');
@@ -89,6 +92,7 @@ $(document).ready(function() {
 			localStorage.removeItem('c8', 'true');
 			localStorage.removeItem('c9', 'true');
 			localStorage.removeItem('c10', 'true');
+			localStorage.removeItem("CHOOSEN_COLOR");
 		} if ($(this).hasClass("c4")) {
 			localStorage.setItem('c4', 'true');
 			localStorage.removeItem('c1', 'true');
@@ -100,6 +104,7 @@ $(document).ready(function() {
 			localStorage.removeItem('c8', 'true');
 			localStorage.removeItem('c9', 'true');
 			localStorage.removeItem('c10', 'true');
+			localStorage.removeItem("CHOOSEN_COLOR");
 		} if ($(this).hasClass("c5")) {
 			localStorage.setItem('c5', 'true');
 			localStorage.removeItem('c1', 'true');
@@ -111,6 +116,7 @@ $(document).ready(function() {
 			localStorage.removeItem('c8', 'true');
 			localStorage.removeItem('c9', 'true');
 			localStorage.removeItem('c10', 'true');
+			localStorage.removeItem("CHOOSEN_COLOR");
 		} if ($(this).hasClass("c6")) {
 			localStorage.setItem('c6', 'true');
 			localStorage.removeItem('c1', 'true');
@@ -122,6 +128,7 @@ $(document).ready(function() {
 			localStorage.removeItem('c8', 'true');
 			localStorage.removeItem('c9', 'true');
 			localStorage.removeItem('c10', 'true');
+			localStorage.removeItem("CHOOSEN_COLOR");
 		} if ($(this).hasClass("c7")) {
 			localStorage.setItem('c7', 'true');
 			localStorage.removeItem('c1', 'true');
@@ -133,6 +140,7 @@ $(document).ready(function() {
 			localStorage.removeItem('c8', 'true');
 			localStorage.removeItem('c9', 'true');
 			localStorage.removeItem('c10', 'true');
+			localStorage.removeItem("CHOOSEN_COLOR");
 		} if ($(this).hasClass("c8")) {
 			localStorage.setItem('c8', 'true');
 			localStorage.removeItem('c1', 'true');
@@ -144,6 +152,7 @@ $(document).ready(function() {
 			localStorage.removeItem('c7', 'true');
 			localStorage.removeItem('c9', 'true');
 			localStorage.removeItem('c10', 'true');
+			localStorage.removeItem("CHOOSEN_COLOR");
 		} if ($(this).hasClass("c9")) {
 			localStorage.setItem('c9', 'true');
 			localStorage.removeItem('c1', 'true');
@@ -155,6 +164,7 @@ $(document).ready(function() {
 			localStorage.removeItem('c7', 'true');
 			localStorage.removeItem('c8', 'true');
 			localStorage.removeItem('c10', 'true');
+			localStorage.removeItem("CHOOSEN_COLOR");
 		} if ($(this).hasClass("c10")) {
 			localStorage.setItem('c10', 'true');
 			localStorage.removeItem('c1', 'true');
@@ -166,6 +176,7 @@ $(document).ready(function() {
 			localStorage.removeItem('c7', 'true');
 			localStorage.removeItem('c8', 'true');
 			localStorage.removeItem('c9', 'true');
+			localStorage.removeItem("CHOOSEN_COLOR");
 		} 
 
 	});

@@ -147,29 +147,38 @@ $(document).ready(function() {
 	$('.classic').click(function() {
 		backToClassic();
 	});
-	
+	 
+    //Custom Button
+    function changeColor(choosenColor){
+        $('.custom').css("background","rgba(0, 0, 0, 0.3)");
+        $('#circle').fadeIn('fast');
+        $('#i1').attr("src","media/1.svg");
+        $('#i2').attr("src","media/2.svg");
+        $('#i3').attr("src","media/3.svg");
+        $('#i4').attr("src","media/4.svg");
+        $('#i5').attr("src","media/5.svg");
+        $('.classic .switch div').animate({right: 0},300);
+        $('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+        $('#animation, #circle').css("background",choosenColor);
+        $('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
+    }
+    
+    $('.custom').click(function() {
+        var color = prompt("Set the color in hexa decimal (with sharp #) !");
+        if (color === null) {
+               
+        } else {
+                changeColor(color);
+                localStorage.setItem("CHOOSEN_COLOR", color);
+        }
 
-	//Custom Button
-	$('.custom').click(function() {
-		var color = prompt("Set the color in hexa decimal (with sharp #) !");
-		if (color === null) { 
-			
-		} else {
-			$('.custom').css("background","rgba(0, 0, 0, 0.3)");
-			$('#circle').fadeIn('fast');
-			$('#i1').attr("src","media/1.svg");
-			$('#i2').attr("src","media/2.svg");
-			$('#i3').attr("src","media/3.svg");
-			$('#i4').attr("src","media/4.svg");
-			$('#i5').attr("src","media/5.svg");
-			$('.classic .switch div').animate({right: 0},300);
-			$('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
-			$('#animation, #circle').css("background",color);
-			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
-		}
+    });
 
-	});
-	
+    if (localStorage.getItem("CHOOSEN_COLOR")) {
+        var savedColor = localStorage.getItem("CHOOSEN_COLOR");
+        changeColor(savedColor);
+    }
+
 
 	//Clock changing
 	$('.t24').click(function() {
@@ -235,5 +244,8 @@ $(document).ready(function() {
 		});
 
 	});
+
+	
+
 
 });
