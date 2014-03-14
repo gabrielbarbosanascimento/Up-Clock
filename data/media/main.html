@@ -71,10 +71,18 @@
 				</span>
 			</div>
 
-			<div class="group" style="top: 130px;height: 70px;">
+			<div class="group" style="top: 125px;height: 70px;">
 				<span class="title2">Time Switcher</span>	
-				<span class="t24 on">24 hours<span class="switch"><div></div></span></span>
+				<span class="t24 on">24 hours<span class="switch"><div></div></span></span><br><br><br>
+				<span class="title2">Opacity</span><br><br>
+				<span><input id="slider3" type ="range" min ="0.1" max="1.0" step ="0.05" value ="1.0" onchange="updateTitle(this.value);"/></span>
+				<script type="text/javascript">
+					function updateTitle(val) {
+						document.title = val
+				}
+				</script>
 			</div>
+
 
 		</div>
 
