@@ -546,3 +546,26 @@ hr{
 	margin: 0 auto;
 	top: 340px;
 }
+input[type=range] {
+	-webkit-appearance: none;
+	width: 255px;
+	height: 30px;
+	margin-left: 15px;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 26px;
+	height: 26px;
+	margin: 2px;
+	background: white;
+	-webkit-border-radius: 250px;
+	border-radius: 15px;
+	color: white;
+	position: relative;
+}

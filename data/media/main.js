@@ -25,7 +25,7 @@ require(['lib/mediator', 'lib/backend', 'lib/jquery-1.11.0.min.js'], function(me
 		 document.title = 'minimize';
 	});
 
-	$('.clock-settings input, .btn-close, .buttons div, #close, #minimize, #confirm, #pallet-color span, #settings, .classic, #hide, .t24, .t12, #alarm, .custom').mouseenter(function() {
+	$('.clock-settings input, .btn-close, .buttons div, #close, #minimize, #confirm, #pallet-color span, #settings, .classic, #hide, .t24, .t12, #alarm, .custom, input[type=range]').mouseenter(function() {
 		document.title = 'disable_drag';
 	}).mouseleave(function() {
 		document.title = 'enable_drag';
