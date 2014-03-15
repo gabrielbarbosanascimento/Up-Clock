@@ -79,6 +79,17 @@
 				<script type="text/javascript">
 					function updateTitle(val) {
 						document.title = val
+						if (val == 0.1) {
+							$('input[type=range]').css('background-color','rgba(255, 255, 255, 0.2)');
+						} else if (val == 0.3) {
+							$('input[type=range]').css('background-color','rgba(255, 255, 255, 0.25)');
+						} else if (val == 0.5) {
+							$('input[type=range]').css('background-color','rgba(255, 255, 255, 0.3)');
+						} else if (val == 0.7) {
+							$('input[type=range]').css('background-color','rgba(255, 255, 255, 0.35)');
+						} else if (val > 0.7) {
+							$('input[type=range]').css('background-color','rgba(255, 255, 255, 0.45)');
+						}
 					}
 					
 				</script>
