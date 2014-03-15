@@ -72,7 +72,46 @@ class UpClockWindow(Window):
                 self.drag = False
             elif title == "enable_drag":
                 self.drag = True
+            elif title == "1":
+                self.set_opacity(1.0)
+            elif title == "0.95":
+                self.set_opacity(0.95)
+            elif title == "0.9":
+                self.set_opacity(0.9)
+            elif title == "0.85":
+                self.set_opacity(0.85)
+            elif title == "0.8":
+                self.set_opacity(0.8)
+            elif title == "0.75":
+                self.set_opacity(0.75)
+            elif title == "0.7":
+                self.set_opacity(0.7)
+            elif title == "0.65":
+                self.set_opacity(0.65)
+            elif title == "0.6":
+                self.set_opacity(0.6)
+            elif title == "0.55":
+                self.set_opacity(0.55)
+            elif title == "0.5":
+                self.set_opacity(0.5)
+            elif title == "0.45":
+                self.set_opacity(0.45)
+            elif title == "0.4":
+                self.set_opacity(0.4)
+            elif title == "0.35":
+                self.set_opacity(0.35)
+            elif title == "0.3":
+                self.set_opacity(0.3)
+            elif title == "0.25":
+                self.set_opacity(0.25)
+            elif title == "0.2":
+                self.set_opacity(0.2)
+            elif title == "0.15":
+                self.set_opacity(0.15)
+            elif title == "0.1":
+                self.set_opacity(0.1)
 
+            
 
         def press_button(widget, event):
             if event.button == 1:
