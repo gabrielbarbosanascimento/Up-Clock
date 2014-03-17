@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="lib/animate.css">
 	<script defer data-main="main" src="lib/require.js"></script>
 </head>
-<body oncontextmenu="return false;">
+<body oncontextmenu="return false;"  onload="opacity()">
 	<div id="container" class="show">
 	
 		<div id="animation" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000" >
@@ -40,8 +40,8 @@
 		</div>
 
 
-		<a id="close">&#10005;</a>	
-		<a id="minimize">_</a>	
+		<a id="close">&#10005;</a>
+		<a id="minimize">_</a>
 		<a id="hide"><img src="media/hide.svg" /></a>
 		<a id="alarm" class="show"><img src="media/alarm.svg" /></a>
 		<a id="settings" class="show"><img src="media/settings.svg" /></a>
@@ -51,7 +51,7 @@
 		<div id="configuration">
 
 			<div class="group" style="height: 140px;top: 50px;">
-				<span class="title1">Themes</span><br />					
+				<span class="title1">Themes</span><br />
 				<div id="pallet-color">
 					<span class="c1" style="background-color: #333;"><img src="media/check.svg" /></span>
 					<span class="c2" style="background-color: #535353;"><img src="media/check.svg" /></span>
@@ -75,10 +75,11 @@
 				<span class="title2">Time Switcher</span>	
 				<span class="t24 on">24 hours<span class="switch"><div></div></span></span><br><br><br>
 				<span class="title2" style="top: 15px;">Opacity</span><br><br>
-				<span><input id="slider3" type="range" min ="0.1" max="1.0" step ="0.05" value ="1.0" onchange="updateTitle(this.value);"/></span>
+				<span><input id="slider3" type="range" min ="0.1" max="1.0" step ="0.05" onchange="updateTitle(this.value);"/></span>
 				<script type="text/javascript">
 					function updateTitle(val) {
 						document.title = val
+						localStorage.opacity = val
 						if (val == 0.1) {
 							$('input[type=range]').css('background-color','rgba(255, 255, 255, 0.2)');
 						} else if (val == 0.3) {
@@ -91,7 +92,6 @@
 							$('input[type=range]').css('background-color','rgba(255, 255, 255, 0.45)');
 						}
 					}
-					
 				</script>
 			</div>
 
@@ -121,7 +121,7 @@
 				<div class="btn">Set Timer</div>
 			</div>
 
-		</div>	
+		</div>
 
 		<div class="alarm-popup">
 			<span>Time's Up</span>
@@ -135,14 +135,25 @@
 	<!--------------------------------------Scripts ------------------------------------------------------>
 
 	<script src="main.js"></script>
-	<script src="lib/jquery-1.11.0.min.js"></script>	
-	<script src="lib/jquery.cycle2.min.js"></script>	
+	<script src="lib/jquery-1.11.0.min.js"></script>
+	<script src="lib/jquery.cycle2.min.js"></script>
 	<script src="lib/save.js"></script>
 	<script src="lib/upclock.js"></script>
 	<script type="text/javascript">
+		function opacity(){
+			//On first run, opacity would be 0.8
+			if (localStorage.getItem("opacity") === null) {
+				localStorage.opacity = 0.8
+			}
+			$('input[type=range]').val(localStorage.opacity)
+			document.title = localStorage.opacity
+			document.title = enable_drag
+		}
+	</script>
+	<script type="text/javascript">
 	//Animation minified
 	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#hide").animate({top:0},100,function(){$("#settings, #alarm").animate({top:0},200,function(){$("#circle").addClass("animated pulse")})})})})});
-	</script>	
+	</script>
 	<script type="text/javascript">
 
 var backToClassic = function() {
@@ -200,10 +211,10 @@ var clock2 = function(){
 	$('#clock').fadeIn('fast');
 	$('#ur').fadeOut('fast');
 	$('.t24').addClass('on');
-	$('.t24').removeClass('off');	
+	$('.t24').removeClass('off');
 };
 
 
-	</script>	
+	</script>
 </body>
 </html>
