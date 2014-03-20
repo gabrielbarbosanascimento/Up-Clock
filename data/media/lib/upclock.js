@@ -245,6 +245,4 @@ $(document).ready(function() {
 
 	});
 
-
-
 });
