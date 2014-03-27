@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UP Clock - A Beautiful Clock</title>
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="cover">
+		<div class="black">
+			<div class="row">
+				<span>UP <img src="img/up-clock.svg" style="position: relative;top: 13px;" /> Clock</span>
+				<h3>A beautiful clock inspired by the Ubuntu Touch Lockscreen</h3>
+			</div>
+		</div>
+	</div>
+	<div class="content" id="scroll">
+		<a href="#scroll" class="arrow">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50px" height="50px" viewBox="0 0 50 50">
+<polyline fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" points="35.891,30.054   25,40.943 14.11,30.053 "></polyline>
+</svg>
+		</a>
+
+		<div class="row">
+			<div class="gallery">
+				<div class="col">
+					<h1>Design</h1>
+					<p>UP Clock was carefully built to be pretty and smart. <br/> 
+					All the design was trought on the user experience, every detail !</p>
+				</div>
+				<div class="col" style="padding-bottom: 50px;">
+					<div style="width: 100%;max-width: 700px;position: relative; margin: 0 auto;">
+						<img src="img/upclock.jpg" style="width: 100%" alt="">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="download">
+			<h1>Download</h1>
+			<p>You can download UP Clock from the PPA in Launchpad, Ubuntu Sofware Center (Old version) or even get the fresh news from GitHub !</p>
+
+			<div class="row" style="top: 120px;">
+				<a href="https://github.com/gabrielbarbosanascimento/Up-Clock" style="background: #0AB88F">GITHUB</a>
+				<a href="https://launchpad.net/~apandada1/+archive/up-clock" style="background: #88086B">LAUNCHPAD</a>
+				<a href="https://apps.ubuntu.com/cat/applications/up-clock/" style="background: #e74c3c">USC</a>
+			</div>
+		</div>
+
+	</div>
+
+
+<script>
+	$(document).ready(function(){
+		$('.arrow').click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
+
+		});
+
+	});
+</script>
+
+</body>
+</html>

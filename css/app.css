@@ -1,0 +1,276 @@
+/*
+
+Copyright (C) 2014 Gabriel Barbosa <barbosanascimentogabriel@gmail.com>
+
+This program is free software: you can redistribute it and/or modify it 
+under the terms of the GNU General Public License version 3, as published 
+by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but 
+WITHOUT ANY WARRANTY; without even the implied warranties of 
+MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR 
+PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along 
+with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+/*----------------SOME GENERAL RUNES/DON'T TOUCH IT-----------------*/
+* {
+	-webkit-user-select: none;
+	user-select: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+img {
+	border: 0;
+	-webkit-user-drag: none;
+	user-drag: none;
+}
+
+body{
+	cursor: default;
+	background: #FFF;
+}
+
+span {
+	color: white;
+}
+
+a{
+	color: rgba(255, 255, 255, 0.6);
+	background: transparent;
+	-webkit-user-drag: none;
+	user-drag: none;
+}
+
+a:active, a:hover {
+	outline: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	display: none;
+}
+
+.row{
+	width: 100%;
+	max-width: 900px;
+	position: relative;
+	margin: 0 auto;
+}
+
+
+/*---------------------------------------------------------*/
+
+.cover{
+	width: 100%;
+	height: 100%;
+	background: url(../img/bg.jpg) no-repeat center center; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.cover .black{
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.cover span{
+	color: white;
+	font-size: 4em;
+	font-weight: 100;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	line-height: 8em;
+}
+
+.cover h3{
+	color: white;
+	font-size: 1.5em;
+	font-weight: 100;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	line-height: 27em;
+}
+
+.cover .col {
+	width: 100%;
+	color: #FFF;
+	top: 20px;
+}
+
+.arrow{
+	width: 50px;
+	height: 50px;
+	background: rgba(0, 0, 0, 0.55);
+	border-radius: 50px;
+	position: absolute;
+	display: block;
+	left: 50%;
+	margin-left: -25px;
+	top: -65px;
+	cursor: pointer;
+	opacity: 0.8;
+	-webkit-transition: opacity .5s;
+	transition: opacity .5s;
+}
+
+.arrow:hover{
+	opacity: 1;
+}
+
+a.arrow > svg {
+	position: absolute;
+	margin-top: -8px;
+}
+
+.content{
+	width: 100%;
+	height: auto;
+	background: #FFF;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+.content h1{
+	font-weight: 300;
+	font-size: 2em;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	background: #FFF;
+	padding: 20px 0;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.gallery{
+	width: 100%;
+	height: auto;
+	background: #FFF;
+	position: relative;
+	padding-bottom: 110px;
+	top: 40px;
+}
+
+.gallery h1{
+	color: #e74c3c;
+	font-size: 3em;
+	box-shadow: none;
+	background: none;
+	font-weight: 100;
+	width: auto;
+	text-align: left;
+	position: relative;
+}
+
+.gallery p{
+	color: gray;
+	font-weight: 300;
+	text-align: left;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+.gallery .col{
+	width: 50%;
+}
+
+.download{
+	width: 100%;
+	height: auto;
+	background: #FFF;
+	position: relative;
+	left: 0;
+	color: white;
+	font-weight: 400;
+	padding-bottom: 200px;
+	padding-top: 100px;
+}
+
+.download h1 {
+	font-size: 2em;
+	font-weight: 100;
+	text-align: center;
+	color: #3498db;
+	margin: 0;
+	box-shadow: none;
+	background: none;
+	position: absolute;
+	width: 100%;
+}
+
+.download p {
+	font-size: 1.15em;
+	font-weight: 100;
+	text-align: center;
+	color: #1A1A1A;
+	box-shadow: none;
+	background: none;
+	position: relative;
+	max-width: 500px;
+	margin: 0 auto;
+	top: 80px;
+}
+
+.download a{
+	padding: 10px 20px;
+	color: white;
+	font-size: 1.3em;
+	font-weight: 100;
+	border-radius: 5px;
+	margin: 0 5px;
+	text-align: center;
+	margin: 10px 0;
+	opacity: 0.9;
+	-webkit-transition: opacity .5s;
+	transition: opacity .5s;
+}
+
+.download a:hover{
+	opacity: 1;
+}
+
+.download .row{
+	max-width: 368px;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+	border: 1px solid #b2b2b2;
+	background: #c8c8c8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	border: 1px solid #9c9c9c;
+	background: #b2b2b2;
+}
+
+::-webkit-scrollbar-thumb:active {
+	border: 1px solid #c14131;
+	background: #d64937;
+}
