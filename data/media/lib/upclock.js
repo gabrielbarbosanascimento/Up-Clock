@@ -70,24 +70,24 @@ $(document).ready(function() {
 			}, 250);
 			$('#settings').addClass('show');
 			$('#settings').removeClass('hide');
-			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.65)');
+			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.7)');
 		}
 	});
 
 	$('#alarm').click(function() {
 		if ($('#alarm').hasClass('show'))
 		{
-			$('#alarm-settings').fadeIn('slow');
+			$('#alarm-settings').fadeIn(400);
 			$('#alarm').removeClass('show');
 			$('#alarm').addClass('hide');
 			$('#settings').css('z-index','98');
 		}
 		else {
-			$('#alarm-settings').fadeOut('slow');
+			$('#alarm-settings').fadeOut(400);
 			$('#alarm').addClass('show');
 			$('#alarm').removeClass('hide');
 			$('#settings').css('z-index','100');
-			$('#alarm-settings').fadeOut('slow');
+			$('#alarm-settings').fadeOut(400);
 		}
 	});
 
