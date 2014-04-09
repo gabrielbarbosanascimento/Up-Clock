@@ -53,10 +53,14 @@ $(document).ready(function() {
 			}, 250);
 			$('#circle').animate({
 				left: '-250px'
-			}, 250);
+			}, 250, function(){
+				$('#g1').fadeIn('fast',function(){
+					$('#g2').fadeIn('fast');
+				});
+			});
 			$('#settings').addClass('hide');
 			$('#settings').removeClass('show');
-			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.95)');
+			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.95)');	
 		}
 		else {
 			$('#animation').animate({
@@ -67,7 +71,9 @@ $(document).ready(function() {
 			}, 250);
 			$('#circle').animate({
 				left: '76px'
-			}, 250);
+			}, 250, function(){
+				$('#g1, #g2').fadeOut('fast');
+			});
 			$('#settings').addClass('show');
 			$('#settings').removeClass('hide');
 			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.7)');

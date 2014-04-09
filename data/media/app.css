@@ -276,6 +276,7 @@ hr{
 	width: 336px;
 	position: relative;
 	float: right;
+	display: none;
 }
 
 
