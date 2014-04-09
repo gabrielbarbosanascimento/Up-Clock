@@ -3,7 +3,9 @@ Up-Clock
 
 A beautiful clock inspired by the [Ubuntu Touch Lockscreen](https://www.youtube.com/watch?v=iaC6EctpIas).
 
-![screenshot](https://dl.dropboxusercontent.com/u/84627545/app.png)
+![screenshot](https://dl.dropboxusercontent.com/u/69127660/upclock.png)
+
+![screenshot](https://dl.dropboxusercontent.com/u/69127660/upclocksettings.png)
 
 This app is created using Quickly on [Ubuntu](http://ubuntu.com/) and is for Linux distributions. It runs using Python, but It's a web application.
 
