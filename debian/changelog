@@ -1,3 +1,9 @@
+up-clock (5.3) trusty; urgency=medium
+
+  * New release.
+
+ -- Archisman Panigrahi <apandada1@gmail.com>  Sat, 12 Apr 2014 15:03:23 +0530
+
 up-clock (5.1) saucy; urgency=low
 
   * New release.
