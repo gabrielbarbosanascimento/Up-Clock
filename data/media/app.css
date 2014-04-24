@@ -197,29 +197,10 @@ hr{
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
 }
-#close:hover, #minimize:hover, #settings:hover, #hide:hover, #alarm:hover{
+#close:hover, #minimize:hover, #settings:hover, #alarm:hover{
 	background: rgba(255, 255, 255, 0.5);
 }
 
-
-#hide{
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	cursor: default;
-	top: -30px;
-	left: 60px;
-	z-index: 3;
-	cursor: pointer;
-}
-#hide img{
-	margin-top: 6px;
-	margin-left: 5px;
-	width: 22px;
-	height: 22px;
-	opacity: 0.85;
-
-}
 
 #settings{
 	width: 30px;
@@ -371,7 +352,7 @@ hr{
 	z-index: 99;
 	left: 0px;
 	top: 0px;
-	background: url(media/blur.png) center top;
+	background: rgb(47, 9, 22);
 	display: none;	
 }
 
@@ -469,8 +450,7 @@ hr{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: url(media/blur.png) center bottom;
-	background-position: bottom right;
+	background: rgb(47, 9, 22);
 	z-index: 999;	
 	display: none;
 }

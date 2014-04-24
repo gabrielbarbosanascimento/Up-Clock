@@ -184,60 +184,60 @@ $(document).ready(function() {
 	
 	//Colors load
 	if (localStorage.getItem("c1") === 'true') {
-		$('#animation, #circle').css("background", c1Color);
+		$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c1Color);
 		palletColors();
 		$('.c1 img').css('display','block');
 	}
 	if (localStorage.getItem("c2") === 'true') {
-		$('#animation, #circle').css("background", c2Color);
+		$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c2Color);
 		palletColors();
 		$('.c2 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c3") === 'true') {
-		$('#animation, #circle').css("background", c3Color);
+		$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c3Color);
 		palletColors();
 		$('.c3 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c4") === 'true') {
-		$('#animation, #circle').css("background", c4Color);
+		$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c4Color);
 		palletColors();
 		$('.c4 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c5") === 'true') {
-		$('#animation, #circle').css("background", c5Color);
+		$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c5Color);
 		palletColors();
 		$('.c5 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c6") === 'true') {
-		$('#animation, #circle').css("background", c6Color);
+		$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c6Color);
 		palletColors();
 		$('.c6 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c7") === 'true') {
-		$('#animation, #circle').css("background", c7Color);
+		$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c7Color);
 		palletColors();
 		$('.c7 img').css('display','block');
 	}
 
 	if (localStorage.getItem("c8") === 'true') {
-		$('#animation, #circle').css("background", c8Color);
+		$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c8Color);
 		palletColors();
 		$('.c8 img').css('display','block');		
 	}
 
 	if (localStorage.getItem("c9") === 'true') {
-		$('#animation, #circle').css("background", c9Color);
+		$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c9Color);
 		palletColors();
 		$('.c9 img').css('display','block');		
 	}
 
 	if (localStorage.getItem("c10") === 'true') {		
-		$('#animation, #circle').css("background", c10Color);
+		$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c10Color);
 		palletColors();
 		$('.c10 img').css('display','block');
 	}

@@ -42,7 +42,6 @@
 
 		<a id="close">&#10005;</a>
 		<a id="minimize">_</a>
-		<a id="hide"><img src="media/hide.svg" /></a>
 		<a id="alarm" class="show"><img src="media/alarm.svg" /></a>
 		<a id="settings" class="show"><img src="media/settings.svg" /></a>
 
@@ -152,7 +151,7 @@
 	</script>
 	<script type="text/javascript">
 	//Animation minified
-	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#hide").animate({top:0},100,function(){$("#settings, #alarm").animate({top:0},200,function(){$("#circle").addClass("animated pulse")})})})})});
+	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#settings, #alarm").animate({top:0},200,function(){$("#circle").addClass("animated pulse")})})})});
 	</script>
 	<script type="text/javascript">
 
@@ -165,7 +164,7 @@ var backToClassic = function() {
 	$('#i3').attr("src","media/3.png");
 	$('#i4').attr("src","media/4.png");
 	$('#i5').attr("src","media/5.png");
-	$('#animation').css("background","#2f0916");
+	$('#animation, #alarm-settings, .alarm-popup').css("background","#2f0916");
 	$('#pallet-color span img').css('display','none');
 	$('.custom').css("background","rgba(255, 255, 255, 0.5)");
 };
