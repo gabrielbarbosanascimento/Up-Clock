@@ -197,10 +197,28 @@ hr{
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
 }
-#close:hover, #minimize:hover, #settings:hover, #alarm:hover{
+#close:hover, #minimize:hover, #settings:hover, #alarm:hover, #credits:hover{
 	background: rgba(255, 255, 255, 0.5);
 }
 
+#credits{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 0px;
+	right: 60px;
+	z-index: 100;
+	cursor: pointer;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+#credits img{
+	margin-top: 6px;
+	margin-left: 6px;
+	width: 18px;
+	height: 18px;
+	opacity: 0.85;
+}
 
 #settings{
 	width: 30px;
@@ -352,8 +370,8 @@ hr{
 	z-index: 99;
 	left: 0px;
 	top: 0px;
-	background: rgb(47, 9, 22);
-	display: none;	
+	background: url(media/blur.png) center top;
+	display: none;
 }
 
 
@@ -450,8 +468,8 @@ hr{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: rgb(47, 9, 22);
-	z-index: 999;	
+	background: url(media/blur.png) center bottom;
+	z-index: 999;
 	display: none;
 }
 .alarm-popup span{

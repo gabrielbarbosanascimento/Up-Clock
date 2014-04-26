@@ -17,11 +17,13 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 $(document).ready(function() {
 	$('#ur, #clock').addClass('animated bounce');
+	$('#credits').hide()
 
 	//Gear button to open the configurations
 	$('#settings').click(function() {
 		if ($('#settings').hasClass('show'))
 		{
+			$('#credits').show()
 			$('#animation').animate({
 				marginLeft: '-250px',
 				width: '350px',
@@ -40,6 +42,7 @@ $(document).ready(function() {
 			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.95)');	
 		}
 		else {
+			$('#credits').hide()
 			$('#animation').animate({
 				marginLeft: 0,
 				width: '442px',

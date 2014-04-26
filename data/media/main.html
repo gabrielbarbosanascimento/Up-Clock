@@ -8,7 +8,7 @@
 </head>
 <body oncontextmenu="return false;"  onload="opacity()">
 	<div id="container" class="show">
-	
+
 		<div id="animation" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000" >
 			<img id="i1" src="media/1.png" />
 			<img id="i2" src="media/2.png" />
@@ -24,10 +24,10 @@
 		</span>
 
 		<div id="clock">
-			<script type="text/javascript">  
+			<script type="text/javascript">
 	 		//Clock AM/PM function minified
 	 		function checklength(e){if(e<10){e="0"+e}return e}function clock(){var e=new Date;var t=checklength(e.getHours());var n=checklength(e.getMinutes());var r=checklength(e.getSeconds());var i=1;var s;if(i==1){if(t>=12){if(t==12){t=12}else{t=t-12}s=t+":"+n+":"+r+" PM"}else if(t<12){if(t==0){t=12}s=t+":"+n+":"+r+" AM"}}if(i==0){s=t+":"+n+":"+r}document.getElementById("clock").innerHTML=s;setTimeout("clock();",500)}clock()
-			</script>  
+			</script>
 		</div>
 
 
@@ -42,11 +42,11 @@
 
 		<a id="close">&#10005;</a>
 		<a id="minimize">_</a>
+		<a href="http://upclock.tk" id="credits"><img src="media/homepage.svg" /></a>
 		<a id="alarm" class="show"><img src="media/alarm.svg" /></a>
 		<a id="settings" class="show"><img src="media/settings.svg" /></a>
 
 
-		
 		<div id="configuration">
 
 			<div id="g1" class="group" style="height: 140px;top: 50px;">
@@ -131,7 +131,7 @@
 	</div>
 
 
-	<!--------------------------------------Scripts ------------------------------------------------------>
+<!--------------------------------------Scripts ------------------------------------------------------>
 
 	<script src="main.js"></script>
 	<script src="lib/jquery-1.11.0.min.js"></script>
@@ -164,7 +164,9 @@ var backToClassic = function() {
 	$('#i3').attr("src","media/3.png");
 	$('#i4').attr("src","media/4.png");
 	$('#i5').attr("src","media/5.png");
-	$('#animation, #alarm-settings, .alarm-popup').css("background","#2f0916");
+	$('#animation').css("background","#2f0916");
+	$('#alarm-settings').css("background","url(media/blur.png) center top");
+	$('.alarm-popup').css("background","url(media/blur.png) center bottom");
 	$('#pallet-color span img').css('display','none');
 	$('.custom').css("background","rgba(255, 255, 255, 0.5)");
 };
