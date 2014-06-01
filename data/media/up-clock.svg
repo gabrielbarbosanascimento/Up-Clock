@@ -8,9 +8,9 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   width="70px"
-   height="70px"
-   viewBox="0 0 50 50"
+   width="250"
+   height="250"
+   viewBox="0 0 178.57143 178.57143"
    id="svg2"
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="up-clock.svg">
@@ -40,15 +40,15 @@
      inkscape:window-height="973"
      id="namedview10"
      showgrid="false"
-     inkscape:zoom="20.771281"
-     inkscape:cx="52.738803"
-     inkscape:cy="18.709364"
+     inkscape:zoom="1.8359392"
+     inkscape:cx="145.71983"
+     inkscape:cy="110.32732"
      inkscape:window-x="0"
      inkscape:window-y="28"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <path
-     transform="matrix(1.3706638,0,0,1.3706638,77.021685,70.886238)"
+     transform="matrix(4.9780585,0,0,4.9780585,276.52986,255.09716)"
      d="m -19.872881,-32.775425 a 17.351694,17.351694 0 1 1 -34.703388,0 17.351694,17.351694 0 1 1 34.703388,0 z"
      sodipodi:ry="17.351694"
      sodipodi:rx="17.351694"
@@ -66,11 +66,11 @@
      sodipodi:rx="17.351694"
      sodipodi:ry="17.351694"
      d="m -19.872881,-32.775425 a 17.351694,17.351694 0 1 1 -34.703388,0 17.351694,17.351694 0 1 1 34.703388,0 z"
-     transform="matrix(1.3706638,0,0,1.3706638,76.022378,69.818155)" />
+     transform="matrix(4.9780585,0,0,4.9780585,272.90052,251.218)" />
   <g
      id="g3794"
      style="opacity:0.2"
-     transform="matrix(0.99999462,0,0,1,-0.28575754,-0.21427777)">
+     transform="matrix(3.63184,0,0,3.6318596,-4.2399137,-3.129953)">
     <path
        style="fill:none;stroke:#000000;stroke-width:2.91499996;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5.9000001;stroke-opacity:1;stroke-dasharray:none"
        d="M 9.2711567,26.766957 27.35907,26.511608 34.417022,38.732496"
@@ -91,14 +91,15 @@
        d="m 28,25 c 0,1.656854 -1.343146,3 -3,3 -1.656854,0 -3,-1.343146 -3,-3 0,-1.656854 1.343146,-3 3,-3 1.656854,0 3,1.343146 3,3 z" />
   </g>
   <g
-     id="g3800">
+     id="g3800"
+     transform="matrix(3.6318596,0,0,3.6318596,-3.2020824,-2.3517186)">
     <circle
        transform="matrix(1.4149011,0,0,1.4149011,-9.5871242,-10.485989)"
        sodipodi:ry="3"
        sodipodi:rx="3"
        sodipodi:cy="25"
        sodipodi:cx="25"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
        id="circle6"
        r="3"
        cy="25"
@@ -109,6 +110,6 @@
        inkscape:connector-curvature="0"
        id="polyline8"
        d="M 7.8425853,25.338386 25.930499,25.083037 32.988451,37.303925"
-       style="fill:none;stroke:#ffffff;stroke-width:2.91499995999999983;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5.90000009999999975;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:none;stroke:#ffffff;stroke-width:2.91499996;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5.9000001;stroke-opacity:1;stroke-dasharray:none" />
   </g>
 </svg>
