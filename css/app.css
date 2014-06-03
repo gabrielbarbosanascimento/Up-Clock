@@ -18,15 +18,17 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /*----------------SOME GENERAL RUNES/DON'T TOUCH IT-----------------*/
 * {
-	-webkit-user-select: none;
-	user-select: none;
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
 img {
 	border: 0;
 	-webkit-user-drag: none;
@@ -84,47 +86,45 @@ input::-webkit-inner-spin-button {
 .cover .black{
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.8);
 	position: absolute;
 	top: 0;
 	left: 0;
 }
+
 .cover span{
-	color: white;
-	font-size: 4em;
+	font-size: 72px;
 	font-weight: 100;
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	line-height: 8em;
+	margin-top: 20%;
 }
-
-.cover h3{
+.cover span h1{
 	color: white;
-	font-size: 1.5em;
+	font-size: 0.5em;
 	font-weight: 100;
-	position: absolute;
 	width: 100%;
-	text-align: center;
-	line-height: 27em;
+	margin: 5px 0;
 }
 
-.cover .col {
+.cover span h3{
+	color: white;
+	font-size: 0.3em;
+	font-weight: 100;
 	width: 100%;
-	color: #FFF;
-	top: 20px;
 }
 
 .arrow{
 	width: 50px;
 	height: 50px;
-	background: rgba(0, 0, 0, 0.55);
+	background: rgba(0, 0, 0, 0.8);
 	border-radius: 50px;
 	position: absolute;
 	display: block;
 	left: 50%;
 	margin-left: -25px;
-	top: -65px;
+	top: -80px;
 	cursor: pointer;
 	opacity: 0.8;
 	-webkit-transition: opacity .5s;
@@ -143,7 +143,7 @@ a.arrow > svg {
 .content{
 	width: 100%;
 	height: auto;
-	background: #FFF;
+	background: #ece9e2;
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -155,7 +155,6 @@ a.arrow > svg {
 	width: 100%;
 	position: absolute;
 	text-align: center;
-	background: #FFF;
 	padding: 20px 0;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -164,7 +163,6 @@ a.arrow > svg {
 .gallery{
 	width: 100%;
 	height: auto;
-	background: #FFF;
 	position: relative;
 	padding-bottom: 110px;
 	top: 40px;
@@ -172,10 +170,10 @@ a.arrow > svg {
 
 .gallery h1{
 	color: #e74c3c;
-	font-size: 3em;
+	font-size: 4em;
 	box-shadow: none;
 	background: none;
-	font-weight: 100;
+	font-weight: normal;
 	width: auto;
 	text-align: left;
 	position: relative;
@@ -196,36 +194,36 @@ a.arrow > svg {
 .download{
 	width: 100%;
 	height: auto;
-	background: #FFF;
+	background-color: #232323;
 	position: relative;
 	left: 0;
 	color: white;
-	font-weight: 400;
+	font-weight: normal;
 	padding-bottom: 200px;
-	padding-top: 100px;
 }
 
 .download h1 {
 	font-size: 2em;
-	font-weight: 100;
+	font-weight: normal;
 	text-align: center;
-	color: #3498db;
+	color: #FFF;
 	margin: 0;
 	box-shadow: none;
 	background: none;
 	position: absolute;
 	width: 100%;
+	padding: 0;
 }
 
 .download p {
 	font-size: 1.15em;
-	font-weight: 100;
+	font-weight: normal;
 	text-align: center;
-	color: #1A1A1A;
+	color: #FFF;
 	box-shadow: none;
 	background: none;
 	position: relative;
-	max-width: 500px;
+	max-width: 550px;
 	margin: 0 auto;
 	top: 80px;
 }
@@ -234,11 +232,11 @@ a.arrow > svg {
 	padding: 10px 20px;
 	color: white;
 	font-size: 1.3em;
-	font-weight: 100;
+	font-weight: normal;
 	border-radius: 5px;
 	margin: 0 5px;
 	text-align: center;
-	margin: 10px 0;
+	margin: 10px 15px;
 	opacity: 0.9;
 	-webkit-transition: opacity .5s;
 	transition: opacity .5s;
@@ -248,25 +246,3 @@ a.arrow > svg {
 	opacity: 1;
 }
 
-::-webkit-scrollbar {
-	width: 12px;
-}
-
-::-webkit-scrollbar-track {
-	background: #FFF;
-}
-
-::-webkit-scrollbar-thumb {
-	border: 1px solid #b2b2b2;
-	background: #c8c8c8;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	border: 1px solid #9c9c9c;
-	background: #b2b2b2;
-}
-
-::-webkit-scrollbar-thumb:active {
-	border: 1px solid #c14131;
-	background: #d64937;
-}

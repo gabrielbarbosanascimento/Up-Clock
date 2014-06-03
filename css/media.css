@@ -4,12 +4,6 @@
 		height: 500px;
 	}
 
-	.cover span{
-		line-height: 6em;
-	}
-	.cover h3{
-		line-height: 22em;
-	}
 
 	.content{
 		top: 500px;
@@ -18,16 +12,31 @@
 
 	.content h1{
 		font-size: 2em;
+		text-align: center;
 	}
 
+	.arrow{
+		display: none;
+	}
 
+	.gallery p{
+		text-align: center;
+	}
+	
+	.content > .row{
+		padding: 0 0 70px 0 !important;
+	}
+
+	.cover span{
+    	margin-top: 13%;
+    }
 }
-
+	
 @media all and (max-width: 700px) {
 	.gallery .col{
 		width: 100%;
 	}
-
+    
 }
 @media all and (max-width: 500px) {
 	.download a{
@@ -48,33 +57,15 @@
 	}
 
 	.cover span{
-		font-size: 3em;
-		font-weight: 100;
-		text-align: center;
-		line-height: 4em;
+		margin-top: 7px;
 	}
 
-	.cover h3{
-		font-size: 1em;
-		line-height: 20em;
-	}
-
-	.cover img{
-		width: 50px;
-		top: 10px !important;
-	}
 }
 
 @media all and (max-width: 450px) {
-	.cover h3{
-		display: none;
-	}
-
 	.cover span{
-		font-size: 2em;
-		line-height: 9em;
-	}
-
+    	font-size: 57px;
+    }
 	.arrow{
 		width: 40px;
 		height: 40px;
@@ -89,4 +80,12 @@
 	}
 }
 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and ( min-device-pixel-ratio: 1.25),
+only screen and ( min-resolution: 200dpi),
+only screen and ( min-resolution: 1.25dppx)
+{
+    -webkit-font-smoothing: subpixel-antialiased;
+}
 
