@@ -80,7 +80,7 @@ hr{
 	width: 50px;
 	height: 30px;
 	display: inline-block;
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(0, 0, 0, 0.1);
 	-webkit-border-radius: 15px;
 	border-radius: 15px;
 }
@@ -247,17 +247,16 @@ hr{
 	width: 442px;
 	height: 442px;
 	position: absolute;
-	z-index: 0;
+	z-index: 3;
 	left: 0px;
-	top: 0px;
-	background: url(media/blur.png) center;
+	top: 442px;
+	background: #f4f4f4;
 }
 
 .group{
 	width: 336px;
 	position: relative;
-	float: right;
-	display: none;
+	float: left;
 }
 
 
@@ -266,20 +265,18 @@ hr{
 	font-size: 22px;
 	margin-left: 15px;
 	top: 0;
-	color: white;
-	opacity: 0.9;
+	color: gray;
 }.title2{
 	position: relative;
 	font-size: 22px;
 	margin-left: 15px;
 	top: 0px;
-	color: white;
-	opacity: 0.9;
+	color: gray;
 }
 
 
 #pallet-color{
-	width: 150px;
+	width: 300px;
 	font-size: 0;
 	margin-top: 5px;
 	position: relative;
@@ -304,12 +301,12 @@ hr{
 
 .classic{
 	position: absolute;
-	top: 105px;
+    margin-top: 10px;  
 	left: 15px;
 	font-size: 17px;
 	cursor: pointer;
 	width: 260px;
-	color: white;
+	color: gray;
 }
 
 .classic .switch{
@@ -323,9 +320,12 @@ hr{
 	position: relative;
 	float: right;
 	padding: 10px 20px;
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(0, 0, 0, 0.2);
 	margin: -50px 63px;
 	border-radius: 5px;
+	left: 152px;
+	top: 15px;
+    font-weight: bold;
 }
 
 
@@ -336,6 +336,7 @@ hr{
 	left: 15px;
 	font-size: 17px;
 	width:260px;
+    color: gray;
 }
 .t24 .switch{
 	position: absolute;
@@ -486,15 +487,17 @@ hr{
 }
 input[type=range] {
 	-webkit-appearance: none;
-	width: 261px;
+	width: 415px;
 	height: 5px;
 	margin-left: 15px;
 	display: inline-block;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(0, 0, 0, 0.3);
 	-webkit-border-radius: 15px;
 	border-radius: 15px;
 	cursor: pointer;
 	outline: none;
+    position: relative;
+    top: 2px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -507,4 +510,6 @@ input[type="range"]::-webkit-slider-thumb {
 	border-radius: 15px;
 	color: white;
 	position: relative;
+    border: 1px solid rgba(145, 145, 145, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

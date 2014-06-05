@@ -22,38 +22,30 @@ $(document).ready(function() {
 	$('#settings').click(function() {
 		if ($('#settings').hasClass('show'))
 		{
-			$('#animation').animate({
-				marginLeft: '-250px',
-				width: '350px',
-				height: '350px',
-				top: '50px'
-			}, 250);
-			$('#circle').animate({
-				left: '-250px'
-			}, 250, function(){
-				$('#g1').fadeIn('fast',function(){
-					$('#g2').fadeIn('fast');
-				});
-			});
 			$('#settings').addClass('hide');
 			$('#settings').removeClass('show');
-			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.95)');	
+			$('#configuration').animate({
+				top: 200
+			}, 250);
+			$('#ur').animate({
+				top: 155
+			}, 250);
+			$('#clock').animate({
+				top: 160
+			}, 250);
 		}
 		else {
-			$('#animation').animate({
-				marginLeft: 0,
-				width: '442px',
-				height: '442px',
-				top: 0
-			}, 250);
-			$('#circle').animate({
-				left: '76px'
-			}, 250, function(){
-				$('#g1, #g2').fadeOut('fast');
-			});
 			$('#settings').addClass('show');
 			$('#settings').removeClass('hide');
-			$('#clock, #ur').css('color', 'rgba(255, 255, 255, 0.7)');
+			$('#configuration').animate({
+				top: 442
+			}, 250);
+			$('#ur').animate({
+				top: 200
+			}, 250);
+			$('#clock').animate({
+				top: 206
+			}, 250);
 		}
 	});
 
@@ -144,6 +136,7 @@ $(document).ready(function() {
         $('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
         $('#animation, #circle, #alarm-settings, .alarm-popup').css("background",choosenColor);
         $('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
+        $('.custom').css('background','rgba(0, 0, 0, 0.4)');
     }
     
     $('.custom').click(function() {
