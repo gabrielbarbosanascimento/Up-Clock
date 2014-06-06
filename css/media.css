@@ -30,12 +30,21 @@
 	.cover span{
     	margin-top: 13%;
     }
+    
+    .gallery h1{
+        padding: 30px 0 !important; 
+    }
 }
 	
-@media all and (max-width: 700px) {
-	.gallery .col{
-		width: 100%;
+@media all and (max-width: 900px) {
+	.col-c{
+		width: 100% !important;
+        background: white;
 	}
+    
+    .content > .row{
+        padding: 0 !important;   
+    }
     
 }
 @media all and (max-width: 500px) {

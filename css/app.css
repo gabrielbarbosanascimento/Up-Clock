@@ -72,7 +72,7 @@ input::-webkit-inner-spin-button {
 
 .cover{
 	width: 100%;
-	height: 100%;
+	height: 750px;
 	background: url(../img/bg.jpg) no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -143,9 +143,9 @@ a.arrow > svg {
 .content{
 	width: 100%;
 	height: auto;
-	background: #ece9e2;
+	background: #f3f6fa;
 	position: absolute;
-	top: 100%;
+	top: 750px;
 	left: 0;
 }
 
@@ -165,36 +165,36 @@ a.arrow > svg {
 	height: auto;
 	position: relative;
 	padding-bottom: 110px;
-	top: 40px;
 }
 
 .gallery h1{
-	color: #e74c3c;
-	font-size: 4em;
+	color: #7c8081;
+	font-size: 3em;
 	box-shadow: none;
 	background: none;
 	font-weight: normal;
 	width: auto;
-	text-align: left;
+	text-align: center;
 	position: relative;
+    padding: 0;
 }
 
 .gallery p{
 	color: gray;
 	font-weight: 300;
-	text-align: left;
+	text-align: center;
 	position: relative;
-	padding-bottom: 20px;
+	padding: 20px 0;
 }
 
 .gallery .col{
-	width: 50%;
+	width: 100%;
 }
 
 .download{
 	width: 100%;
 	height: auto;
-	background-color: #232323;
+	background-color: white;
 	position: relative;
 	left: 0;
 	color: white;
@@ -206,7 +206,7 @@ a.arrow > svg {
 	font-size: 2em;
 	font-weight: normal;
 	text-align: center;
-	color: #FFF;
+	color: #4b4b4d;
 	margin: 0;
 	box-shadow: none;
 	background: none;
@@ -219,7 +219,7 @@ a.arrow > svg {
 	font-size: 1.15em;
 	font-weight: normal;
 	text-align: center;
-	color: #FFF;
+	color: #888;
 	box-shadow: none;
 	background: none;
 	position: relative;
