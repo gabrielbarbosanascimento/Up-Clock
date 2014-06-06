@@ -133,7 +133,7 @@ $(document).ready(function() {
         $('#i4').attr("src","media/4.svg");
         $('#i5').attr("src","media/5.svg");
         $('.classic .switch div').animate({right: 0},300);
-        $('.classic .switch').css('background-color','rgba(255, 255, 255, 0.2)');
+        $('.classic .switch').css('background-color','rgba(0, 0, 0, 0.1)');
         $('#animation, #circle, #alarm-settings, .alarm-popup').css("background",choosenColor);
         $('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
         $('.custom').css('background','rgba(0, 0, 0, 0.4)');
