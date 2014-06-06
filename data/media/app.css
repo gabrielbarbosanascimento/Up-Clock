@@ -383,6 +383,11 @@ hr{
 
 }
 
+.clock-settings input{
+    -webkit-user-select: initial;
+    user-select: initial;
+}
+
 .clock-settings label{
 	text-transform: uppercase;
 	background-color: #f4f4f4;
