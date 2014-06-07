@@ -5,7 +5,6 @@ A beautiful clock inspired by the [Ubuntu Touch Lockscreen](https://www.youtube.
 
 ![screenshot](https://dl.dropboxusercontent.com/u/69127660/upclock.png)
 
-![screenshot](https://dl.dropboxusercontent.com/u/69127660/upclocksettings.png)
 
 This app is created using Quickly on [Ubuntu](http://ubuntu.com/) and is for Linux distributions. It runs using Python, but It's a web application.
 
