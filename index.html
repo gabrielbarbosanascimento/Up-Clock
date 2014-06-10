@@ -27,6 +27,7 @@
 	
 </head>
 <body>
+    
 	<div class="cover">
 		<div class="black">
 			<div class="row">
@@ -34,6 +35,7 @@
 					<img src="img/up-clock.svg" style="position: relative;top: 13px;width: 120px;" onerror="this.onerror=null; this.src='img/up-clock.png'" />
 					<h1>UP Clock</h1>
 					<h3>A beautiful linux application inspired by the Ubuntu Touch Lockscreen</h3>
+					<a href="#" class="watch">WATCH VIDEO</a>
 				</span>	
 			</div>
 		</div>
@@ -85,7 +87,13 @@
 		</div>
 
 	</div>
-
+<div class="light">
+    <img src="img/x.svg" style="width:50px;position:absolute;cursor:pointer;right:10px;top:10px" alt="Close">
+    
+    <div class="row video-container" style="top: 20%;">
+       <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://player.vimeo.com/video/97788312' frameborder='0'></iframe></div>
+    </div>
+</div>
 
 <script>
 	$(document).ready(function(){
@@ -94,7 +102,24 @@
 			$('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
 
 		});
-
+        
+        if ($(window).width() > 550) {
+            $('.watch').click(function(){
+			     $('.light').fadeIn('fast');
+                 $('body').css('overflow','hidden');
+		    });
+        
+            $('.light').click(function(){
+			    $('.light').fadeOut('fast');
+                $('body').css('overflow','scroll');
+            
+		    });
+            
+            
+        } else {
+             $('.watch').attr('href', 'https://vimeo.com/97788312');
+        }
+        
 	});
 </script>
 </body>
