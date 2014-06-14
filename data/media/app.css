@@ -98,8 +98,10 @@ hr{
 /*---------------------------------------------------------*/
 
 #container{
-	height: 442px;
-	width: 442px;
+	max-height: 442px;
+	max-width: 442px;
+    width: 100%;
+    height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -107,8 +109,8 @@ hr{
 }
 
 #animation{
-	width: 442px;
-	height: 442px;
+	width: 100%;
+	height: 100%;
 	z-index: 1;
 	overflow: hidden;
 	position: relative;
@@ -148,8 +150,10 @@ hr{
 	width: 284px;
 	height: 284px;
 	position: absolute;
-	top: 81px;
-	left: 76px;
+	top: -142px;
+    margin-top: 50%;
+	left: -142px;
+    margin-left: 50%;
 	background: rgb(51, 51, 51);
 	border-radius: 174px;
 	z-index: 1;
@@ -159,6 +163,10 @@ hr{
 	animation-duration: 0.8s;
 }
 
+#circle img{
+    width: 100%;
+    height: 100%;
+}
 
 #close{
 	font-family: 'Lato';
@@ -244,8 +252,8 @@ hr{
 /*------------------- Configuration Screen ----------------------*/
 
 #configuration{
-	width: 442px;
-	height: 442px;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	z-index: 3;
 	left: 0px;
@@ -347,8 +355,8 @@ hr{
 /*---------------------Alarm Screen---------------------------*/
 
 #alarm-settings{
-	width: 442px;
-	height: 442px;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	z-index: 99;
 	left: 0px;
@@ -451,8 +459,8 @@ hr{
 }
 
 .alarm-popup{
-	width: 442px;
-	height: 442px;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
