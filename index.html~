@@ -83,7 +83,7 @@
     </div>
 </div>
 <script>
-	$(document).ready(function(){$(".arrow").click(function(e){e.preventDefault();$("html,body").animate({scrollTop:$(this.hash).offset().top},600)});if($(window).width()>550){$(".watch").click(function(){$(".light").fadeIn("fast");$("body").css("overflow-y","hidden")});$(".light").click(function(){$(".light").fadeOut("fast");$("body").css("overflow-y","scroll")})}else{$(".watch").attr("href","https://vimeo.com/97788312")}})
+	$(document).ready(function(){$(".arrow").click(function(e){e.preventDefault();$("html,body").animate({scrollTop:$(this.hash).offset().top},600)});if($(window).width()>550){$(".watch").click(function(){$(".light").fadeIn("fast");$("body").css("overflow","hidden")});$(".light").click(function(){$(".light").fadeOut("fast");$("body").css("overflow","scroll")})}else{$(".watch").attr("href","https://vimeo.com/97788312")}})
 </script>
 </body>
 </html>
