@@ -74,42 +74,72 @@ $(document).ready(function() {
 			$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c1Color);
 			$('.c1 img').css('display','block');
 			$('.c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
+            if ($('.t24').hasClass('off')) {
+                clock1(c1Color);
+            }
 		} else if ($(this).hasClass("c2")) {
 			$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c2Color);
 			$('.c2 img').css('display','block');
 			$('.c1 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
+            if ($('.t24').hasClass('off')) {
+                clock1(c2Color);
+            }
 		} else if ($(this).hasClass("c3")) {
 			$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c3Color);
 			$('.c3 img').css('display','block');
 			$('.c1 img, .c2 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
+            if ($('.t24').hasClass('off')) {
+                clock1(c3Color);
+            }
 		} else if ($(this).hasClass("c4")) {
 			$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c4Color);
 			$('.c4 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
+            if ($('.t24').hasClass('off')) {
+                clock1(c4Color);
+            }
 		} else if ($(this).hasClass("c5")) {
 			$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c5Color);
 			$('.c5 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
+            if ($('.t24').hasClass('off')) {
+                clock1(c5Color);
+            }
 		} else if ($(this).hasClass("c6")) {
 			$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c6Color);
 			$('.c6 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display','none');
+            if ($('.t24').hasClass('off')) {
+                clock1(c6Color);
+            }
 		} else if ($(this).hasClass("c7")) {
 			$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c7Color);
 			$('.c7 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c8 img, .c9 img, .c10 img').css('display','none');
+            if ($('.t24').hasClass('off')) {
+                clock1(c7Color);
+            }
 		} else if ($(this).hasClass("c8")) {
 			$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c8Color);
 			$('.c8 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c9 img, .c10 img').css('display','none');
+            if ($('.t24').hasClass('off')) {
+                clock1(c8Color);
+            }
 		} else if ($(this).hasClass("c9")) {
 			$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c9Color);
 			$('.c9 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c10 img').css('display','none');
+            if ($('.t24').hasClass('off')) {
+                clock1(c9Color);
+            }
 		} else if ($(this).hasClass("c10")) {
 			$('#animation, #circle, #alarm-settings, .alarm-popup').css("background", c10Color);
 			$('.c10 img').css('display','block');
 			$('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img').css('display','none');
+            if ($('.t24').hasClass('off')) {
+                clock1(c10Color);
+            }
 		}
 	});
 
@@ -121,6 +151,9 @@ $(document).ready(function() {
 	//Classic button
 	$('.classic').click(function() {
 		backToClassic();
+        if ($('.t24').hasClass('off')) {
+            clock1(colorSwitch);
+        }
 	});
 	 
     //Custom Button
@@ -146,6 +179,9 @@ $(document).ready(function() {
         } else {
                 changeColor(color);
                 localStorage.setItem("CHOOSEN_COLOR", color);
+            if ($('.t24').hasClass('off')) {
+                clock1(color);
+            }
         }
 
     });
@@ -153,6 +189,9 @@ $(document).ready(function() {
     if (localStorage.getItem("CHOOSEN_COLOR")) {
         var savedColor = localStorage.getItem("CHOOSEN_COLOR");
         changeColor(savedColor);
+        if ($('.t24').hasClass('off')) {
+            clock1(savedColor);
+        }
     }
 
 

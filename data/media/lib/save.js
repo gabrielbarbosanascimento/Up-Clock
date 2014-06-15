@@ -28,7 +28,39 @@ $(document).ready(function() {
 	});
 	
 	if (localStorage.getItem("clock1") === "true") {
-		clock1();
+        if (localStorage.getItem("c1") === 'true') {
+            clock1(c1Color);
+        }
+        else if (localStorage.getItem("c2") === 'true') {
+            clock1(c2Color);
+        }
+        else if (localStorage.getItem("c3") === 'true') {
+            clock1(c3Color);
+        }
+        else if (localStorage.getItem("c4") === 'true') {
+            clock1(c4Color);
+        }
+        else if (localStorage.getItem("c5") === 'true') {
+            clock1(c5Color);
+        }
+        else if (localStorage.getItem("c6") === 'true') {
+            clock1(c6Color);
+        }
+        else if (localStorage.getItem("c7") === 'true') {
+            clock1(c7Color);
+        }
+        else if (localStorage.getItem("c8") === 'true') {
+            clock1(c8Color);
+        }
+        else if (localStorage.getItem("c9") === 'true') {
+            clock1(c9Color);
+        }
+        else if (localStorage.getItem("c10") === 'true') {
+            clock1(c10Color);
+        }
+        else if (localStorage.getItem('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10') === null) {
+		    clock1(colorSwitch);
+	    }
 	} else if (localStorage.getItem("clock2") === "true") {		
 		clock2();
 	}
@@ -241,5 +273,6 @@ $(document).ready(function() {
 		palletColors();
 		$('.c10 img').css('display','block');
 	}
+    
 	
 });

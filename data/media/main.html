@@ -47,7 +47,6 @@
 		<a id="settings" class="show"><img src="media/settings.svg" /></a>
 
 
-		
 		<div id="configuration">
 
 			<div id="g1" class="group" style="height: 140px;top: 5px;">
@@ -156,9 +155,9 @@
 	</script>
 	<script type="text/javascript">
 
-var backToClassic = function() {
+function backToClassic() {
 	$('.classic .switch div').animate({right: '-20px'},300);
-	$('.classic .switch').css('background-color','rgba(0, 0, 0, 0.3)');
+	$('.classic .switch').css('background-color', colorSwitch);
 	$('#circle').fadeOut('fast');
 	$('#i1').attr("src","media/1.png");
 	$('#i2').attr("src","media/2.png");
@@ -182,9 +181,11 @@ var c1Color = "#333";
 	c9Color = "#f3894e";
 	c10Color = "#e05a4c";
 
+var colorSwitch = 'rgb(138, 85, 103)';
+
 //Spans of the pallet of color
 //it returns to the colored theme
-var palletColors = function() {
+function palletColors() {
 	$('#circle').fadeIn('fast');
 	$('#i1').attr("src","media/1.svg");
 	$('#i2').attr("src","media/2.svg");
@@ -197,15 +198,15 @@ var palletColors = function() {
 };
 
 //Variable that change the clocks
-var clock1 = function() {
+function clock1(color) {
 	$('.t24 .switch div').animate({right: '-20px'},300);
-	$('.t24 .switch').css('background-color','rgba(0, 0, 0, 0.3)');
+	$('.t24 .switch').css('background-color', color);
 	$('#clock').fadeOut('fast');
 	$('#ur').fadeIn('fast');
 	$('.t24').addClass('off');
 	$('.t24').removeClass('on');
 };
-var clock2 = function(){
+function clock2(){
 	$('.t24 .switch div').animate({right: '0'},300);
 	$('.t24 .switch').css('background-color','rgba(0, 0, 0, 0.1)');
 	$('#clock').fadeIn('fast');

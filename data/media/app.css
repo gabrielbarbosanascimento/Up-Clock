@@ -67,16 +67,11 @@ input::-webkit-inner-spin-button {
     display: none;
 }
 
-
 hr{
-	background-color: #eaeaea;
-	color: #eaeaea;
-	width: 412px;
-	position: relative;
-	margin: 15px;
-	border: 1px solid #eaeaea;
-	height: 0;
-	top: -12px;
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin: 8px;
 }
 
 .switch{
@@ -253,15 +248,14 @@ hr{
 }
 
 /*------------------- Configuration Screen ----------------------*/
-
 #configuration{
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	z-index: 3;
+	z-index: 5;
 	left: 0px;
 	top: 442px;
-	background: #f4f4f4;
+	background: #f7f7f7;
 }
 
 .group{
@@ -504,7 +498,7 @@ hr{
 input[type=range] {
 	-webkit-appearance: none;
 	width: 415px;
-	height: 5px;
+	height: 3px;
 	margin-left: 15px;
 	display: inline-block;
 	background-color: rgba(0, 0, 0, 0.3);
@@ -526,6 +520,5 @@ input[type="range"]::-webkit-slider-thumb {
 	border-radius: 15px;
 	color: white;
 	position: relative;
-    border: 1px solid rgba(145, 145, 145, 0.2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.2);
 }
