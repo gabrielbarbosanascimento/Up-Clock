@@ -179,6 +179,16 @@ $(document).ready(function() {
         } else {
                 changeColor(color);
                 localStorage.setItem("CHOOSEN_COLOR", color);
+                localStorage.removeItem('c1', 'true');
+                localStorage.removeItem('c2', 'true');
+			    localStorage.removeItem('c3', 'true');
+			    localStorage.removeItem('c4', 'true');
+			    localStorage.removeItem('c5', 'true');
+			    localStorage.removeItem('c6', 'true');
+			    localStorage.removeItem('c7', 'true');
+			    localStorage.removeItem('c8', 'true');
+			    localStorage.removeItem('c9', 'true');
+			    localStorage.removeItem('c10', 'true');			    
             if ($('.t24').hasClass('off')) {
                 clock1(color);
             }
@@ -197,41 +207,49 @@ $(document).ready(function() {
 
 	//Clock changing
 	$('.t24').click(function() {
+        var savedColor = localStorage.getItem("CHOOSEN_COLOR");
+        
 		if ($('.t24').hasClass('on')) {
 			if (localStorage.getItem("c1") === 'true') {
-            clock1(c1Color);
+                clock1(c1Color);
+            }
+            else if (localStorage.getItem("c2") === 'true') {
+                clock1(c2Color);
+            }
+            else if (localStorage.getItem("c3") === 'true') {
+                clock1(c3Color);
+            }
+            else if (localStorage.getItem("c4") === 'true') {
+                clock1(c4Color);
+            }
+            else if (localStorage.getItem("c5") === 'true') {
+                clock1(c5Color);
+            }
+            else if (localStorage.getItem("c6") === 'true') {
+                clock1(c6Color);
+            }
+            else if (localStorage.getItem("c7") === 'true') {
+                clock1(c7Color);
+            }
+            else if (localStorage.getItem("c8") === 'true') {
+                clock1(c8Color);
+            }
+            else if (localStorage.getItem("c9") === 'true') {
+                clock1(c9Color);
+            }
+            else if (localStorage.getItem("c10") === 'true') {
+                clock1(c10Color);
+            } 
+            
+            else if (localStorage.getItem("CHOOSEN_COLOR")) {
+                clock1(savedColor);
+            }
+            
+            else if (localStorage.getItem('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, CHOOSEN_COLOR') === null) {
+		        clock1(colorSwitch);
+	        }         
+            
         }
-        else if (localStorage.getItem("c2") === 'true') {
-            clock1(c2Color);
-        }
-        else if (localStorage.getItem("c3") === 'true') {
-            clock1(c3Color);
-        }
-        else if (localStorage.getItem("c4") === 'true') {
-            clock1(c4Color);
-        }
-        else if (localStorage.getItem("c5") === 'true') {
-            clock1(c5Color);
-        }
-        else if (localStorage.getItem("c6") === 'true') {
-            clock1(c6Color);
-        }
-        else if (localStorage.getItem("c7") === 'true') {
-            clock1(c7Color);
-        }
-        else if (localStorage.getItem("c8") === 'true') {
-            clock1(c8Color);
-        }
-        else if (localStorage.getItem("c9") === 'true') {
-            clock1(c9Color);
-        }
-        else if (localStorage.getItem("c10") === 'true') {
-            clock1(c10Color);
-        }
-        else if (localStorage.getItem('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10') === null) {
-		    clock1(colorSwitch);
-	    }
-		} 
 		else {
 			clock2();
 		}
