@@ -172,29 +172,37 @@ $(document).ready(function() {
         $('.custom').css('background','rgba(0, 0, 0, 0.4)');
     }
     
-    $('.custom').click(function() {
-        var color = prompt("Set the color in hexa decimal (with sharp #) !");
-        if (color === null) {
-               
-        } else {
-                changeColor(color);
-                localStorage.setItem("CHOOSEN_COLOR", color);
-                localStorage.removeItem('c1', 'true');
-                localStorage.removeItem('c2', 'true');
-			    localStorage.removeItem('c3', 'true');
-			    localStorage.removeItem('c4', 'true');
-			    localStorage.removeItem('c5', 'true');
-			    localStorage.removeItem('c6', 'true');
-			    localStorage.removeItem('c7', 'true');
-			    localStorage.removeItem('c8', 'true');
-			    localStorage.removeItem('c9', 'true');
-			    localStorage.removeItem('c10', 'true');			    
-            if ($('.t24').hasClass('off')) {
-                clock1(color);
-            }
-        }
+	$('.custom').click(function() {
+		var color = prompt("Put the whole Hexadecimal code of your favourite color (with sharp #) ! \nHow about #bada55 ?");
+		colorcode_validate(color)
+		function colorcode_validate(choosenColor) {
+			var regColorcode = /^(#)?([0-9a-fA-F]{3})([0-9a-fA-F]{3})?$/;
 
-    });
+		if (choosenColor === null){
+			//If the user enters clicks "Cancel", do nothing
+		} else if (choosenColor == ''){
+			//If the user enters enters nothing but clicks "Ok", do nothing
+		} else if(regColorcode.test(choosenColor) == false) {
+			alert("The code you entered is invalid. \nVisit http://html-color-codes.info/ to get correct hexadecimal code of colors.");
+		} else {
+			changeColor(choosenColor);
+			localStorage.setItem("CHOOSEN_COLOR", choosenColor);
+			localStorage.removeItem('c1', 'true');
+			localStorage.removeItem('c2', 'true');
+			localStorage.removeItem('c3', 'true');
+			localStorage.removeItem('c4', 'true');
+			localStorage.removeItem('c5', 'true');
+			localStorage.removeItem('c6', 'true');
+			localStorage.removeItem('c7', 'true');
+			localStorage.removeItem('c8', 'true');
+			localStorage.removeItem('c9', 'true');
+			localStorage.removeItem('c10', 'true');
+			if ($('.t24').hasClass('off')) {
+				clock1(choosenColor);
+			}
+		}
+		}
+	});
 
     if (localStorage.getItem("CHOOSEN_COLOR")) {
         var savedColor = localStorage.getItem("CHOOSEN_COLOR");
@@ -247,7 +255,7 @@ $(document).ready(function() {
             
             else if (localStorage.getItem('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, CHOOSEN_COLOR') === null) {
 		        clock1(colorSwitch);
-	        }         
+	        }
             
         }
 		else {
@@ -280,13 +288,13 @@ $(document).ready(function() {
 		var ring = function () {
 			$('#alarm').css('display','none');
 
-			setTimeout(function(){		
+			setTimeout(function(){
 				alarmSound.loop = true;
 				alarmSound.play();
 
 			},timeLeft);
 
-			setTimeout(function(){		
+			setTimeout(function(){
 				$('.alarm-popup').css('display','block');
 
 			},timeLeft);
@@ -301,7 +309,7 @@ $(document).ready(function() {
 				$('#alarm-settings').css('display','none');
 			});
 			$('#alarm').addClass('show');
-			$('#alarm').css('display','block');		
+			$('#alarm').css('display','block');
 			$('.alarm-popup img').css('-webkit-animation','0');
 			$('.alarm-popup img').css('animation','0');
 			$('#alarm').fadeIn('fast');
