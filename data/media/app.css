@@ -160,6 +160,7 @@ hr{
 	display: none;
 	-webkit-animation-duration: 0.8s;
 	animation-duration: 0.8s;
+    -webkit-transition: 500ms background ease;
 }
 
 #circle img{
