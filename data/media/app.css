@@ -113,6 +113,7 @@ hr{
 	overflow: hidden;
 	position: relative;
 	left: 0;
+	-webkit-transition: 500ms background ease;
 }
 
 #animation img{
@@ -347,6 +348,7 @@ hr{
 	position: absolute;
 	top: -4px;
 	right: 0;
+	-webkit-transition: 500ms background ease;
 }
 
 /*---------------------Alarm Screen---------------------------*/
