@@ -18,7 +18,7 @@ To run this aplication,
 - Open the Terminal and type cd plus the direction of this directory on your files. 
 - Enter on the directory 
 ```bash
-$ cd Up-Clock/
+$ cd Up-Clock
 ```
 - Now enter
 ```bash
