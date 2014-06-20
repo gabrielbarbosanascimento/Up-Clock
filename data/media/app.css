@@ -17,6 +17,7 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 /*----------------SOME GENERAL RUNES/DON'T TOUCH IT-----------------*/
+
 * {
     -webkit-user-select: none;
     user-select: none;
@@ -35,46 +36,39 @@ img {
     -webkit-user-drag: none;
     user-drag: none;
 }
-
 @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
     src: url('lib/Lato-Light.ttf');
 }
-
-body{
+body {
     cursor: default;
 }
-
 span {
-     color: white;
+    color: white;
 }
-
-a{
+a {
     color: rgba(255, 255, 255, 0.6);
     background: transparent;
     -webkit-user-drag: none;
     user-drag: none;
 }
-
-a:active, a:hover {
+a:active,
+a:hover {
     outline: 0;
 }
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     display: none;
 }
-
-hr{
+hr {
     background-color: #ccc;
     border: 0;
     height: 1px;
     margin: 8px;
 }
-
-.switch{
+.switch {
     width: 50px;
     height: 30px;
     display: inline-block;
@@ -82,7 +76,7 @@ hr{
     -webkit-border-radius: 15px;
     border-radius: 15px;
 }
-.switch div{
+.switch div {
     width: 26px;
     height: 26px;
     margin: 2px;
@@ -92,10 +86,9 @@ hr{
     color: white;
     position: relative;
 }
-
 /*---------------------------------------------------------*/
 
-#container{
+#container {
     max-height: 442px;
     max-width: 442px;
     width: 100%;
@@ -105,8 +98,7 @@ hr{
     left: 0;
     overflow: hidden;
 }
-
-#animation{
+#animation {
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -115,24 +107,21 @@ hr{
     left: 0;
     -webkit-transition: 500ms background ease;
 }
-
-#animation img{
+#animation img {
     width: 100%;
     height: 100%;
 }
-
-#ur{
+#ur {
     font-size: 38px;
     position: absolute;
-    top: 202px;	
+    top: 202px;
     z-index: 2;
     color: rgba(255, 255, 255, 0.7);
     width: 100%;
     text-align: center;
     font-family: 'Lato';
 }
-
-#clock{
+#clock {
     font-size: 34px;
     position: absolute;
     top: 206px;
@@ -143,9 +132,7 @@ hr{
     width: 100%;
     text-align: center;
 }
-
-
-#circle{
+#circle {
     width: 284px;
     height: 284px;
     position: absolute;
@@ -162,13 +149,11 @@ hr{
     animation-duration: 0.8s;
     -webkit-transition: 500ms background ease;
 }
-
-#circle img{
+#circle img {
     width: 100%;
     height: 100%;
 }
-
-#close{
+#close {
     font-family: 'Lato';
     font-size: 18px;
     width: 30px;
@@ -184,9 +169,7 @@ hr{
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
 }
-
-
-#minimize{
+#minimize {
     font-family: monospace;
     font-size: 18px;
     width: 30px;
@@ -205,12 +188,13 @@ hr{
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
 }
-#close:hover, #minimize:hover, #settings:hover, #alarm:hover{
+#close:hover,
+#minimize:hover,
+#settings:hover,
+#alarm:hover {
     background: rgba(255, 255, 255, 0.5);
 }
-
-
-#settings{
+#settings {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -221,15 +205,14 @@ hr{
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
 }
-#settings img{
+#settings img {
     margin-top: 6px;
     margin-left: 6px;
     width: 18px;
     height: 18px;
     opacity: 0.85;
 }
-
-#alarm{
+#alarm {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -240,17 +223,16 @@ hr{
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
 }
-
-#alarm img{
+#alarm img {
     margin-top: 6px;
     margin-left: 6px;
     width: 18px;
     height: 18px;
     opacity: 0.85;
 }
-
 /*------------------- Configuration Screen ----------------------*/
-#configuration{
+
+#configuration {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -259,30 +241,26 @@ hr{
     top: 442px;
     background: #f7f7f7;
 }
-
-.group{
+.group {
     width: 336px;
     position: relative;
     float: left;
 }
-
-
-.title1{
+.title1 {
     position: relative;
     font-size: 22px;
     margin-left: 15px;
     top: 0;
     color: gray;
-}.title2{
+}
+.title2 {
     position: relative;
     font-size: 22px;
     margin-left: 15px;
     top: 0px;
     color: gray;
 }
-
-
-#pallet-color{
+#pallet-color {
     width: 300px;
     font-size: 0;
     margin-top: 5px;
@@ -290,39 +268,32 @@ hr{
     top: 0;
     left: 15px;
 }
-
 #pallet-color span {
     height: 30px;
     width: 30px;
     display: inline-block;
     cursor: pointer;
 }
-
 #pallet-color span img {
     height: 30px;
     width: 30px;
     display: none;
 }
-
-
-
-.classic{
+.classic {
     position: absolute;
-    margin-top: 10px;  
+    margin-top: 10px;
     left: 15px;
     font-size: 17px;
     cursor: pointer;
     width: 260px;
     color: gray;
 }
-
-.classic .switch{
+.classic .switch {
     position: absolute;
     top: -4px;
     right: 0;
 }
-
-.custom{
+.custom {
     cursor: pointer;
     position: relative;
     float: right;
@@ -334,27 +305,24 @@ hr{
     top: 15px;
     font-weight: bold;
 }
-
-
-.t24{
+.t24 {
     cursor: pointer;
     position: absolute;
     top: 34px;
     left: 15px;
     font-size: 17px;
-    width:260px;
+    width: 260px;
     color: gray;
 }
-.t24 .switch{
+.t24 .switch {
     position: absolute;
     top: -4px;
     right: 0;
     -webkit-transition: 500ms background ease;
 }
-
 /*---------------------Alarm Screen---------------------------*/
 
-#alarm-settings{
+#alarm-settings {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -362,11 +330,9 @@ hr{
     left: 0px;
     top: 0px;
     background: rgb(47, 9, 22);
-    display: none;	
+    display: none;
 }
-
-
-#alarm-settings span{
+#alarm-settings span {
     color: #F7F7F7;
     text-align: center;
     font-size: 22px;
@@ -374,28 +340,25 @@ hr{
     position: absolute;
     margin-top: 24px;
 }
-
-#alarm-settings p{
+#alarm-settings p {
     color: #F7F7F7;
     width: 100%;
     text-align: center;
     position: absolute;
     top: 80px;
 }
-.clock-settings{
+.clock-settings {
     width: 318px;
     margin: 0 auto;
     position: relative;
     top: 100px;
     padding: 6px;
 }
-
-.clock-settings input{
+.clock-settings input {
     -webkit-user-select: initial;
     user-select: initial;
 }
-
-.clock-settings label{
+.clock-settings label {
     text-transform: uppercase;
     background-color: #f4f4f4;
     width: 80px;
@@ -406,7 +369,7 @@ hr{
     margin-right: 4px;
     text-align: center;
 }
-.clock-settings label input{
+.clock-settings label input {
     display: block;
     border: 0;
     font: inherit;
@@ -416,13 +379,11 @@ hr{
     text-align: center;
     width: 59px;
     margin: 10px auto;
-    background-color:#fff;
+    background-color: #fff;
     -webkit-user-select: all;
     user-select: all;
 }
-
-
-.btn{
+.btn {
     width: 110px;
     padding: 7px 0;
     color: white;
@@ -435,39 +396,35 @@ hr{
     margin: 0 auto;
     top: 120px;
 }
-
 /*-------------------- Alarm Touch ----------------------*/
 
 @-webkit-keyframes play {
-	from {
-		-webkit-transform:rotate(45deg);
-	}
-
-	to {
-		-webkit-transform:rotate(-45deg);
-	}
+    from {
+        -webkit-transform: rotate(45deg);
+    }
+    to {
+        -webkit-transform: rotate(-45deg);
+    }
 }
 @keyframes play {
-	from {
-		-webkit-transform:rotate(45deg);
-	}
-
-	to {
-		-webkit-transform:rotate(-45deg);
-	}
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(-45deg);
+    }
 }
-
-.alarm-popup{
+.alarm-popup {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background: rgb(47, 9, 22);
-    z-index: 999;	
+    z-index: 999;
     display: none;
 }
-.alarm-popup span{
+.alarm-popup span {
     color: white;
     text-align: center;
     width: 100%;
@@ -475,8 +432,7 @@ hr{
     position: absolute;
     top: 30px;
 }
-.alarm-popup img{
-
+.alarm-popup img {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -484,7 +440,7 @@ hr{
     margin-left: -100px;
     top: 100px;
 }
-.btn-close{
+.btn-close {
     width: 110px;
     padding: 7px 0;
     color: white;
@@ -511,7 +467,6 @@ input[type=range] {
     position: relative;
     top: 2px;
 }
-
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20px;
