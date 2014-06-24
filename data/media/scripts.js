@@ -447,7 +447,7 @@ $(document).ready(function () {
     }
 
     $('.custom').click(function () {
-        var color = prompt('Put the whole Hexadecimal code of your favourite color (with sharp #) ! \nHow about #bada55 ?');
+        var color = prompt('Put the whole Hexadecimal code of your favourite color (with sharp #) ! \nHow about #8CBF26 ?');
         colorcode_validate(color)
 
         function colorcode_validate(choosenColor) {
