@@ -224,60 +224,70 @@ $(document).ready(function () {
 
     //Colors load
     if (localStorage.getItem('c1') === 'true') {
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c1Color);
+        $('#animation, #circle, .alarm-popup').css('background', c1Color);
+        $('.btn').css('color', c1Color);
         palletColors();
         $('.c1 img').css('display', 'block');
     }
     if (localStorage.getItem('c2') === 'true') {
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c2Color);
+        $('#animation, #circle, .alarm-popup').css('background', c2Color);
+        $('.btn').css('color', c2Color);
         palletColors();
         $('.c2 img').css('display', 'block');
     }
 
     if (localStorage.getItem('c3') === 'true') {
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c3Color);
+        $('#animation, #circle, .alarm-popup').css('background', c3Color);
+        $('.btn').css('color', c3Color);
         palletColors();
         $('.c3 img').css('display', 'block');
     }
 
     if (localStorage.getItem('c4') === 'true') {
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c4Color);
+        $('#animation, #circle, .alarm-popup').css('background', c4Color);
+        $('.btn').css('color', c4Color);
         palletColors();
         $('.c4 img').css('display', 'block');
     }
 
     if (localStorage.getItem('c5') === 'true') {
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c5Color);
+        $('#animation, #circle, .alarm-popup').css('background', c5Color);
+        $('.btn').css('color', c5Color);
         palletColors();
         $('.c5 img').css('display', 'block');
     }
 
     if (localStorage.getItem('c6') === 'true') {
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c6Color);
+        $('#animation, #circle, .alarm-popup').css('background', c6Color);
+        $('.btn').css('color', c6Color);
         palletColors();
         $('.c6 img').css('display', 'block');
     }
 
     if (localStorage.getItem('c7') === 'true') {
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c7Color);
+        $('#animation, #circle, .alarm-popup').css('background', c7Color);
+        $('.btn').css('color', c7Color);
         palletColors();
         $('.c7 img').css('display', 'block');
     }
 
     if (localStorage.getItem('c8') === 'true') {
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c8Color);
+        $('#animation, #circle, .alarm-popup').css('background', c8Color);
+        $('.btn').css('color', c8Color);
         palletColors();
         $('.c8 img').css('display', 'block');
     }
 
     if (localStorage.getItem('c9') === 'true') {
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c9Color);
+        $('#animation, #circle, .alarm-popup').css('background', c9Color);
+        $('.btn').css('color', c9Color);
         palletColors();
         $('.c9 img').css('display', 'block');
     }
 
     if (localStorage.getItem('c10') === 'true') {
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c10Color);
+        $('#animation, #circle, .alarm-popup').css('background', c10Color);
+        $('.btn').css('color', c10Color);
         palletColors();
         $('.c10 img').css('display', 'block');
     }
@@ -303,110 +313,146 @@ $(document).ready(function () {
             $('#settings').removeClass('show');
             $('#configuration').animate({
                 top: 200
-            }, 250);
+            }, 200);
             $('#ur').animate({
                 top: 155
-            }, 250);
+            }, 200);
             $('#clock').animate({
                 top: 160
-            }, 250);
+            }, 200);
+            
+            if ($('#alarm').hasClass('hide')) {
+                $('#card').animate({marginLeft: '-558px'}, 200, function() {
+                    $('#alarm-settings').css('display','none');
+                });
+                $('#alarm').addClass('show');
+                $('#alarm').removeClass('hide');
+                $('#settings').css('z-index', '100');
+                
+            }
         } else {
             $('#settings').addClass('show');
             $('#settings').removeClass('hide');
             $('#configuration').animate({
                 top: 442
-            }, 250);
+            }, 200);
             $('#ur').animate({
                 top: 200
-            }, 250);
+            }, 200);
             $('#clock').animate({
                 top: 206
-            }, 250);
+            }, 200);
         }
     });
 
     $('#alarm').click(function () {
         if ($('#alarm').hasClass('show')) {
-            $('#alarm-settings').fadeIn(400);
+            $('#alarm-settings').css('display','block');
+            $('#card').animate({marginLeft: '-168px'}, 200);
             $('#alarm').removeClass('show');
             $('#alarm').addClass('hide');
             $('#settings').css('z-index', '98');
+            
+            if ($('#settings').hasClass('hide')) {
+                $('#settings').addClass('show');
+                $('#settings').removeClass('hide');
+                $('#configuration').animate({
+                top: 442
+                }, 200);
+                $('#ur').animate({
+                top: 200
+                }, 200);
+                $('#clock').animate({
+                top: 206
+                }, 200);
+            }
         } else {
-            $('#alarm-settings').fadeOut(400);
+            $('#card').animate({marginLeft: '-558px'}, 200, function() {
+                $('#alarm-settings').css('display','none');
+            });
             $('#alarm').addClass('show');
             $('#alarm').removeClass('hide');
             $('#settings').css('z-index', '100');
-            $('#alarm-settings').fadeOut(400);
         }
     });
 
     //Color changes
     $('.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10').click(function () {
         if ($(this).hasClass('c1')) {
-            $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c1Color);
+            $('#animation, #circle, .alarm-popup').css('background', c1Color);
+            $('.btn').css('color', c1Color);
             $('.c1 img').css('display', 'block');
             $('.c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display', 'none');
             if ($('.t24').hasClass('off')) {
                 clock1(c1Color);
             }
         } else if ($(this).hasClass('c2')) {
-            $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c2Color);
+            $('#animation, #circle, .alarm-popup').css('background', c2Color);
+            $('.btn').css('color', c2Color);
             $('.c2 img').css('display', 'block');
             $('.c1 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display', 'none');
             if ($('.t24').hasClass('off')) {
                 clock1(c2Color);
             }
         } else if ($(this).hasClass('c3')) {
-            $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c3Color);
+            $('#animation, #circle, .alarm-popup').css('background', c3Color);
+            $('.btn').css('color', c3Color);
             $('.c3 img').css('display', 'block');
             $('.c1 img, .c2 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display', 'none');
             if ($('.t24').hasClass('off')) {
                 clock1(c3Color);
             }
         } else if ($(this).hasClass('c4')) {
-            $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c4Color);
+            $('#animation, #circle, .alarm-popup').css('background', c4Color);
+            $('.btn').css('color', c4Color);
             $('.c4 img').css('display', 'block');
             $('.c1 img, .c2 img, .c3 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display', 'none');
             if ($('.t24').hasClass('off')) {
                 clock1(c4Color);
             }
         } else if ($(this).hasClass('c5')) {
-            $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c5Color);
+            $('#animation, #circle, .alarm-popup').css('background', c5Color);
+            $('.btn').css('color', c5Color);
             $('.c5 img').css('display', 'block');
             $('.c1 img, .c2 img, .c3 img, .c4 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display', 'none');
             if ($('.t24').hasClass('off')) {
                 clock1(c5Color);
             }
         } else if ($(this).hasClass('c6')) {
-            $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c6Color);
+            $('#animation, #circle, .alarm-popup').css('background', c6Color);
+            $('.btn').css('color', c6Color);
             $('.c6 img').css('display', 'block');
             $('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display', 'none');
             if ($('.t24').hasClass('off')) {
                 clock1(c6Color);
             }
         } else if ($(this).hasClass('c7')) {
-            $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c7Color);
+            $('#animation, #circle, .alarm-popup').css('background', c7Color);
+            $('.btn').css('color', c7Color);
             $('.c7 img').css('display', 'block');
             $('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c8 img, .c9 img, .c10 img').css('display', 'none');
             if ($('.t24').hasClass('off')) {
                 clock1(c7Color);
             }
         } else if ($(this).hasClass('c8')) {
-            $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c8Color);
+            $('#animation, #circle, .alarm-popup').css('background', c8Color);
+            $('.btn').css('color', c8Color);
             $('.c8 img').css('display', 'block');
             $('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c9 img, .c10 img').css('display', 'none');
             if ($('.t24').hasClass('off')) {
                 clock1(c8Color);
             }
         } else if ($(this).hasClass('c9')) {
-            $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c9Color);
+            $('#animation, #circle, .alarm-popup').css('background', c9Color);
+            $('.btn').css('color', c9Color);
             $('.c9 img').css('display', 'block');
             $('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c10 img').css('display', 'none');
             if ($('.t24').hasClass('off')) {
                 clock1(c9Color);
             }
         } else if ($(this).hasClass('c10')) {
-            $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', c10Color);
+            $('#animation, #circle, .alarm-popup').css('background', c10Color);
+            $('.btn').css('color', c10Color);
             $('.c10 img').css('display', 'block');
             $('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img').css('display', 'none');
             if ($('.t24').hasClass('off')) {
@@ -441,7 +487,8 @@ $(document).ready(function () {
             right: 0
         }, 300);
         $('.classic .switch').css('background-color', 'rgba(0, 0, 0, 0.1)');
-        $('#animation, #circle, #alarm-settings, .alarm-popup').css('background', choosenColor);
+        $('#animation, #circle, .alarm-popup').css('background', choosenColor);
+        $('.btn').css('color', choosenColor)
         $('.c1 img, .c2 img, .c3 img, .c4 img, .c5 img, .c6 img, .c7 img, .c8 img, .c9 img, .c10 img').css('display', 'none');
         $('.custom').css('background', 'rgba(0, 0, 0, 0.4)');
     }
@@ -478,7 +525,6 @@ $(document).ready(function () {
             }
         }
     });
-
 
     //Clock changing
     $('.t24').click(function () {
@@ -560,13 +606,17 @@ $(document).ready(function () {
 
         $('.btn-close').click(function () {
             $('.alarm-popup').fadeOut('slow', function () {
-                $('#alarm-settings').css('display', 'none');
+                $('#card').animate({marginLeft: '-558px'}, 250, function() {
+                $('#alarm-settings').css('display','none');
             });
-            $('#alarm').addClass('show');
+            });
             $('#alarm').css('display', 'block');
             $('.alarm-popup img').css('-webkit-animation', '0');
             $('.alarm-popup img').css('animation', '0');
             $('#alarm').fadeIn('fast');
+            $('#alarm').addClass('show');
+            $('#alarm').removeClass('hide');
+            $('#settings').css('z-index', '100');
             alarmSound.pause();
         });
 
