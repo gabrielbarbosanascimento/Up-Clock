@@ -28,6 +28,7 @@ $(document).ready(function () {
 
     /*-----------------LocalStorage Codes----------------*/
     //
+    
     $(".t24").click(function () {
         if ($('.t24').hasClass('off')) {
             setItem('clock2', 'true');

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="lib/animate.css">
 	<script defer data-main="main" src="lib/require.js"></script>
 </head>
-<body oncontextmenu="return false;"  onload="opacity()">
+<body oncontextmenu="return false;" onload="opacity();">
 	<div id="container" class="show">
 	
 		<div id="animation" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000" >
@@ -74,11 +74,20 @@
 				<span class="title2">Time Switcher</span>	
 				<span class="t24 on">24 hours<span class="switch"><div></div></span></span><br><br><br>
 				<span class="title2" style="top: 5px;">Opacity</span><br>
-				<span><input id="slider3" type="range" min ="0.1" max="1.0" step ="0.05" onchange="updateTitle(this.value);"/></span>
+				<span><input id="slider3" type="range" min ="0.1" max="1.0" step ="0.05" onchange="updateTitle(this.value);"/><span class="slider"><div></div></span></span>
 				<script type="text/javascript">
 					function updateTitle(val) {
 						document.title = val
 						localStorage.opacity = val
+                        var sliderVal = (val*100)-2+('%');
+                        if (val < 1 && val >= 0.65) {
+                            $('.slider div').css('width', sliderVal);
+                        } else if (val < 0.65) {
+                            sliderVal =(val*100)-5+('%');
+                            $('.slider div').css('width', sliderVal);
+                        } else if (val > 0.95) {
+                            $('.slider div').css('width', '100%');
+                        }
 					}
 				</script>
 			</div>
@@ -137,6 +146,7 @@
 			document.title = localStorage.opacity
 			document.title = enable_drag
 		}
+        
 	</script>
 	<script type="text/javascript">
 	//Animation minified
@@ -160,6 +170,21 @@
         $('.custom').css("background", "rgba(0, 0, 0, 0.2)");
     };
 
+    function loadSlider(val) {
+        var valTil = (localStorage.opacity * 100) - 2;
+        var sliderVal = valTil + ('%');
+        var a = localStorage.getItem("opacity");
+        if (a < 0.95 && a >= 0.65) {
+            $('.slider div').css('width', sliderVal);
+        } else if (a < 0.65) {
+            sliderVal = (valTil - 5) + ('%');
+            $('.slider div').css('width', sliderVal);
+        } else if (a > 0.95) {
+            $('.slider div').css('width', '100%');
+        }
+    };
+    loadSlider();
+    
     //Colors of each span pallet
     var c1Color = "#333";
     var c2Color = "#535353";

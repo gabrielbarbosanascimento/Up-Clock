@@ -320,6 +320,21 @@ hr {
     right: 0;
     -webkit-transition: 500ms background ease;
 }
+
+.slider{
+                        position: absolute;
+                        margin-top: -1px;
+                        margin-left: 15px;
+                        width: 407px;
+                        height: 3px;
+                        z-index: 1;
+                    }
+                    .slider div{
+                        position: relative;
+                        height: 3px;
+                        width: 100%;
+                        background: rgb(165, 165, 165);
+                    }
 /*---------------------Alarm Screen---------------------------*/
 
 #alarm-settings {
@@ -398,7 +413,8 @@ hr {
     user-select: all;
 }
 .btn {
-    width: 100%;
+    width: 130px;
+    margin: 0 auto;
     padding: 7px 0;
     color: gray;
     text-align: center;
@@ -407,6 +423,9 @@ hr {
     cursor: pointer;
     border-radius: 5px;
     top: 77px;
+}
+.btn:hover{
+    background: #f4f4f4;
 }
 /*-------------------- Alarm Touch ----------------------*/
 
@@ -478,13 +497,14 @@ input[type=range] {
     cursor: pointer;
     outline: none;
     position: relative;
+    top: 5px;
 }
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
     margin: 2px;
-    background: rgb(190, 190, 190);
+    background: rgb(165, 165, 165);
     -webkit-border-radius: 250px;
     border-radius: 15px;
     position: relative;
