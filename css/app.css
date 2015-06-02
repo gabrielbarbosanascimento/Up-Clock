@@ -16,7 +16,7 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-/*----------------SOME GENERAL RUNES/DON'T TOUCH IT-----------------*/
+/*----------------SOME GENERAL RULES/DON'T TOUCH IT-----------------*/
 * {
 	margin: 0;
 	padding: 0;
@@ -80,7 +80,7 @@ input::-webkit-inner-spin-button {
 
 .cover{
 	width: 100%;
-	height: 750px;
+	height: 100%;
 	background: url(../img/bg.jpg) no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -166,7 +166,7 @@ a.arrow > svg {
 	height: auto;
 	background: #f3f6fa;
 	position: absolute;
-	top: 750px;
+	top: 100%;
 	left: 0;
 }
 
