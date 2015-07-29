@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="upclock">
 <head>
 	<title>enable_drag</title>
 	<link rel="stylesheet" type="text/css" href="app.css">
@@ -9,231 +9,74 @@
 </head>
 <body oncontextmenu="return false;" onload="opacity();">
 	<div id="container" class="show">
-	
-		<div id="animation" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000" >
-			<img id="i1" src="media/1.png" />
-			<img id="i2" src="media/2.png" />
-			<img id="i3" src="media/3.png" />
-			<img id="i4" src="media/4.png" />
-			<img id="i5" src="media/5.png" />
+		<!-- THE ANIMATION OF LENS -->
+		<div id="animation" ng-controller="animationController" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000" >
+			<img ng-repeat="x in data" id="{{x.id}}" ng-src="{{x.image}}" />
 		</div>
-
-		<span id="ur">
-			<script type="text/javascript">
-				function firstclock(){UR_Nu=new Date;UR_Indhold=showFilled(UR_Nu.getHours())+":"+showFilled(UR_Nu.getMinutes())+":"+showFilled(UR_Nu.getSeconds());document.getElementById("ur").innerHTML=UR_Indhold;setTimeout("firstclock()",1e3)}function showFilled(e){return e>9?""+e:"0"+e}firstclock();
-			</script>
-		</span>
-
-		<div id="clock">
-			<script type="text/javascript">  
-	 		//Clock AM/PM function minified
-	 		function checklength(e){if(e<10){e="0"+e}return e}function clock(){var e=new Date;var t=checklength(e.getHours());var n=checklength(e.getMinutes());var r=checklength(e.getSeconds());var i=1;var s;if(i==1){if(t>=12){if(t==12){t=12}else{t=t-12}s=t+":"+n+":"+r+" PM"}else if(t<12){if(t==0){t=12}s=t+":"+n+":"+r+" AM"}}if(i==0){s=t+":"+n+":"+r}document.getElementById("clock").innerHTML=s;setTimeout("clock();",500)}clock()
-			</script>  
+		<!-- THE 24HRS CLOCK -->
+		<span id="ur"></span>
+		<!-- THE AM/PM CLOCK -->
+		<div id="clock"></div>
+		<!-- ONLY VISIBLE WHEN NOT USING THE CLASSIC MODE -->
+		<div id="circle" ng-init="img=['media/point-1.svg','media/point-2.svg','media/point-3.svg','media/point-4.svg', 'media/point-5.svg']" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000">
+			<img ng-repeat="x in img" ng-src="{{x}}" />
 		</div>
-
-
-		<div id="circle" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="3000" data-cycle-timeout="2000">
-			<img src="media/point-1.svg" />
-			<img src="media/point-2.svg" />
-			<img src="media/point-3.svg" />
-			<img src="media/point-4.svg" />
-			<img src="media/point-5.svg" />
-		</div>
-
-
+		<!-- WINDOWS TITLE OPTIONS-->
 		<a id="close"><i class="fi-x"></i></a>
 		<a id="minimize"><i class="fi-minus" style="top: 8px;position:relative"></i></a>
 		<a id="alarm" class="show"><img src="media/alarm.svg" /></a>
 		<a id="settings" class="show"><img src="media/settings.svg" /></a>
-
-
+		<!-- SETTINGS PAGE-->
 		<div id="configuration">
-
+			<!-- FIRST GROUP OF SETTINGS-->
 			<div id="g1" class="group" style="height: 140px;top: 5px;">
 				<span class="title1">Themes</span><br />
-				<div id="pallet-color">
-					<span data-color="#333;" style="background-color: #333;"></span>
-					<span data-color="#535353" style="background-color: #535353;"></span>
-					<span data-color="#16a085" style="background-color: #16a085;"></span>
-					<span data-color="#54c28f" style="background-color: #54c28f;"></span>
-					<span data-color="#3b6dd5" style="background-color: #3b6dd5;"></span>
-					<span data-color="#5b95f5" style="background-color: #5b95f5"></span>
-					<span data-color="#a527c6" style="background-color: #a527c6;"></span>
-					<span data-color="#f8a645" style="background-color: #f8a645;"></span>
-					<span data-color="#f3894e" style="background-color: #f3894e;"></span>
-					<span data-color="#e05a4c" style="background-color: #e05a4c;"></span>
+				<!-- PALLET COLOR USING ANGULAR REPEAT-->
+				<div id="pallet-color" ng-init="colors=['#333', '#535353', '#16a085','#54c28f','#3b6dd5','#5b95f5','#a527c6','#f8a645','#f3894e','#e05a4c']">
+					<span ng-repeat="color in colors" data-color="{{color}}" style="background-color: {{color}};"></span>
 				</div>
+
 				<span class="custom">Custom</span>
 				<span class="classic">
 				Classic
 				<span class="switch"><div></div></span>
 				</span>
 			</div>
-
+			<!-- SECOND GROUP OF SETTINGS-->
 			<div id="g2" class="group" style="top: -30px;height: 70px;">
 				<span class="title2">Time Switcher</span>	
 				<span class="t24 on">24 hours<span class="switch"><div></div></span></span><br><br><br>
 				<span class="title2" style="top: 5px;">Opacity</span><br>
 				<span><input id="slider3" type="range" min ="0.1" max="1.0" step ="0.05" onchange="updateTitle(this.value);"/><span class="slider"><div></div></span></span>
-				<script type="text/javascript">
-					function updateTitle(val) {
-						document.title = val
-						localStorage.opacity = val
-                        var sliderVal = (val*100)-2+('%');
-                        if (val < 1 && val >= 0.65) {
-                            $('.slider div').css('width', sliderVal);
-                        } else if (val < 0.65) {
-                            sliderVal =(val*100)-5+('%');
-                            $('.slider div').css('width', sliderVal);
-                        } else if (val > 0.95) {
-                            $('.slider div').css('width', '100%');
-                        }
-					}
-				</script>
 			</div>
-
-
 		</div>
-
+		<!-- ALARM SERTTINGS PAGE-->
 		<div id="alarm-settings">
 		    <div id="card">
-			<span>Set Timer</span>
-			<div class="clock-settings">
-				<label class="hours">
-					Hours
-					<input type="number" min="0" />
-				</label>
-				
-				<label class="minutes">
-					Minutes
-					<input type="number" min="0" />
-				</label>
-				
-				<label class="seconds">
-					Seconds
-					<input type="number" min="0" />
-				</label>
-			</div>
-
-			<div class="buttons">
-				<div class="btn">Set Timer</div>
-			</div>
+				<span>Set Timer</span>
+				<div class="clock-settings" ng-controller="alarmSettingsController">
+					<!-- REPEAT LABELS THROUGH ANGULAR -->
+					<label ng-repeat="x in data" class="{{x.id}}"> {{x.name}}
+						<input type="number" min="0" />
+					</label>
+				</div>
+				<div class="buttons">
+					<div class="btn">Set Timer</div>
+				</div>
             </div>
 		</div>
-
+		<!-- ALARM POPUP/ ONLY VISIBLE WHEN THE ALARM IS TRIGGERED-->
 		<div class="alarm-popup">
 			<span>Time's Up</span>
 			<img src="media/alarm.svg">
 			<div class="btn-close">Close</div>
 		</div>
-		
 	</div>
-
-
-	<!--------------------------------------Scripts ------------------------------------------------------>
-
+	<!---------------------------------------- Scripts ------------------------------------------------------>
 	<script src="main.js"></script>
+	<script src="lib/js/angular.min.js"></script>
 	<script src="lib/js/jquery-2.1.1.min.js"></script>
 	<script src="lib/js/jquery.cycle2.min.js"></script>
 	<script src="scripts.js"></script>
-	<script type="text/javascript">
-		function opacity(){
-			//On first run, opacity would be 0.9
-			if (localStorage.getItem("opacity") === null) {
-				localStorage.opacity = 0.9
-			}
-			$('input[type=range]').val(localStorage.opacity)
-			document.title = localStorage.opacity
-			document.title = enable_drag
-		}
-        
-	</script>
-	<script type="text/javascript">
-	//Animation minified
-	$(document).ready(function(){$("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#settings, #alarm").animate({top:0},200,function(){$("#circle").addClass("animated pulse")})})})});
-	</script>
-<script type="text/javascript">
-    function backToClassic() {
-        $('.classic .switch div').animate({
-            right: '-20px'
-        }, 300);
-        $('.classic .switch').css('background-color', colorSwitch);
-        $('#circle').fadeOut('fast');
-        $('#i1').attr("src", "media/1.png");
-        $('#i2').attr("src", "media/2.png");
-        $('#i3').attr("src", "media/3.png");
-        $('#i4').attr("src", "media/4.png");
-        $('#i5').attr("src", "media/5.png");
-        $('#animation, .alarm-popup').css("background", "#2f0916");
-        $('.btn').css("color", "#2f0916");
-        $('#pallet-color span img').css('display', 'none');
-        $('.custom').css("background", "rgba(0, 0, 0, 0.2)");
-    };
-
-    function loadSlider(val) {
-        var valTil = (localStorage.opacity * 100) - 2;
-        var sliderVal = valTil + ('%');
-        var a = localStorage.getItem("opacity");
-        if (a < 0.95 && a >= 0.65) {
-            $('.slider div').css('width', sliderVal);
-        } else if (a < 0.65) {
-            sliderVal = (valTil - 5) + ('%');
-            $('.slider div').css('width', sliderVal);
-        } else if (a > 0.95) {
-            $('.slider div').css('width', '100%');
-        }
-    };
-    loadSlider();
-    
-    //Color constant
-    var colorSwitch = 'rgb(138, 85, 103)';
-
-    //Spans of the pallet of color
-    //it returns to the colored theme
-    function palletColors() {
-        $('#circle').fadeIn('fast');
-        $('#i1').attr("src", "media/1.svg");
-        $('#i2').attr("src", "media/2.svg");
-        $('#i3').attr("src", "media/3.svg");
-        $('#i4').attr("src", "media/4.svg");
-        $('#i5').attr("src", "media/5.svg");
-        $('.classic .switch div').animate({
-            right: 0
-        }, 200);
-        $('.classic .switch').css('background-color', 'rgba(0, 0, 0, 0.1)');
-        $('.custom').css("background", "rgba(0, 0, 0, 0.2)");
-    };
-
-    //Variable that change the clocks
-    function clock1(color) {
-        $('.t24 .switch div').animate({
-            right: '-20px'
-        }, 300);
-        $('.t24 .switch').css('background-color', color);
-        $('#clock').fadeOut('fast');
-        $('#ur').fadeIn('fast');
-        $('.t24').addClass('on');
-        $('.t24').removeClass('off');
-    };
-
-    function clock2() {
-        $('.t24 .switch div').animate({
-            right: '0'
-        }, 300);
-        $('.t24 .switch').css('background-color', 'rgba(0, 0, 0, 0.1)');
-        $('#clock').fadeIn('fast');
-        $('#ur').fadeOut('fast');
-        $('.t24').addClass('off');
-        $('.t24').removeClass('oon');
-    };
-
-    function setItem(x, y) {
-        localStorage.setItem(x, y);
-    }
-
-    function removeItem(x, y) {
-        localStorage.removeItem(x, y);
-    }
-</script>
 </body>
 </html>
