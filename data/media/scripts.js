@@ -52,7 +52,7 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 /*-----------------Basic Functionss----------------*/
 
 //CLOCK DENIFINITIONS MINIFIED/
-function firstclock(){UR_Nu=new Date,UR_Indhold=showFilled(UR_Nu.getHours())+":"+showFilled(UR_Nu.getMinutes())+":"+showFilled(UR_Nu.getSeconds()),document.getElementById("ur").innerHTML=UR_Indhold,setTimeout("firstclock()",1e3)}function showFilled(e){return e>9?""+e:"0"+e}function checklength(e){return 10>e&&(e="0"+e),e}function clock(){var e,t=new Date,c=checklength(t.getHours()),n=checklength(t.getMinutes()),o=checklength(t.getSeconds()),l=1;1==l&&(c>=12?(12==c?c=12:c-=12,e=c+":"+n+":"+o+" PM"):12>c&&(0==c&&(c=12),e=c+":"+n+":"+o+" AM")),0==l&&(e=c+":"+n+":"+o),document.getElementById("clock").innerHTML=e,setTimeout("clock();",500)}firstclock(),clock();
+function firstclock(){UR_Nu=new Date,UR_Indhold=showFilled(UR_Nu.getHours())+":"+showFilled(UR_Nu.getMinutes())+":"+showFilled(UR_Nu.getSeconds()),document.getElementById("ur").innerHTML=UR_Indhold,setTimeout("firstclock()",1e3)}function showFilled(e){return e>9?""+e:"0"+e}function checklength(e){return 10>e&&(e="0"+e),e}function clock(){var e,t=new Date,c=checklength(t.getHours()),n=checklength(t.getMinutes()),o=checklength(t.getSeconds()),l=1;1==l&&(c>=12?(12==c?c=12:c-=12,e=c+":"+n+":"+o+" PM"):12>c&&(0==c&&(c=12),e=c+":"+n+":"+o+" AM")),0==l&&(e=c+":"+n+":"+o); document.getElementById("clock").innerHTML=e,setTimeout("clock();",500)}firstclock(),clock();
 //---------------
 
 function updateTitle(val) {
@@ -350,11 +350,9 @@ $(document).ready(function() {
         function colorcode_validate(choosenColor) {
             var regColorcode = /^(#)?([0-9a-fA-F]{3})([0-9a-fA-F]{3})?$/;
 
-            if (choosenColor === null) {
-                //If the user enters clicks 'Cancel', do nothing
-            } else if (choosenColor == '') {
-                //If the user enters enters nothing but clicks 'Ok', do nothing
-            } else if (regColorcode.test(choosenColor) == false) {
+            if (choosenColor === null || choosenColor === '') {
+                //If the user enters clicks 'Cancel', do nothing or  clicks 'Ok', do nothing
+            } else if (regColorcode.test(choosenColor) === false) {
                 alert('The code you entered is invalid. \nVisit http://html-color-codes.info/ to get correct hexadecimal code of colors.');
             } else {
                 changeColor(choosenColor);
@@ -423,7 +421,7 @@ $(document).ready(function() {
             }, timeLeft);
         };
 
-        if (timeLeft !== 0, timeLeft !== null) {
+        if (timeLeft !== 0 || timeLeft !== null) {
             ring();
         }
 
