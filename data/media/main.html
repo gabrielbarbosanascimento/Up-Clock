@@ -3,9 +3,9 @@
 <head>
 	<title>enable_drag</title>
 	<link rel="stylesheet" type="text/css" href="app.css">
-    <link rel="stylesheet" href="lib/foundation-icons.css">
-	<link rel="stylesheet" href="lib/animate.css">
-	<script defer data-main="main" src="lib/require.js"></script>
+    <link rel="stylesheet" href="lib/css/foundation-icons.css">
+	<link rel="stylesheet" href="lib/css/animate.css">
+	<script defer data-main="main" src="lib/js/require.js"></script>
 </head>
 <body oncontextmenu="return false;" onload="opacity();">
 	<div id="container" class="show">
@@ -52,16 +52,16 @@
 			<div id="g1" class="group" style="height: 140px;top: 5px;">
 				<span class="title1">Themes</span><br />
 				<div id="pallet-color">
-					<span class="c1" style="background-color: #333;"><img src="media/check.svg" /></span>
-					<span class="c2" style="background-color: #535353;"><img src="media/check.svg" /></span>
-					<span class="c3" style="background-color: #16a085;"><img src="media/check.svg" /></span>
-					<span class="c4" style="background-color: #54c28f;"><img src="media/check.svg" /></span>
-					<span class="c5" style="background-color: #3b6dd5;"><img src="media/check.svg" /></span>
-					<span class="c6" style="background-color: #5b95f5"><img src="media/check.svg" /></span>
-					<span class="c7" style="background-color: #a527c6;"><img src="media/check.svg" /></span>
-					<span class="c8" style="background-color: #f8a645;"><img src="media/check.svg" /></span>
-					<span class="c9" style="background-color: #f3894e;"><img src="media/check.svg" /></span>
-					<span class="c10" style="background-color: #e05a4c;"><img src="media/check.svg" /></span>
+					<span data-color="#333;" style="background-color: #333;"></span>
+					<span data-color="#535353" style="background-color: #535353;"></span>
+					<span data-color="#16a085" style="background-color: #16a085;"></span>
+					<span data-color="#54c28f" style="background-color: #54c28f;"></span>
+					<span data-color="#3b6dd5" style="background-color: #3b6dd5;"></span>
+					<span data-color="#5b95f5" style="background-color: #5b95f5"></span>
+					<span data-color="#a527c6" style="background-color: #a527c6;"></span>
+					<span data-color="#f8a645" style="background-color: #f8a645;"></span>
+					<span data-color="#f3894e" style="background-color: #f3894e;"></span>
+					<span data-color="#e05a4c" style="background-color: #e05a4c;"></span>
 				</div>
 				<span class="custom">Custom</span>
 				<span class="classic">
@@ -133,8 +133,8 @@
 	<!--------------------------------------Scripts ------------------------------------------------------>
 
 	<script src="main.js"></script>
-	<script src="lib/jquery-2.1.1.min.js"></script>
-	<script src="lib/jquery.cycle2.min.js"></script>
+	<script src="lib/js/jquery-2.1.1.min.js"></script>
+	<script src="lib/js/jquery.cycle2.min.js"></script>
 	<script src="scripts.js"></script>
 	<script type="text/javascript">
 		function opacity(){
@@ -185,18 +185,7 @@
     };
     loadSlider();
     
-    //Colors of each span pallet
-    var c1Color = "#333";
-    var c2Color = "#535353";
-    var c3Color = "#16a085";
-    var c4Color = "#54c28f";
-    var c5Color = "#3b6dd5";
-    var c6Color = "#5b95f5";
-    var c7Color = "#a527c6";
-    var c8Color = "#f8a645";
-    var c9Color = "#f3894e";
-    var c10Color = "#e05a4c";
-
+    //Color constant
     var colorSwitch = 'rgb(138, 85, 103)';
 
     //Spans of the pallet of color
@@ -223,8 +212,8 @@
         $('.t24 .switch').css('background-color', color);
         $('#clock').fadeOut('fast');
         $('#ur').fadeIn('fast');
-        $('.t24').addClass('off');
-        $('.t24').removeClass('on');
+        $('.t24').addClass('on');
+        $('.t24').removeClass('off');
     };
 
     function clock2() {
@@ -234,8 +223,8 @@
         $('.t24 .switch').css('background-color', 'rgba(0, 0, 0, 0.1)');
         $('#clock').fadeIn('fast');
         $('#ur').fadeOut('fast');
-        $('.t24').addClass('on');
-        $('.t24').removeClass('off');
+        $('.t24').addClass('off');
+        $('.t24').removeClass('oon');
     };
 
     function setItem(x, y) {

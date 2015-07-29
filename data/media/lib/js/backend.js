@@ -1,4 +1,4 @@
-define(['lib/mediator'], function(mediator) {
+define(['lib/js/mediator'], function(mediator) {
 
     return {
         // should only be used by the python backend

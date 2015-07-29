@@ -1,4 +1,4 @@
-require(['lib/mediator', 'lib/backend', 'lib/jquery-2.1.1.min.js'], function(mediator, backend) {
+require(['lib/js/mediator', 'lib/js/backend', 'lib/js/jquery-2.1.1.min.js'], function(mediator, backend) {
 
 	// decide what you want to do depending on the backend signal_name
 	mediator.subscribe('backend_message', function(signal_name, data) {
