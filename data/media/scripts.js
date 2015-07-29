@@ -31,6 +31,14 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 /*-----------------Angular Code/APLICATION DATA----------------*/
 (function(){
     angular.module('upclock', [])
+    .controller('windowController', ['$scope', function($scope) {
+        $scope.data = [
+            {id: 'close', image: 'media/close.svg'},
+            {id: 'minimize', image: 'media/minimize.svg'},
+            {id: 'alarm', image: 'media/alarm.svg'},
+            {id: 'settings', image: 'media/settings.svg'}
+        ];
+    }])
     .controller('animationController', ['$scope', function($scope){
         $scope.data = [
             {id: 'i1', image: 'media/1.png'},
@@ -162,6 +170,7 @@ function removeItem(x, y) {
 
 $(document).ready(function() {
     //STARTUP ANIMATION MINIFIED
+    $('#alarm, #settings').addClass('show');
     $("#close").animate({top:0},100,function(){$("#minimize").animate({top:0},100,function(){$("#settings, #alarm").animate({top:0},200,function(){$("#circle").addClass("animated pulse")})})});
 
     /*-----------------LocalStorage Codes----------------*/

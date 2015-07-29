@@ -3,7 +3,6 @@
 <head>
 	<title>enable_drag</title>
 	<link rel="stylesheet" type="text/css" href="app.css">
-    <link rel="stylesheet" href="lib/css/foundation-icons.css">
 	<link rel="stylesheet" href="lib/css/animate.css">
 	<script defer data-main="main" src="lib/js/require.js"></script>
 </head>
@@ -22,10 +21,11 @@
 			<img ng-repeat="x in img" ng-src="{{x}}" />
 		</div>
 		<!-- WINDOWS TITLE OPTIONS-->
-		<a id="close"><i class="fi-x"></i></a>
-		<a id="minimize"><i class="fi-minus" style="top: 8px;position:relative"></i></a>
-		<a id="alarm" class="show"><img src="media/alarm.svg" /></a>
-		<a id="settings" class="show"><img src="media/settings.svg" /></a>
+		<div ng-controller="windowController">
+			<a ng-repeat="x in data" id="{{x.id}}">
+				<img ng-src="{{x.image}}" />
+			</a>
+		</div>
 		<!-- SETTINGS PAGE-->
 		<div id="configuration">
 			<!-- FIRST GROUP OF SETTINGS-->
