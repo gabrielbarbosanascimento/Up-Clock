@@ -15,7 +15,6 @@ You should have received a copy of the GNU General Public License along
 with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
-
 /*----------------SOME GENERAL RUNES/DON'T TOUCH IT-----------------*/
 
 * {
@@ -66,7 +65,8 @@ hr {
     background-color: #ccc;
     border: 0;
     height: 1px;
-    margin: 8px;
+    position: relative;
+    width: 100%;
 }
 .switch {
     width: 50px;
@@ -154,17 +154,12 @@ hr {
     height: 100%;
 }
 #close {
-    font-family: 'Lato';
-    font-size: 18px;
     width: 30px;
     height: 30px;
-    text-align: center;
-    line-height: 31px;
     position: absolute;
     z-index: 100;
     top: -30px;
     left: 0px;
-    color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
@@ -250,31 +245,28 @@ hr {
     z-index: 5;
 }
 .group {
-    width: 336px;
+    width: 100%;
     position: relative;
     float: left;
 }
 .title1 {
     position: relative;
-    font-size: 22px;
-    margin-left: 15px;
-    top: 0;
+    font-size: 20px;
+    margin-left: 8px;
     color: gray;
 }
 .title2 {
     position: relative;
     font-size: 22px;
-    margin-left: 15px;
-    top: 0px;
+    margin-left: 8px;
     color: gray;
 }
 #pallet-color {
     width: 300px;
-    font-size: 0;
-    margin-top: 5px;
     position: relative;
-    top: 0;
-    left: 15px;
+    left: 8px;
+    top: 4px;
+    display: inline;
 }
 #pallet-color span {
     height: 30px;
@@ -282,67 +274,60 @@ hr {
     display: inline-block;
     cursor: pointer;
 }
-#pallet-color span img {
-    height: 30px;
-    width: 30px;
-    display: none;
-}
 .classic {
-    position: absolute;
-    margin-top: 10px;
-    left: 15px;
+    position: relative;
+    left: 8px;
+    top: 12px;
     font-size: 17px;
     cursor: pointer;
-    width: 260px;
     color: gray;
 }
 .classic .switch {
     position: absolute;
-    top: -4px;
-    right: 0;
+    margin-left: 200px;
+    top: -2px;
 }
 .custom {
     cursor: pointer;
     position: relative;
     float: right;
     padding: 10px 20px;
+    margin-right: 8px;
     background: rgba(0, 0, 0, 0.2);
-    margin: -50px 73px;
     border-radius: 5px;
-    left: 160px;
-    top: 15px;
+    top: -3px;
     font-weight: bold;
 }
 .t24 {
     cursor: pointer;
-    position: absolute;
-    top: 34px;
-    left: 15px;
+    position: relative;
+    left: 8px;
+    top: 8px;
     font-size: 17px;
-    width: 260px;
     color: gray;
+    display: inherit;
+    padding-bottom: 12px;
 }
 .t24 .switch {
     position: absolute;
     top: -4px;
-    right: 0;
+    margin-left: 186px;
     -webkit-transition: 500ms background ease;
 }
-
-.slider{
-                        position: absolute;
-                        margin-top: -1px;
-                        margin-left: 15px;
-                        width: 407px;
-                        height: 3px;
-                        z-index: 1;
-                    }
-                    .slider div{
-                        position: relative;
-                        height: 3px;
-                        width: 100%;
-                        background: rgb(165, 165, 165);
-                    }
+.slider {
+    position: absolute;
+    width: 423px;
+    left: 8px;
+    margin-top: 18px;
+    height: 3px;
+    z-index: 1;
+}
+.slider div {
+    position: relative;
+    height: 3px;
+    width: 100%;
+    background: rgb(165, 165, 165);
+}
 /*---------------------Alarm Screen---------------------------*/
 
 #alarm-settings {
@@ -352,7 +337,6 @@ hr {
     background: rgb(47, 9, 22);
     display: none;
 }
-
 #card {
     position: absolute;
     width: 336px;
@@ -385,11 +369,11 @@ hr {
     top: 80px;
 }
 .clock-settings {
-    width: 318px;
-    margin: 0 auto;
+    width: 300px;
     position: relative;
-    top: 67px;
-    padding: 6px;
+    margin-top: 67px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .clock-settings input {
     -webkit-user-select: initial;
@@ -430,9 +414,9 @@ hr {
     font-size: 1.2em;
     cursor: pointer;
     border-radius: 5px;
-    top: 77px;
+    margin-top: 12px;
 }
-.btn:hover{
+.btn:hover {
     background: #f4f4f4;
 }
 /*-------------------- Alarm Touch ----------------------*/
@@ -453,7 +437,6 @@ hr {
         transform: rotate(-45deg);
     }
 }
-
 .alarm-popup {
     width: 100%;
     height: 100%;
@@ -495,9 +478,8 @@ hr {
 }
 input[type=range] {
     -webkit-appearance: none;
-    width: 407px;
+    width: 422px;
     height: 3px;
-    margin-left: 15px;
     display: inline-block;
     background-color: rgb(230, 230, 230);
     -webkit-border-radius: 15px;

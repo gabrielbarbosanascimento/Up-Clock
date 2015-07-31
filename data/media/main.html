@@ -29,25 +29,21 @@
 		<!-- SETTINGS PAGE-->
 		<div id="configuration">
 			<!-- FIRST GROUP OF SETTINGS-->
-			<div id="g1" class="group" style="height: 140px;top: 5px;">
+			<div id="g1" class="group" style="height: 108px;top: 4px;">
 				<span class="title1">Themes</span><br />
 				<!-- PALLET COLOR USING ANGULAR REPEAT-->
 				<div id="pallet-color" ng-init="colors=['#333', '#535353', '#16a085','#54c28f','#3b6dd5','#5b95f5','#a527c6','#f8a645','#f3894e','#e05a4c']">
 					<span ng-repeat="color in colors" data-color="{{color}}" style="background-color: {{color}};"></span>
 				</div>
-
 				<span class="custom">Custom</span>
-				<span class="classic">
-				Classic
-				<span class="switch"><div></div></span>
-				</span>
+				<span class="classic">Classic<span class="switch"><div></div></span></span>				
 			</div>
 			<!-- SECOND GROUP OF SETTINGS-->
-			<div id="g2" class="group" style="top: -30px;height: 70px;">
+			<div id="g2" class="group" style="top: 4px;height: 70px;">
 				<span class="title2">Time Switcher</span>	
-				<span class="t24 on">24 hours<span class="switch"><div></div></span></span><br><br><br>
-				<span class="title2" style="top: 5px;">Opacity</span><br>
-				<span><input id="slider3" type="range" min ="0.1" max="1.0" step ="0.05" onchange="updateTitle(this.value);"/><span class="slider"><div></div></span></span>
+				<span class="t24 on">24 hours<span class="switch"><div></div></span></span>
+				<span class="title2" style="top: 5px;">Opacity</span>
+				<span style="margin-left: 8px"><input id="slider3" type="range" min ="0.1" max="1.0" step ="0.05" onchange="updateTitle(this.value);"/><span class="slider"><div></div></span></span>
 			</div>
 		</div>
 		<!-- ALARM SERTTINGS PAGE-->
