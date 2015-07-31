@@ -319,7 +319,7 @@ hr {
     width: 423px;
     left: 8px;
     margin-top: 18px;
-    height: 3px;
+    height: 2px;
     z-index: 1;
 }
 .slider div {
@@ -479,7 +479,7 @@ hr {
 input[type=range] {
     -webkit-appearance: none;
     width: 422px;
-    height: 3px;
+    height: 2px;
     display: inline-block;
     background-color: rgb(230, 230, 230);
     -webkit-border-radius: 15px;
@@ -491,8 +491,8 @@ input[type=range] {
 }
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     margin: 2px;
     background: rgb(165, 165, 165);
     -webkit-border-radius: 250px;
