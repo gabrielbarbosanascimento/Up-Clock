@@ -65,7 +65,7 @@ function firstclock(){UR_Nu=new Date,UR_Indhold=showFilled(UR_Nu.getHours())+":"
 
 function updateTitle(val) {
     document.title = val;
-    localStorage.opacity = val;
+    localStorage.setItem("opacity", val);
     var sliderVal = (val*100)-2+('%');
     if (val < 1 && val >= 0.65) {
         $('.slider div').css('width', sliderVal);
@@ -77,12 +77,11 @@ function updateTitle(val) {
     }
 }
 function opacity() {
-    //On first run, opacity would be 0.9
-    if (localStorage.getItem("opacity") === null) {
-        localStorage.opacity = 0.9;
+    if (!localStorage.getItem("opacity")) {
+        localStorage.setItem("opacity", 1);
     }
-    $('input[type=range]').val(localStorage.opacity);
-    document.title = localStorage.opacity;
+    $('input[type=range]').val(localStorage.getItem("opacity"));
+    document.title = localStorage.getItem("opacity");
     document.title = 'enable_drag';
 }
 
@@ -104,10 +103,10 @@ function backToClassic() {
 }
 
 function loadSlider(val) {
-    var valTil = (localStorage.opacity * 100) - 2;
+    var valTil = (localStorage.getItem("opacity") * 100) - 2;
     var sliderVal = valTil + ('%');
     var a = localStorage.getItem("opacity");
-    if (a < 0.95 && a >= 0.65) {
+    if (a < 1 && a >= 0.65) {
         $('.slider div').css('width', sliderVal);
     } else if (a < 0.65) {
         sliderVal = (valTil - 5) + ('%');
@@ -116,6 +115,7 @@ function loadSlider(val) {
         $('.slider div').css('width', '100%');
     }
 }
+
 loadSlider();
 
 //Color constant
