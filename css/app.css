@@ -2,16 +2,16 @@
 
 Copyright (C) 2014 Gabriel Barbosa <barbosanascimentogabriel@gmail.com>
 
-This program is free software: you can redistribute it and/or modify it 
-under the terms of the GNU General Public License version 3, as published 
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License version 3, as published
 by the Free Software Foundation.
 
-This program is distributed in the hope that it will be useful, but 
-WITHOUT ANY WARRANTY; without even the implied warranties of 
-MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR 
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranties of
+MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
 PURPOSE.  See the GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License along 
+You should have received a copy of the GNU General Public License along
 with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
@@ -81,7 +81,7 @@ input::-webkit-inner-spin-button {
 .cover{
 	width: 100%;
 	height: 100%;
-	background: url(../img/bg.jpg) no-repeat center center; 
+	background: url(../img/bg.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -266,4 +266,14 @@ a.arrow > svg {
 .download a:hover{
 	opacity: 1;
 }
-
+.download pre {
+	white-space: pre-wrap;
+  word-wrap: break-word;
+	top: 6em;
+	max-width: 550px;
+	position: relative;
+	margin: 0 auto;
+  padding: 1em;
+  border-radius: 2px;
+  background-color: rgba(56,173,124,0.8);
+}
