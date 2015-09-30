@@ -13,7 +13,7 @@ We plan to release Up-Clock for other systems soon.
 
 <h3>HOW TO RUN IT?</h3>
 
-To run this aplication, 
+To run this application, 
 
 - Open the Terminal and type cd plus the direction of this directory on your files. 
 - Enter on the directory 
