@@ -353,7 +353,7 @@ $(document).ready(function() {
     }
 
     $('.custom').click(function() {
-        var color = prompt('Put the whole Hexadecimal code of your favourite color (with sharp #) ! \nHow about #8CBF26 ?');
+        var color = prompt('Put the whole Hexadecimal code of your favourite color (with sharp #) ! \nHow about #8CBF26 ?\n Tip: To get a color that matches your wallpaper, run the command \n"xprop -root | grep _GNOME_BACKGROUND_REPRESENTATIVE_COLORS" \nin a terminal, get the rgb code, convert it into hexadecimal and use it :)');
         colorcode_validate(color)
 
         function colorcode_validate(choosenColor) {
