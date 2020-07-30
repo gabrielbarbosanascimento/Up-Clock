@@ -26,9 +26,9 @@ $ cd Up-Clock
 ```
 - Now enter
 ```bash
-$ debuild
+$ debuild -b -uc -us
 ```
-It will build the .deb package for you.
+It will build the .deb package for you (you may need sudo).
 
 
 Images
