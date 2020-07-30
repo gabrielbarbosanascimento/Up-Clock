@@ -23,11 +23,10 @@ sudo apt install up-clock
 - Dependencies
 
 Build dependencies: `dh-python, debhelper, python3-distutils-extra`
-Runtime dependencies: ``gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-webkit2-4.0`
 
-- To run this application, 
+Runtime dependencies: `gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-webkit2-4.0`
 
-- Open the Terminal and enter the directory 
+- To run this application, open a Terminal and enter the directory of the source code
 
 ```bash
 $ cd Up-Clock
