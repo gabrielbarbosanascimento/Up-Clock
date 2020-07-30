@@ -3,15 +3,19 @@ Up-Clock
 
 A beautiful clock inspired by the [Ubuntu Touch Lockscreen](https://www.youtube.com/watch?v=iaC6EctpIas).
 
-![screenshot](https://dl.dropboxusercontent.com/u/84627545/upclock.JPG)
+![screenshot](http://upclock.tk/img/upclock.jpg)
 
 
-This app is created using Quickly on [Ubuntu](http://ubuntu.com/) and is for Linux distributions. It's a web application running in a Python window.
-
-We plan to release Up-Clock for other systems soon.
-
-
-<h3>HOW TO RUN IT?</h3>
+This app was created using Quickly on [Ubuntu](http://ubuntu.com/), and later ported to work with Python3.
+<h3>HOW TO GET IT?</h3>
+A PPA is available at https://launchpad.net/~apandada1/+archive/up-clock.
+To install from the PPA, open a Terminal, and run the following commands.
+```bash
+sudo add-apt-repository ppa:apandada1/up-clock
+sudo apt update
+sudo apt install up-clock
+```
+<h3>HOW TO BUILD IT FROM SOURCE?</h3>
 
 To run this application, 
 
@@ -22,13 +26,9 @@ $ cd Up-Clock
 ```
 - Now enter
 ```bash
-$ quickly run
+$ debuild
 ```
-You need to have `quickly` installed
-
-A PPA is available at https://launchpad.net/~apandada1/+archive/up-clock.
-
-Up-Clock is also available at [Ubuntu Software Center](https://apps.ubuntu.com/cat/applications/up-clock/)
+It will build the .deb package for you.
 
 
 Images
