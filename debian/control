@@ -2,11 +2,11 @@ Source: up-clock
 Section: python
 Priority: extra
 Build-Depends: debhelper (>= 8),
- python (>= 2.6.6-3~),
- python-distutils-extra (>= 2.10)
+ python3,
+ python3-distutils-extra
 Maintainer: Archisman Panigrahi <apandada1@gmail.com>
 Standards-Version: 3.9.3
-X-Python-Version: >= 2.6
+X-Python-Version: >= 3.5
 
 Package: up-clock
 Architecture: all
@@ -14,8 +14,7 @@ Depends: ${misc:Depends},
  ${python:Depends},
  gir1.2-glib-2.0,
  gir1.2-gtk-3.0,
- gir1.2-webkit-3.0,
- yelp
+ gir1.2-webkit2-4.0
 Description: A beautiful Clock, inspired by Ubuntu Touch homescreen, already on your desktop.
  Inspired by Ubuntu Touch homescreen, this clock is able to show you the
  time in a way you never seen before. The "clouds" changes colors and
