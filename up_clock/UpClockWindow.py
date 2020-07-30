@@ -83,7 +83,7 @@ class UpClockWindow(Window):
                 if self.drag == True:
                     Gtk.Window.begin_move_drag(self.window,event.button,event.x_root,event.y_root,event.time)
 
-        self.webview.connect('title-changed', title_changed)
+        self.webview.connect('notify::title', title_changed)
         # self.webview.connect('navigation-requested', navigation_requested_cb)
         # self.webview.connect('console-message', console_message_cb)
         self.webview.connect('button-press-event', press_button)
