@@ -5,11 +5,14 @@ A beautiful clock inspired by the [Ubuntu Touch Lockscreen](https://www.youtube.
 
 ![screenshot](http://upclock.tk/img/upclock.jpg)
 
+This is an web app which runs inside a Python window using GTK Webkit2. The main HTML file, and its libs are is located at `data/media`.
 
-This app was created using Quickly on [Ubuntu](http://ubuntu.com/), and later ported to work with Python3.
+This software was initially packaged using Quickly on [Ubuntu](http://ubuntu.com/), and was later ported to work with Python3 and GTK Webkit 2.
+
 <h3>HOW TO GET IT?</h3>
 A PPA is available at https://launchpad.net/~apandada1/+archive/up-clock.
 To install from the PPA, open a Terminal, and run the following commands.
+
 ```bash
 sudo add-apt-repository ppa:apandada1/up-clock
 sudo apt update
@@ -17,27 +20,22 @@ sudo apt install up-clock
 ```
 <h3>HOW TO BUILD IT FROM SOURCE?</h3>
 
-To run this application, 
+- Dependencies
 
-- Open the Terminal and type cd plus the direction of this directory on your files. 
-- Enter on the directory 
+Build dependencies: `dh-python, debhelper, python3-distutils-extra`
+Runtime dependencies: ``gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-webkit2-4.0`
+
+- To run this application, 
+
+- Open the Terminal and enter the directory 
+
 ```bash
 $ cd Up-Clock
 ```
-- Now enter
+- Now enter the command
+
 ```bash
 $ debuild -b -uc -us
 ```
 It will build the .deb package for you (you may need sudo).
 
-
-Images
-========
-
-All the images used on this app are located on media folder
-
-
-Files
-========
-
-Specific files are located on `data/media/lib` folder, you can find jquery or cycle plugins there 
