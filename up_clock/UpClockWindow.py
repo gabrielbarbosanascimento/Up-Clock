@@ -20,7 +20,7 @@ from locale import gettext as _
 locale.textdomain('up-clock')
 
 import subprocess
-from gi.repository import Gtk, WebKit # pylint: disable=E0611
+from gi.repository import Gtk, WebKit2 # pylint: disable=E0611
 import logging
 logger = logging.getLogger('up_clock')
 
@@ -40,27 +40,28 @@ class UpClockWindow(Window):
         self.window = self.builder.get_object("up_clock_window")
         self.drag = True
         # Code for other initialization actions should be added here.
-        self.webview = WebKit.WebView()
+        self.webview = WebKit2.WebView()
         self.box.add(self.webview)
-        self.webview.props.settings.enable_default_context_menu = False
+        #self.webview.props.settings.enable_default_context_menu = False
         self.webviewsettings = self.webview.get_settings()
-        self.webviewsettings.set_property("javascript-can-open-windows-automatically", True)
-        self.webviewsettings.set_property("enable-universal-access-from-file-uris", True)
-        self.webviewsettings.set_property('enable-default-context-menu',False)
+        # self.webviewsettings.set_property("javascript-can-open-windows-automatically", True)
+        # self.webviewsettings.set_property("enable-universal-access-from-file-uris", True)
+        # self.webviewsettings.set_property('enable-default-context-menu',False)
         self.webview.load_uri(get_media_file('main.html'))
         self.box.show_all()
 
-        def navigation_requested_cb(view, frame, networkRequest):
-            uri = networkRequest.get_uri()
-            subprocess.Popen(['xdg-open', uri])
-            return 1
+        # def navigation_requested_cb(view, frame, networkRequest):
+        #     uri = networkRequest.get_uri()
+        #     subprocess.Popen(['xdg-open', uri])
+        #     return 1
 
-        def console_message_cb(widget, message, line, source):
-            logger.debug('%s:%s "%s"' % (source, line, message))
-            return True
+        # def console_message_cb(widget, message, line, source):
+        #     logger.debug('%s:%s "%s"' % (source, line, message))
+        #     return True
 
-        def title_changed(widget, frame, title):
-            print title
+        def title_changed(webview, frame):
+            title = webview.get_title()
+            print(title)
 
             if title == "close":
                 Gtk.main_quit()
@@ -82,8 +83,8 @@ class UpClockWindow(Window):
                 if self.drag == True:
                     Gtk.Window.begin_move_drag(self.window,event.button,event.x_root,event.y_root,event.time)
 
-        self.webview.connect('title-changed', title_changed)
-        self.webview.connect('navigation-requested', navigation_requested_cb)
-        self.webview.connect('console-message', console_message_cb)
+        self.webview.connect('notify::title', title_changed)
+        # self.webview.connect('navigation-requested', navigation_requested_cb)
+        # self.webview.connect('console-message', console_message_cb)
         self.webview.connect('button-press-event', press_button)
 
