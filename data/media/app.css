@@ -398,7 +398,7 @@ hr {
     padding: 6px;
     outline: none;
     text-align: center;
-    width: 59px;
+    max-width: 59px;
     margin: 10px auto;
     background-color: #fff;
     -webkit-user-select: all;
