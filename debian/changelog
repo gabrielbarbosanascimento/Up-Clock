@@ -1,3 +1,9 @@
+up-clock (6.2) focal; urgency=medium
+
+  * Fixed timer input width
+
+ -- Archisman Panigrahi <apandada1@gmail.com>  Fri, 31 Jul 2020 17:27:33 +0530
+
 up-clock (6.1) focal; urgency=medium
 
   * Bump version number. It was worth the hassle
