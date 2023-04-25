@@ -1,9 +1,12 @@
-Up-Clock
-========
+<img src="http://gabrielbarbosanascimento.github.io/Up-Clock/img/up-clock.svg" align="left">
+
+# Up-Clock
 
 A beautiful clock inspired by the [Ubuntu Touch Lockscreen](https://www.youtube.com/watch?v=iaC6EctpIas).
 
-![screenshot](http://upclock.tk/img/upclock.jpg)
+Homepage: https://gabrielbarbosanascimento.github.io/Up-Clock/
+
+![screenshot](http://gabrielbarbosanascimento.github.io/Up-Clock/img/upclock.jpg)
 
 This is an web app which runs inside a Python window using GTK Webkit2. The main HTML file, and its libs are is located at `data/media`.
 
