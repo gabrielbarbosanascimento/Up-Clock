@@ -31,7 +31,7 @@ sudo apt install up-clock
 
 Build dependencies: `dh-python, debhelper, python3-distutils-extra`
 
-Runtime dependencies: `gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-webkit2-4.0`
+Runtime dependencies: `gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-webkit2-4.1`
 
 #### To build this application in Ubuntu/Debian, open a Terminal and run the following commands.
 
