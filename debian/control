@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 10),
  dh-python,
  python3-gi,
  gir1.2-gtk-3.0,
- gir1.2-webkit2-4.0
+ gir1.2-webkit2-4.0 | gir1.2-webkit2-4.1
 Maintainer: Archisman Panigrahi <apandada1@gmail.com>
 Standards-Version: 4.1.4
 X-Python-Version: >= 3.5
@@ -18,7 +18,7 @@ Depends: ${misc:Depends},
  ${python3:Depends},
  gir1.2-glib-2.0,
  gir1.2-gtk-3.0,
- gir1.2-webkit2-4.0
+ gir1.2-webkit2-4.0 | gir1.2-webkit2-4.1
 Description: A beautiful Clock, inspired by Ubuntu Touch homescreen, already on your desktop.
  Inspired by Ubuntu Touch homescreen, this clock is able to show you the
  time in a way you never seen before. The "clouds" changes colors and
